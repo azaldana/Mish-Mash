@@ -1,5 +1,7 @@
 .recipe-content {
     text-align: center;
+    background-color: #f9f9f9;
+    margin-top: 10px;
 }
 
 .recipe-content .card-content {
@@ -18,4 +20,5 @@
     font-weight: bold;
     font-family: 'Rajdhani', sans-serif;
     text-align: center;
+    padding-top: 100px;
 }
