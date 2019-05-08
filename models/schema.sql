@@ -1,0 +1,4 @@
+CREATE DATABASE mishmash;
+
+DROP DATABASE IF EXISTS mishmash;
+CREATE DATABASE mishmash;
