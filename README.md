@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mish Mash
 
-## Available Scripts
+An ingredients-to-recipe application that uses MySQL, Node, Express, Handlebars and Sequelize, deployed on Heroku. 
 
-In the project directory, you can run:
+[Mish Mash Link](http://immense-ravine-59091.herokuapp.com/ "project-2 Link")
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The goal of this application is to match users with recipes based on ingredients they possess and input into the database, using the Spoonacular API.
 
-### `npm test`
++ User will Sign Up/Log In to ensure that ingredients added to their refrigerator are added to the database, allowing the items to be recorded for future Mish Mash visits.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
++ In the Regrigerator, user will choose from the categories of ingredients. Based on the box versus checkmark, the ingredient choice will be added/removed from the User's ID in the database. User has the ability to add other ingredients in the input field.
 
-### `npm run build`
++ Once all chosen ingredients have been checked or added, User will click 'Search For Recipes' button. Six recipes will display, with the option to 'See More Results.' User can then choose to View Recipe.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
++ View Recipe link will connect user with full recipe breakdown.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Sample View
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Mish Mash App Screenshot](/public/images/screenshot.jpg/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Library 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
++ Font Awesome
++ Materialize
++ Sequelize
++ Unirest
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technology
 
-To learn React, check out the [React documentation](https://reactjs.org/).
++ Javascript
++ jQuery
++ HTML5
++ CSS3
++ MySQL
++ Node.js - Express, Handlebars
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## API List
 
-### Analyzing the Bundle Size
++ Spoonacular
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
