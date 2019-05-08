@@ -3,8 +3,8 @@ import React from "react";
 import Wrapper from "./components/Wrapper";
 // import friends from "./choices.json";
 import NavBar from "./components/NavBar";
-// import Jumbotron from "./components/Jumbotron";
 import About from "./components/About";
+import Chefs from "./components/Chefs";
 import "./App.css";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     <Wrapper>
         <NavBar/>
         <About/>
+        <Chefs/>
       </Wrapper>
   );
 }
