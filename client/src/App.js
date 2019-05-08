@@ -1,20 +1,36 @@
-import React from "react";
-// import CardChoices from "./components/CardChoices";
+import React, {Component} from "react";
 import Wrapper from "./components/Wrapper";
-// import friends from "./choices.json";
+import HeaderChef from "./components/HeaderChef";
+import recipes from "./recipes.json";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Chefs from "./components/Chefs";
 import "./App.css";
 
-function App() {
+class App extends Component {
+  state = {
+    recipes
+  };
+
+render() {
   return (
     <Wrapper>
         <NavBar/>
         <About/>
-        <Chefs/>
+        <HeaderChef>
+          <div className="container cards">
+            <div className="row">
+          {this.state.recipes.map(recipe => (
+            <Chefs 
+            id = {recipe.id}
+            image = {recipe.image}
+            /> ))}
+            </div>
+            </div>
+          </HeaderChef>
       </Wrapper>
   );
+}
 }
 
 export default App;
