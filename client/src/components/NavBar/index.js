@@ -3,7 +3,7 @@ import "./style.css";
 
 const NavBar = props => {
     return (
-        <div className="container-navbar">
+        <div className="container-chefs">
             <header>
                 <nav class="nav-wrapper transparent z-depth-0">
                     <a href="#" class="sidenav-trigger" data-target="mobile-menu">

@@ -5,6 +5,13 @@ import recipes from "./recipes.json";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Chefs from "./components/Chefs";
+import DualBtn from "./components/DualBtn";
+import Video from "./components/Video";
+import HeaderBlogs from "./components/HeaderBlogs";
+import Blogs from "./components/Blogs";
+import Categories from "./components/Categories";
+import SubmitForm from "./components/SubmitForm";
+import Footer from "./components/Footer";
 import "./App.css";
 
 class App extends Component {
@@ -28,6 +35,23 @@ render() {
             </div>
             </div>
           </HeaderChef>
+          <DualBtn/>
+          <Video/>
+          <HeaderBlogs>
+            <div className="container blogs">
+            <div className="row">
+            <Blogs/>
+            </div>
+            </div>
+          </HeaderBlogs>
+          <Categories/>
+          
+            <div className="row">
+            <form className="col s12">
+            <SubmitForm/>
+            </form>
+            </div>
+          <Footer/>
       </Wrapper>
   );
 }

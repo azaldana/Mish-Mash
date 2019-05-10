@@ -31,3 +31,7 @@
     transform: rotate(360deg);
   }
 }
+
+.cards .blogs {
+  width: 65%;
+}
