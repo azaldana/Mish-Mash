@@ -12,6 +12,11 @@ module.exports = function(sequelize, DataTypes) {
       Recipes.hasMany(models.Ingredients, {
         onDelete: "cascade"
       });
+      Recipes.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
     };
   
     return Recipes;
