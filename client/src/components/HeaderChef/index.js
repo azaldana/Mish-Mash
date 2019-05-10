@@ -3,7 +3,7 @@ import "./style.css";
 
 const HeaderChef = props => {
     return (
-        <div className="container-navbar">
+        <div className="container-chefs">
             <div className="recipe-content">
                 <div className="recipes">
                     <h2>Featured Chefs</h2>

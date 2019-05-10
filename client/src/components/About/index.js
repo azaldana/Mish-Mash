@@ -3,7 +3,7 @@ import "./style.css";
 
 const About = props => {
     return (
-        <div className="container-navbar">
+        <div className="container-about">
             <div className="about-content">
                 <div className="about">
                     <h2>About</h2>

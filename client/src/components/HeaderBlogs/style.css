@@ -1,19 +1,15 @@
-.recipe-content {
+.blog-content {
     text-align: center;
     background-color: #f9f9f9;
     margin-top: 10px;
 }
 
-.recipe-content .card-content {
-    text-align: left;
-}
-
-.recipes {
+.blogs {
     width: 70%;
     margin: 0 auto;
 }
 
-.recipes h2 {
+.blogs h2 {
     text-transform: uppercase;
     font-size: 50px;
     margin-top: 100px;
@@ -23,11 +19,11 @@
     /* padding-top: 100px; */
 }
 
-#recipeIcon {
+#blogIcon {
     margin-bottom: 50px;
 }
 
-.container-chefs {
+.container-blogs {
     width: 100%;
     margin: 0;
     padding: 0;
