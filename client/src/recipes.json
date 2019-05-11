@@ -21,7 +21,7 @@
     },
     {
       "id": 1,
-      "image": "./images/2.jpg", 
+      "image": "./images/3.jpg", 
       "social": "@kaylapega",
       "title": "Chicken Parmesan",
       "totalTime": "Prep: 25 min. Cook: 4 hours" ,
@@ -41,7 +41,7 @@
     },
     {
       "id": 1,
-      "image": "./images/2.jpg", 
+      "image": "./images/4.jpg", 
       "social": "@kaylapega",
       "title": "Chicken Parmesan",
       "totalTime": "Prep: 25 min. Cook: 4 hours" ,

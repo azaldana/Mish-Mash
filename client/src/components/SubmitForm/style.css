@@ -1,10 +1,10 @@
 .container-form {
     width: 100%;
-    height: 750px;
+    height: 600px;
 }
 
 .submit-form {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -15,16 +15,14 @@
     font-weight: bold;
     font-family: 'Rajdhani', sans-serif;
     text-align: center;
-    /* padding-top: 100px; */
 }
 
-#submit-icon {
-    margin: 0 auto;
+#submitIcon {
     align-content: center;
+    margin-bottom: 50px;
 }
 
 .form-content {
     text-align: center;
-    /* background-color: #f9f9f9; */
     margin-top: 10px;
 }

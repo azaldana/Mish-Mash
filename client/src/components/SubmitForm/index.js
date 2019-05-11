@@ -33,6 +33,10 @@ const SubmitForm = props => {
 
                     </div>
 
+                    <button class="btn waves-effect col 12 waves-light z-depth-0" id="seeMore" type="submit" name="action">Submit
+<i class="material-icons right">send</i>
+                </button>
+
 
                 </div>
 
