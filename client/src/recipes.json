@@ -1,62 +1,515 @@
 [
-    {
-      "id": 1,
-      "image": "./images/2.jpg", 
+  {
+    "id": 1,
+    "image": "./images/1.jpg", 
+    "social": "@kaylapega",
+    "title": "Chicken Parmesan",
+    "totalTime": "Prep: 25 min. Cook: 4 hours" ,
+    "servings": "4 servings", 
+    "ingredients": ["1/2 cup seasoned bread crumbs",
+      "1/2 cup grated Parmesan cheese",
+      "1/2 teaspoon Italian seasoning",
+      "1/2 teaspoon pepper",
+      "1/4 teaspoon salt",
+      "1 large egg, lightly beaten",
+      "1 tablespoon water",
+      "4 (6 ounces each ) boneless skinless chicken breast halves",
+      "1 jar (24 ounces) marinara sauce",
+      "4 slices part-skim mozzarella cheese"],
+    "instructions": 
+    "1. In a shallow bowl, combine bread crumbs, Parmesan cheese, Italian seasoning, pepper and salt. In another bowl, combine egg and water. Dip chicken in egg mixture, then in crumb mixture to coat both sides (patting to help adhere). Repeat.\n 2. Transfer chicken to slow cooker. Pour sauce over chicken and top with cheese. Cook, covered, on low until a thermometer inserted in chicken reads 165°, about 4-6 hours."
+
+  },
+  {
+      "id": 2,
+      "image": "./images/2.jpg",
       "social": "@kaylapega",
-      "title": "Chicken Parmesan",
-      "totalTime": "Prep: 25 min. Cook: 4 hours" ,
+      "title": "Ginger-Cashew Chicken Salad",
+      "totalTime": "Prep: 20 min. + marinating Broil: 10" ,
+      "servings": "8 servings", 
+      "ingredients":"Dressing: 1/2 cup cider vinegar, 1/2 cup molasses, 1/3 cup canola oil, 2 tablespoons minced fresh gingerroot, 2 teaspoons reduced-sodium soy sauce, 1 teaspoon salt, 1/8 teaspoon cayenne pepper, 4 boneless skinless chicken breast halves (6 ounces each), Salad:, 8 ounces fresh baby spinach (about 10 cups)1 can (11 ounces) mandarin oranges, drained, 1 cup shredded red cabbage, 2 medium carrots, shredded, 3 green onions, thinly sliced, 2 cups chow mein noodles, 3/4 cup salted cashews, toasted, 2 tablespoons sesame seeds, toasted",
+      "instructions":"1. In a small bowl, whisk the first seven ingredients until blended. Pour 3/4 cup marinade into a large resealable plastic bag. Add chicken; seal bag and turn to coat. Refrigerate at least 3 hours. Cover and refrigerate remaining marinade.\n 2. Preheat broiler. Drain chicken, discarding marinade in bag. Place chicken in a 15x10x1-in. baking pan. Broil 4-6 in. from heat 4-6 minutes on each side or until a thermometer reads 165°. Cut chicken into strips.\n 3. Place spinach on a serving platter. Arrange chicken, oranges, cabbage, carrots and green onions. Sprinkle with chow mein noodles, cashews and sesame seeds. Stir reserved molasses mixture; drizzle over salad and toss to coat. Serve immediately."
+    },
+    {
+      "id": 3,
+      "image": "./images/3.jpg",
+      "social": "@kaylapega",
+      "title": "Grilled Barbecued Chicken",
+      "totalTime": "Prep: 15 min. + marinating Cook: 35 min",
+      "servings": "6 servings", 
+      "ingredients": "1 large onion, chopped, 2/3 cup butter, melted, 6 tablespoons cider vinegar, 4 teaspoons sugar, 1 tablespoon chili powder, 2 teaspoons salt, 2 teaspoons Worcestershire sauce, 1-1/2 teaspoons pepper, 1-1/2 teaspoons ground mustard, 1/2 teaspoon hot pepper sauce, 2 garlic cloves: minced, 6 bone-in chicken breast halves (4 to 5 pounds) with skin removed",
+
+      "instructions": "1. In a bowl, combine the first 11 ingredients. Cover and refrigerate 1/3 cup for basting. Place the chicken in a large resealable plastic bag; add remaining marinade. Refrigerate for at least 1 hour, turning occasionally. \n 2. Drain and discard marinade from chicken. Grill chicken, covered, over indirect medium heat for 20 minutes. Turn; grill 15-25 minutes longer or until juices run clear, basting occasionally with reserved marinade."
+    },
+    {
+      "id": 4,
+      "image": "./images/4.jpg",
+      "social": "@kaylapega",
+      "title": "Chicken Sausage & Gnocchi Skillet",
+      "totalTime": "Prep/Total Time: 30 min." ,
       "servings": "4 servings", 
-      "ingredients": ["1/2 cup seasoned bread crumbs",
-        "1/2 cup grated Parmesan cheese",
-        "1/2 teaspoon Italian seasoning",
-        "1/2 teaspoon pepper",
-        "1/4 teaspoon salt",
-        "1 large egg, lightly beaten",
-        "1 tablespoon water",
-        "4 (6 ounces each ) boneless skinless chicken breast halves",
-        "1 jar (24 ounces) marinara sauce",
-        "4 slices part-skim mozzarella cheese"],
-      "instructions":"1. In a shallow bowl, combine bread crumbs, Parmesan cheese, Italian seasoning, pepper and salt. In another bowl, combine egg and water. Dip chicken in egg mixture, then in crumb mixture to coat both sides (patting to help adhere). Repeat.\n 2. Transfer chicken to slow cooker. Pour sauce over chicken and top with cheese. Cook, covered, on low until a thermometer inserted in chicken reads 165°, about 4-6 hours."
+      "ingredients": "1 package (16 ounces) potato gnocchi, 1 tablespoon butter, 1 tablespoon olive oil, 2 fully cooked Italian chicken sausage links (3 ounces each), sliced, 1/2 pound sliced baby portobello mushrooms, 1 medium onion, finely chopped, 1 pound fresh asparagus, trimmed and cut into 1/2-inch pieces, 2 garlic cloves: minced, 2 tablespoons white wine or chicken broth, 2 ounces herbed fresh goat cheese, 2 tablespoons minced fresh basil or 2 teaspoons dried basil, 1 tablespoon lemon juice, 1/4 teaspoon salt, 1/8 teaspoon pepper, Grated Parmesan cheese",
+      "instructions": "1. Cook gnocchi according to package directions; drain. Meanwhile, in a large skillet, heat butter and oil over medium-high heat. Add sausage, mushrooms and onion; cook and stir until sausage is browned and vegetables are tender. Add asparagus and garlic; cook and stir 2-3 minutes longer. \n 2. Stir in wine. Bring to a boil; cook until liquid is almost evaporated. Add goat cheese, basil, lemon juice, salt and pepper. Stir in gnocchi; heat through. Sprinkle with Parmesan cheese."
 
     },
     {
-      "id": 1,
-      "image": "./images/3.jpg", 
+      "id": 5,
+      "image": "./images/5.jpg",
       "social": "@kaylapega",
-      "title": "Chicken Parmesan",
-      "totalTime": "Prep: 25 min. Cook: 4 hours" ,
+      "title": "Asian Glazed Chicken Thighs",
+      "totalTime": "Prep/Total Time: 25 min.",
       "servings": "4 servings", 
-      "ingredients": ["1/2 cup seasoned bread crumbs",
-        "1/2 cup grated Parmesan cheese",
-        "1/2 teaspoon Italian seasoning",
-        "1/2 teaspoon pepper",
-        "1/4 teaspoon salt",
-        "1 large egg, lightly beaten",
-        "1 tablespoon water",
-        "4 (6 ounces each ) boneless skinless chicken breast halves",
-        "1 jar (24 ounces) marinara sauce",
-        "4 slices part-skim mozzarella cheese"],
-      "instructions":"1. In a shallow bowl, combine bread crumbs, Parmesan cheese, Italian seasoning, pepper and salt. In another bowl, combine egg and water. Dip chicken in egg mixture, then in crumb mixture to coat both sides (patting to help adhere). Repeat.\n 2. Transfer chicken to slow cooker. Pour sauce over chicken and top with cheese. Cook, covered, on low until a thermometer inserted in chicken reads 165°, about 4-6 hours."
-
+      "ingredients": "1/4 cup rice vinegar, 3 tablespoons reduced-sodium soy sauce, 2 tablespoons honey, 2 teaspoons canola oil, 4 boneless skinless chicken thighs (about 1 pound), 3 garlic cloves, minced, 1 teaspoon minced fresh gingerroot or 1/2 teaspoon ground ginger, Toasted sesame seeds- optional",
+      "instructions": "1. In a small bowl, whisk vinegar, soy sauce and honey until blended. In a large nonstick skillet, heat oil over medium-high heat. Brown chicken on both sides. \n 2. Add garlic and ginger to skillet; cook and stir 1 minute (do not allow garlic to brown). Stir in vinegar mixture; bring to a boil. Reduce heat; simmer, covered, 8-10 minutes or until a thermometer inserted in chicken reads 170°. \n 3. Uncover; simmer 1-2 minutes longer or until sauce is slightly thickened. If desired, cut into bite-size pieces and sprinkle with sesame seeds before serving." 
     },
     {
-      "id": 1,
-      "image": "./images/4.jpg", 
+      "id": 6,
+      "image": "./images/6.jpg",
       "social": "@kaylapega",
-      "title": "Chicken Parmesan",
-      "totalTime": "Prep: 25 min. Cook: 4 hours" ,
+      "title": "Simple Chicken Enchiladas",
+      "totalTime": "Prep: 20 min. Bake: 25 min.",
+      "servings": "5 servings" , 
+      "ingredients": "1 can (10 ounces) enchilada sauce- divided, 4 ounces cream cheese, cubed, 1-1/2 cups salsa, 2 cups cubed cooked chicken, 1 can (15 ounces) pinto beans- rinsed and drained, 1 can (4 ounces) chopped green chilies, 10 flour tortillas (6 inches), 1 cup shredded Mexican cheese blend",
+      "instructions": "1. Spoon 1/2 cup enchilada sauce into a greased 13x9-in. baking dish. In a large saucepan cook and stir the cream cheese and salsa over medium heat for 2-3 minutes or until blended. Stir in the chicken, beans and chiles.\n 2. Place about 1/3 cup of chicken mixture down the center of each tortilla. Roll up and place seam side down over sauce. Top with remaining enchilada sauce; sprinkle with cheese.\n 3. Cover and bake at 350° for 25-30 minutes or until heated through. Serve with lettuce, tomato, sour cream and olives if desired."
+    },
+    {
+      "id": 7,
+      "image": "./images/7.jpg",
+      "social": "@kaylapega",
+      "title": "Curried Chicken & Peach Salad",
+      "totalTime": "Prep/Total Time: 10 min.",
       "servings": "4 servings", 
-      "ingredients": ["1/2 cup seasoned bread crumbs",
-        "1/2 cup grated Parmesan cheese",
-        "1/2 teaspoon Italian seasoning",
-        "1/2 teaspoon pepper",
-        "1/4 teaspoon salt",
-        "1 large egg, lightly beaten",
-        "1 tablespoon water",
-        "4 (6 ounces each ) boneless skinless chicken breast halves",
-        "1 jar (24 ounces) marinara sauce",
-        "4 slices part-skim mozzarella cheese"],
-      "instructions":"1. In a shallow bowl, combine bread crumbs, Parmesan cheese, Italian seasoning, pepper and salt. In another bowl, combine egg and water. Dip chicken in egg mixture, then in crumb mixture to coat both sides (patting to help adhere). Repeat.\n 2. Transfer chicken to slow cooker. Pour sauce over chicken and top with cheese. Cook, covered, on low until a thermometer inserted in chicken reads 165°, about 4-6 hours."
-
-    }
-    ]
+      "ingredients": "1/2 cup fat-free mayonnaise, 1 teaspoon curry powder, 2 cups cubed cooked chicken breasts, 1/2 cup chopped walnuts, 1/4 cup raisins, 2 medium peaches- sliced, 1 package (5 ounces) spring mix salad greens",
+      "instructions": "Mix mayonnaise and curry powder; toss gently with chicken, walnuts and raisins. Serve chicken mixture and peaches over greens." 
+    },
+    {
+      "id": 8,
+      "image": "./images/8.jpg",
+      "social": "@kaylapega",
+      "title": "Effortless Black Bean Chili",
+      "totalTime": "Prep: 25 min. Cook: 6 hours",
+      "servings": "6 servings (1-1/2 qt.)", 
+      "ingredients": "1 pound ground turkey, 1 small onion, chopped, 3 teaspoons chili powder, 2 teaspoons minced fresh oregano or 3/4 teaspoon dried oregano, 1 teaspoon chicken bouillon granules, 1 jar (16 ounces) mild salsa, 1 can (15-1/4 ounces) whole kernel corn drained, 1 can (15 ounces) black beans- rinsed and drained, 1 can (14-1/2 ounces) diced tomatoes- undrained, 1/2 cup water",
+      "instructions": "1. In a large skillet, cook and crumble turkey with onion over medium-high heat until no longer pink, 5-7 minutes. Transfer to a 4-qt. slow cooker.\n 2. Stir in all remaining ingredients except toppings. Cook, covered, on low until flavors are blended, 6-8 hours. Top as desired."
+    },
+    {
+      "id": 9,
+      "image": "./images/9.jpg",
+      "social": "@kaylapega",
+      "title": "Turkey-Stuffed Bell Peppers",
+      "totalTime": "Prep: 30 min. Bake: 20 min." ,
+      "servings": "5 servings" , 
+      "ingredients": "5 medium green, red or yellow peppers, 2 teaspoons olive oil, 1-1/4 pounds extra-lean ground turkey, 1 large onion chopped, 1 garlic clove, minced, 2 teaspoons ground cumin, 1 teaspoon Italian seasoning, 1/2 teaspoon salt, 1/2 teaspoon pepper, 2 medium tomatoes finely chopped, 1-3/4 cups shredded cheddar-flavored lactose-free or other cheese, 1-1/2 cups soft bread crumbs, 1/4 teaspoon paprika", 
+      "instructions": "1. Preheat oven to 325°. Cut peppers lengthwise in half; remove seeds. Place in a 15x10x1-in. pan coated with cooking spray. \n 2. In a large skillet, heat oil over medium-high heat. Cook and crumble turkey with onion, garlic and seasonings over medium-high heat until meat is no longer pink, 6-8 minutes. Cool slightly. Stir in tomatoes, cheese and bread crumbs.\n  3. Fill with turkey mixture. Sprinkle with paprika. Bake, uncovered, until heated through and peppers are tender, 20-25 minutes."
+    },
+    {
+      "id": 10,
+      "image": "./images/10.jpg",
+      "social": "@azaldana",
+      "title": "Quick Turkey Spaghetti" ,
+      "totalTime": "Prep: 15 min. Cook: 25 min." ,
+      "servings": "4 Servings", 
+      "ingredients": "1 pound lean ground turkey, 1 small green pepper, chopped, 1/2 cup sliced fresh mushrooms, 1/4 cup chopped onion, 1 can (15 ounces) tomato sauce, 6 ounces uncooked multigrain spaghetti, 3/4 cup water, 1/4 teaspoon garlic salt",
+      "instructions": "1. In a large nonstick skillet coated with cooking spray, cook the turkey, pepper, mushrooms and onion over medium heat until meat is no longer pink and vegetables are crisp-tender.\n 2. Stir in the tomato sauce, spaghetti, water and garlic salt. Bring to a boil. Reduce heat; cover and simmer for 15-20 minutes or until spaghetti and vegetables are tender. Garnish with cheese if desired." 
+    },
+    {
+      "id": 11,
+      "image": "./images/11.jpg",
+      "social": "@unc_lan_grub",
+      "title": "Flavorful Pot Roast",
+      "totalTime": "Prep: 10 min. Cook: 7 hours",
+      "servings": "15 servings", 
+      "ingredients": "2 boneless beef chuck roasts (2-1/2 pounds each), 1 envelope ranch salad dressing mix, 1 envelope Italian salad dressing mix, 1 envelope brown gravy mix, 1/2 cup water, Chopped fresh parsley optional",
+      "instructions": "Place the chuck roasts in a 5-qt. slow cooker. In a small bowl, combine the salad dressings and gravy mix; stir in water. Pour over meat. Cover and cook on low for 7-8 hours or until tender. If desired, sprinkle with parsley and thicken cooking juices for gravy." 
+    },
+    {
+      "id": 12,
+      "image": "./images/12.jpg",
+      "social": "@naimuh",
+      "title": "Classic Cobb Salad",
+      "totalTime": "Prep/Total Time: 20 min." ,
+      "servings": "4 Servings" , 
+      "ingredients": "6 cups torn iceberg lettuce, 2 medium tomatoes, chopped, 1 medium ripe avocado peeled and chopped, 3/4 cup diced fully cooked ham, 2 hard-boiled large eggs chopped, 3/4 cup diced cooked turkey, 1-1/4 cups sliced fresh mushrooms, 1/2 cup crumbled blue cheese, Salad dressing of choice, Optional: Sliced ripe olives and lemon wedges",
+      "instructions": "Place lettuce on a platter or in a large serving bowl. Arrange remaining ingredients in rows or sections as desired. Serve with dressing of choice; if desired serve with sliced ripe olives and lemon wedges."
+    },
+    {
+      "id": 13,
+      "image": "./images/13.jpg",
+      "social": "@unc_lan_grub",
+      "title": "'Secret’s in the Sauce' BBQ Ribs",
+      "totalTime": "Prep: 10 min. Cook: 6 hours",
+      "servings": "5 servings", 
+      "ingredients": "4-1/2 pounds pork baby back ribs, 1-1/2 teaspoons pepper, 2-1/2 cups barbecue sauce, 3/4 cup cherry preserves, 1 tablespoon Dijon mustard,1 garlic clove minced",
+      "instructions": "Cut ribs into serving-size pieces; sprinkle with pepper. Place in a 5- or 6-qt. slow cooker. Combine the remaining ingredients; pour over ribs. Cook, covered, on low until meat is tender, 6-8 hours. Serve with sauce."
+    },
+    {
+      "id": 14,
+      "image": "./images/1.jpg",
+      "social": "@azaldana",
+      "title": "Beef Nachos Supreme",
+      "totalTime": "Prep/Total Time: 25 min",
+      "servings": "2 Servings", 
+      "ingredients": "1/2 pound lean ground beef (90% lean), 3/4 cup water, 2/3 cup condensed tomato soup undiluted, 2 tablespoons taco seasoning, 3/4 cup uncooked instant rice, Optional toppings: shredded lettuce shredded cheddar cheese salsa and sour cream, Tortilla chips",
+      "instructions": "In a large skillet, cook beef over medium heat until no longer pink; drain. Stir in the water, soup and taco seasoning. Bring to a boil. Stir in rice. Cover and remove from the heat. Let stand for 5 minutes or until rice is tender. Serve with chips."
+    },
+    {
+      "id": 15,
+      "image": "./images/15.jpg",
+      "social": "@unc_lan_grub",
+      "title": "Caramelized Pork Tenderloin" ,
+      "totalTime": "Prep/Total Time: 20 min.",
+      "servings": "4 Servings", 
+      "ingredients": "1 pork tenderloin (1 pound), 1/4 cup packed brown sugar, 4 garlic cloves minced, 1 tablespoon Montreal steak seasoning, 2 tablespoons butter",
+      "instructions": "1. Cut pork into four pieces and pound with a meat mallet to 1/4-in. thickness. In a shallow bowl, mix brown sugar, garlic and steak seasoning. Dip pork in brown sugar mixture, patting to help coating adhere. \n 2. In a large skillet, heat butter over medium-high heat. Add pork; cook 2-3 minutes on each side or until tender."
+    },
+    {
+      "id": 16,
+      "image": "./images/16.jpg",
+      "social": "@naimuh",
+      "title": "Old-Fashioned Baked Ham",
+      "totalTime": "Prep: 10 min. Bake: 70 min." ,
+      "servings": "8-10 Servings", 
+      "ingredients": "1 can (8 ounces) sliced pineapple, 1 canned ham (5 pounds), 1/2 cup packed brown sugar, 1 teaspoon ground mustard, 1/4 teaspoon ground cloves, 1 tablespoon cider vinegar, Maraschino cherries",
+      "instructions": "1. Drain pineapple, reserving 2 tablespoons juice; set aside. Place ham in a baking dish. Bake at 350° for 30 minutes.\n 2. In a small bowl, combine the brown sugar, mustard, cloves, vinegar and reserved pineapple juice. Score top of ham. Place pineapple slices and cherries over ham; spoon glaze over top.\n 3. Bake 40-45 minutes longer or until a thermometer reads 140°, basting occasionally."
+    },
+    {
+      "id": 17,
+      "image": "./images/17.jpg",
+      "social": "@naimuh",
+      "title": "Ultimate Pot Roast",
+      "totalTime": "Prep: 55 min. Bake: 2 hours",
+      "servings": "8 Servings", 
+      "ingredients": "1 boneless beef chuck-eye or other chuck roast (3 to 4 pounds), 2 teaspoons pepper, 2 teaspoons salt, divided, 2 tablespoons canola oil, 2 medium onions, cut into 1-inch pieces, 2 celery ribs chopped, 3 garlic cloves minced1 tablespoon tomato paste, 1 tablespoon minced fresh thyme or 1 teaspoon dried thyme, 2 bay leaves, 1 cup dry red wine or reduced-sodium beef broth, 2 cups reduced-sodium beef broth, 1 pound small red potatoes quartered, 4 medium parsnips- peeled and cut into 2-inch pieces, 6 medium carrots- cut into 2-inch pieces, 1 tablespoon red wine vinegar, 2 tablespoons minced fresh parsley, Salt and pepper to taste",
+      "instructions": "1. Preheat oven to 325°. Pat roast dry with a paper towel; tie at 2-in. intervals with kitchen string. Sprinkle roast with pepper and 1-1/2 teaspoons salt. In a Dutch oven, heat oil over medium-high heat. Brown roast on all sides. Remove from pan. \n 2. Add onions, celery and 1/2 teaspoon salt to the same pan; cook and stir over medium heat 8-10 minutes or until onions are browned. Add garlic, tomato paste, thyme and bay leaves; cook and stir 1 minute longer. \n 3. Add wine, stirring to loosen browned bits from pan; stir in broth. Return roast to pan. Arrange potatoes, parsnips and carrots around roast; bring to a boil. Bake, covered, until meat is fork-tender, 2-2-1/2 hours.\n 4. Remove roast and vegetables from pan; keep warm. Discard bay leaves; skim fat from cooking juices. On stovetop, bring juices to a boil; cook until liquid is reduced by half (about 1-1/2 cups), 10-12 minutes. Stir in vinegar and parsley; season with salt and pepper to taste.\n 5. Remove string from roast. Serve with vegetables and sauce.",
+    },
+    {
+      "id": 18,
+      "image": "./images/18.jpg",
+      "social": "@unc_lan_grub",
+      "title": "Lamb Chops with Mint Stuffing",
+      "totalTime": "Prep: 20 min. Bake: 1 hour",
+      "servings": "8 Servings", 
+      "ingredients": "1/4 cup chopped onion, 1/4 cup chopped celery, 1/2 cup butter cubed, 2/3 cup fresh mint leaves, chopped and packed, 4 cups white or brown bread torn in 3/4-in. pieces, Salt to taste, Black pepper to taste, 1 large egg, beaten, 8 shoulder lamb chops, 4 teaspoons creme de menthe optional",
+      "instructions": "1. Saute onion and celery in butter. Stir together with mint and bread. Season with salt and pepper. Add egg; mix lightly. \n 2. Place lamb in a shallow baking dish; brush with creme de menthe if desired. Pile stuffing on top of chops. Bake at 350° for 1 hour."
+    },
+    {
+      "id": 19,
+      "image": "./images/19.jpg",
+      "social": "@naimuh",
+      "title": "Favorite Gyro",
+      "totalTime": "Prep: 30 min. Bake: 1 hour + chilling",
+      "servings": "8 Servings", 
+      "ingredients": "1 large egg, lightly beaten, 6 garlic cloves- minced, 3 tablespoons dried oregano, 1-1/2 teaspoons kosher salt, 1 teaspoon pepper, 1 pound ground lamb, 1 pound ground beef, tzatziki sauce, GYROS:, 8 whole pita breads, 3 tablespoons olive oil, divided, 16 slices tomato, 8 slices sweet onion halved" ,
+      "instructions": "1. In a large bowl, combine the egg, garlic, oregano, kosher salt and pepper. Crumble lamb and beef over mixture; mix well. \n 2. Pat into an ungreased 9x5-in. loaf pan. Bake, uncovered, at 350° for 60-70 minutes or until no pink remains and a thermometer reads 160°. Cool completely on a wire rack. Refrigerate for 1-2 hours. \n 3. Brush pita breads with 1 tablespoon oil; heat on a lightly greased griddle for 1 minute on each side. Keep warm. Cut meat loaf into very thin slices. In a large skillet, fry meat loaf in remaining oil in batches until crisp. \n 4. On each pita bread, layer the tomato, onion and meat loaf slices; top with some tzatziki sauce. Carefully fold pitas in half. Serve with remaining sauce."
+    },
+    {
+      "id": 20,
+      "image": "./images/20.jpg",
+      "social": "@naimuh",
+      "title": "Bacon Pea Salad" ,
+      "totalTime": "Prep: 10 min. + chilling",
+      "servings": "6 Servings", 
+      "ingredients": "4 cups frozen peas (about 16 ounces) thawed, 1/2 cup shredded sharp cheddar cheese, 1/2 cup ranch salad dressing, 1/3 cup chopped red onion, 1/4 teaspoon salt, 1/4 teaspoon pepper, 4 bacon strips- cooked and crumbled",
+      "instructions": "Combine the first 6 ingredients; toss to coat. Refrigerate, covered, at least 30 minutes. Stir in bacon before serving."
+    },
+    {
+      "id": 21,
+      "image": "./images/21.jpg",
+      "social": "@azaldana",
+      "title": "Shrimp Scampi",
+      "totalTime": "Prep/Total Time: 20 min.",
+      "servings": "4 Servings", 
+      "ingredients": "3 to 4 garlic cloves- minced, 1/4 cup butter- cubed, 1/4 cup olive oil, 1 pound uncooked medium shrimp, peeled and deveined, 1/4 cup lemon juice, 1/2 teaspoon pepper, 1/4 teaspoon dried oregano, 1/2 cup grated Parmesan cheese, 1/4 cup dry bread crumbs, 1/4 cup minced fresh parsley, Hot cooked angel hair pasta",
+      "instructions": "1. In a 10-in. ovenproof skillet, saute garlic in butter and oil until fragrant. Add the shrimp, lemon juice, pepper and oregano; cook and stir until shrimp turn pink. Sprinkle with cheese, bread crumbs and parsley. \n 2. Broil 6 in. from the heat for 2-3 minutes or until topping is golden brown. Serve with pasta."
+    },
+    {
+      "id": 22,
+      "image": "./images/22.jpg",
+      "social": "@unc_lan_grub",
+      "title": "Thai Scallop Saute",
+      "totalTime": "Prep: 15 min. Cook: 20 min.",
+      "servings": "4 Servings", 
+      "ingredients": "3 teaspoons olive oil, divided, 1-1/2 pounds sea scallops, 2 cups fresh broccoli florets, 2 medium onions- halved and sliced, 1 medium zucchini- sliced, 4 small carrots- sliced, 1/4 cup Thai peanut sauce, 1/4 teaspoon salt, Hot cooked rice, Lime wedges",
+      "instructions": "1. In a large skillet, heat 1 teaspoon oil over medium-high heat. Add half of scallops; stir-fry until firm and opaque. Remove from pan. Repeat with an additional 1 teaspoon oil and remaining scallops. \n 2. In same skillet, heat remaining oil over medium-high heat. Add vegetables; stir-fry until crisp-tender, 7-9 minutes. Stir in peanut sauce and salt. Return scallops to pan; heat through. Serve with rice and, if desired, lime wedges."
+    },
+    {
+      "id": 23,
+      "image": "./images/23.jpg",
+      "social": "@unc_lan_grub",
+      "title": "Pan-Seared Salmon with Dill Sauce",
+      "totalTime": "Prep/Total Time: 25 min.",
+      "servings": "4 Servings", 
+      "ingredients": "1 tablespoon canola oil, 4 salmon fillets (6 ounces each)1 teaspoon Italian seasoning, 1/4 teaspoon salt, 1/2 cup reduced-fat plain yogurt, 1/4 cup reduced-fat mayonnaise1/4 cup finely chopped cucumber, 1 teaspoon snipped fresh dill",
+      "instructions": "1. In a large skillet, heat oil over medium-high heat. Sprinkle salmon with Italian seasoning and salt. Place in skillet, skin side down. Reduce heat to medium. Cook until fish just begins to flake easily with a fork, about 5 minutes on each side. \n 2. Meanwhile, in a small bowl, combine yogurt, mayonnaise, cucumber and dill. Serve with salmon."
+    },
+    {
+      "id": 24,
+      "image": "./images/24.jpg",
+      "social": "@naimuh",
+      "title": "Garlic Tilapia with Mushroom Risotto",
+      "totalTime": "Prep/Total Time: 30 min.",
+      "servings": " 4 Servings", 
+      "ingredients": "1 package (5-1/2 ounces) Parmesan risotto mix, 1 cup sliced fresh mushrooms, 1/4 cup chopped shallots, 1-1/2 pounds tilapia fillets, 1-1/2 teaspoons seafood seasoning, 4 tablespoons butter divided, 3 garlic cloves sliced, 1/4 cup grated Parmesan cheese",
+      "instructions": "1. Cook risotto according to package directions, adding mushrooms and shallots with the water. \n 2. Meanwhile, sprinkle tilapia with seafood seasoning. In a large nonstick skillet, heat 2 tablespoons butter over medium heat. In batches, cook tilapia with garlic until fish just begins to flake easily with a fork, about 5 minutes, turning fillets halfway through cooking. \n 3. Stir cheese and remaining butter into risotto; remove from heat. Serve with tilapia."
+    },
+    {
+      "id": 25,
+      "image": "./images/25.jpg",
+      "social": "@naimuh",
+      "title": "Ginger Halibut with Brussels Sprouts",
+      "totalTime": "Prep/Total Time: 25 min.",
+      "servings": "4 Servings", 
+      "ingredients": "4 teaspoons lemon juice, 4 halibut fillets (4 to 6 ounces each), 1 teaspoon minced fresh gingerroot, 1/4 to 3/4 teaspoon salt divided, 1/4 teaspoon pepper, 1/2 cup water, 10 ounces (about 2-1/2 cups) fresh Brussels sprouts halved, Crushed red pepper flakes, 1 tablespoon canola oil, 5 garlic cloves sliced lengthwise, 2 tablespoons sesame oil, 2 tablespoons soy sauce",
+      "instructions": "1. Brush lemon juice over halibut fillets. Sprinkle with minced ginger, 1/4 teaspoon salt and pepper. \n  2. Place fish on an oiled grill rack, skin side down. Grill, covered, over medium heat (or broil 6 in. from heat) until fish just begins to flake easily with a fork, 6-8 minutes. \n 3. In a large skillet, bring water to a boil over medium-high heat. Add Brussels sprouts, pepper flakes and, if desired, remaining salt. Cook, covered, until tender, 5-7 minutes. Meanwhile, in a small skillet, heat oil over medium heat. Add garlic; cook until golden brown. Drain on paper towels. \n 4. Drizzle sesame oil and soy sauce over halibut. Serve with Brussels sprouts; sprinkle with fried garlic. If desired, serve with lemon slices"
+    },
+    {
+      "id": 26,
+      "image": "./images/26.jpg",
+      "social": "@azaldana",
+      "title": "Ultimate Fish Tacos",
+      "totalTime": "Prep: 20 min. + marinating Grill: 10 min.",
+      "servings": "6 Servings", 
+      "ingredients": "1/4 cup olive oil, 1 teaspoon ground cardamom, 1 teaspoon paprika, 1 teaspoon salt, 1 teaspoon pepper, 6 mahi mahi fillets (6 ounces each), 12 corn tortillas (6 inches), 2 cups chopped red cabbage, 1 cup chopped fresh cilantro, Salsa verde, 2 medium limes cut into wedges, Hot pepper sauce (Tapatio preferred)",
+      "instructions": "1. In a 13x9-in. baking dish, whisk the first five ingredients. Add fillets; turn to coat. Refrigerate, covered, 30 minutes. \n 2. Drain fish and discard marinade. On an oiled grill rack, grill mahi mahi, covered, over medium-high heat (or broil 4 in. from heat) until it flakes easily with a fork, 4-5 minutes per side. Remove fish. Place tortillas on grill rack; heat 30-45 seconds. Keep warm. \n 3, To assemble, divide fish among the tortillas; layer with red cabbage, cilantro and, if desired, salsa verde. Squeeze a little lime juice and hot pepper sauce over fish mixture; fold sides of tortilla over mixture. Serve with lime wedges and additional pepper sauce."
+    },
+    {
+        "id": 27,
+        "image": "./images/27.jpg",
+        "social": "@naimuh",
+        "title": "Peppered Tuna Kabobs",
+        "totalTime": "Prep/Total Time: 30 min.",
+        "servings": "4 Servings", 
+        "ingredients": "1/2 cup frozen corn thawed, 4 green onions chopped, 1 jalapeno pepper seeded and chopped, 2 tablespoons coarsely chopped fresh parsley, 2 tablespoons lime juice, 1 pound tuna steaks cut into 1-inch cubes, 1 teaspoon coarsely ground pepper, 2 large sweet red peppers cut into 2x1-inch pieces, 1 medium mango peeled and cut into 1-inch cubes",
+        "instructions": "1. For salsa, in a small bowl, combine the first five ingredients; set aside. \n 2. Rub tuna with pepper. On four metal or soaked wooden skewers, alternately thread red peppers, tuna and mango. \n 3. Place skewers on greased grill rack. Cook, covered, over medium heat, turning occasionally, until tuna is slightly pink in center (medium-rare) and peppers are tender, 10-12 minutes. Serve with salsa."
+      },
+      {
+        "id": 28,
+        "image": "./images/28.jpg",
+        "social": "@naimuh",
+        "title": "Sheet-Pan Chipotle-Lime Shrimp Bake",
+        "totalTime": "Prep: 10 min. Bake: 40 min.",
+        "servings": "4 Servings", 
+        "ingredients": "1-1/2 pounds baby red potatoes, cut into 3/4-inch cubes, 1 tablespoon extra virgin olive oil, 3/4 teaspoon sea salt divided, 3 medium limes, 1/4 cup unsalted butter, melted, 1 teaspoon ground chipotle pepper, 1/2 pound fresh asparagus trimmed, 1/2 pound Broccolini or broccoli- cut into small florets, 1 pound uncooked shrimp (16-20 per pound) peeled and deveined, 2 tablespoons minced fresh cilantro",
+        "instructions": "1. Preheat oven to 400°. Place potatoes in a greased 15x10x1-in. baking pan; drizzle with olive oil. Sprinkle with 1/4 teaspoon sea salt; stir to combine. Bake 30 minutes. Meanwhile, squeeze 1/3 cup juice from limes, reserving fruit. Combine lime juice, melted butter, chipotle and remaining sea salt. \n 2. Remove sheet pan from oven; stir potatoes. Arrange asparagus, Broccolini, shrimp and reserved limes on top of potatoes. Pour lime juice mixture over vegetables and shrimp. \n 3. Bake until shrimp turn pink and vegetables are tender, about 10 minutes. Sprinkle with cilantro."
+      },
+      {
+        "id": 29,
+        "image": "./images/29.jpg",
+        "social": "@naimuh",
+        "title": "Spicy Mango Scallops",
+        "totalTime": "Prep/Total Time: 30 min.",
+        "servings": "4 Servings", 
+        "ingredients": "12 sea scallops (1-1/2 pounds), 1 tablespoon peanut or canola oil, 1 medium red onion- chopped, 1 garlic clove- minced, 1/4 to 1/2 teaspoon crushed red pepper flakes, 1/2 cup unsweetened pineapple juice, 1/4 cup mango chutney, 2 cups hot cooked basmati rice, Minced fresh cilantro",
+        "instructions": "1. Pat scallops dry with paper towels. In a large skillet, heat oil over medium-high heat. Add scallops; cook 1-2 minutes on each side or until golden brown and firm. Remove from pan. \n 2. Add onion to same pan; cook and stir until tender. Add garlic and pepper flakes; cook 1 minute longer. Stir in pineapple juice. Bring to a boil; cook until liquid is reduced by half. Stir in chutney. \n 3. Return scallops to pan; heat through, stirring gently to coat. Serve with rice; sprinkle with cilantro."
+      },
+      {
+        "id": 30,
+        "image": "./images/30.jpg",
+        "social": "@azaldana",
+        "title": "Fajita-Style Shrimp and Grits",
+        "totalTime": "Prep/Total Time: 30 min.",
+        "servings": "4 Servings", 
+        "ingredients": "1 pound uncooked shrimp (16-20 per pound), peeled and deveined, 2 tablespoons fajita seasoning mix, 1 cup quick-cooking grits, 4 cups boiling water, 1-1/2 cups shredded Mexican cheese blend, 3 tablespoons 2% milk, 2 tablespoons canola oil, 3 medium sweet peppers, seeded and cut into 1-inch strips, 1 medium sweet onion cut into 1-inch strips, 1 jar (15-1/2 to 16 ounces) medium chunky salsa, 1/4 cup orange juice,1/4 cup plus 1 tablespoon fresh cilantro leaves divided ",
+        "instructions": "1. Sprinkle shrimp with fajita seasoning; toss to coat. Set aside. \n 2. Slowly stir grits into boiling water. Reduce heat to medium; cook, covered, stirring occasionally, until thickened, 5-7 minutes. Remove from heat. Stir in cheese until melted; stir in milk. Keep warm. \n 3. In a large skillet, heat oil over medium-high heat. Add peppers and onion; cook and stir until tender and pepper edges are slightly charred. Add salsa, orange juice and shrimp. Cook, stirring constantly, until shrimp turn pink, 4-6 minutes. Stir in 1/4 cup cilantro. Remove from heat. \n 4. Spoon grits into serving bowls; top with shrimp mixture. Sprinkle with remaining cilantro."
+      },
+      {
+        "id": 31,
+        "image": "./images/31.jpg",
+        "social": "@day.inherlife",
+        "title": "Vegetarian Linguine",
+        "totalTime": "Prep/Total Time: 30 min.",
+        "servings": "6 Servings", 
+        "ingredients": "6 ounces uncooked linguine, 2 tablespoons butter, 1 tablespoon olive oil, 2 medium zucchini thinly sliced, 1/2 pound fresh mushrooms sliced, 1 large tomato chopped, 2 green onions chopped, 1 garlic clove minced, 1/2 teaspoon salt, 1/4 teaspoon pepper, 1 cup shredded provolone cheese3 tablespoons shredded Parmesan cheese, 2 teeaspoons minced fresh basil",
+        "instructions": "Cook linguine according to package directions. Meanwhile, in a large skillet, heat butter and oil over medium heat. Add zucchini and mushrooms; saute 3-5 minutes. Add tomato, onions, garlic and seasonings. Reduce heat; simmer, covered, about 3 minutes. Drain linguine; add to vegetable mixture. Sprinkle with cheeses and basil. Toss to coat."
+      },
+      {
+        "id": 32,
+        "image": "./images/32.jpg",
+        "social": "@day.inherlife",
+        "title": "Pronto Vegetarian Peppers",
+        "totalTime": "Prep/Total Time: 25 min.",
+        "servings": "2 Servings", 
+        "ingredients": "2 large sweet red peppers, 1 cup canned stewed tomatoes, 1/3 cup instant brown rice, 2 tablespoons hot water, 3/4 cup canned kidney beans rinsed and drained, 1/2 cup frozen corn, thawed, 2 green onions thinly sliced, 1/8 teaspoon crushed red pepper flakes, 1/2 cup shredded part-skim mozzarella cheese, 1 tablespoon grated Parmesan cheese",
+        "instructions": "1. Cut peppers in half lengthwise; remove seeds. Place peppers in an ungreased shallow microwave-safe dish. Cover and microwave on high until tender, 3-4 minutes. \n 2. Combine the tomatoes, rice and water in a small microwave-safe bowl. Cover and microwave on high until rice is tender, 5-6 minutes. Stir in the beans, corn, onions and pepper flakes; spoon into peppers. \n 3. Sprinkle with cheeses. Microwave, uncovered, until heated through, 3-4 minutes."
+      },
+      {
+        "id": 33,
+        "image": "./images/33.jpg",
+        "social": "@day.inherlife",
+        "title": "Southwest Vegetarian Bake",
+        "totalTime": "Prep: 40 min. Bake: 35 min. + standing",
+        "servings": "8 Servings", 
+        "ingredients": "3/4 cup uncooked brown rice, 1-1/2 cups water, 1 can (15 ounces) black beans rinsed and drained, 1 can (11 ounces) Mexicorn drained, 1 can (10 ounces) diced tomatoes and green chiles, 1 cup shredded reduced-fat cheddar cheese, 1 cup salsa, 1 cup reduced-fat sour cream, 1/4 teaspoon pepper, 1/2 cup chopped red onion, 1 can (2-1/4 ounces) sliced ripe olives drained, 1 cup shredded reduced-fat Mexican cheese blend",
+        "instructions": "1. In a small saucepan, bring rice and water to a boil. Reduce heat; simmer, covered, until rice is tender, 35-40 minutes. \n 2. Preheat oven to 350°. Place beans, corn, tomatoes, cheddar cheese and rice in a large bowl; stir in salsa, sour cream and pepper. Transfer to a shallow 2-1/2-qt. baking dish coated with cooking spray. Sprinkle with onion and olives. \n 3. Bake, uncovered, 30 minutes. Sprinkle with Mexican cheese; bake, uncovered, until heated through and cheese is melted, 5-10 minutes. Let stand 10 minutes before serving."
+      },
+      {
+        "id": 34,
+        "image": "./images/1.jpg",
+        "social": "@day.inherlife",
+        "title": "Vegetarian Black Bean Pasta",
+        "totalTime": "Prep/Total Time: 25 min.",
+        "servings": "6 Servings", 
+        "ingredients": "9 ounces uncooked whole wheat fettuccine, 1 tablespoon olive oil, 1-3/4 cups sliced baby portobello mushrooms, 1 garlic clove minced 1 can (15 ounces) black beans rinsed and drained, 1 can (14-1/2 ounces) diced tomatoes- undrained, 1 teaspoon dried rosemary- crushed, 1/2 teaspoon dried oregano, 2 cups fresh baby spinach",
+        "instructions": "1. Cook fettuccine according to package directions. Meanwhile, in a large skillet, heat oil over medium-high heat. Add mushrooms; cook and stir 4-6 minutes or until tender. Add garlic; cook 1 minute longer. \n 2. Stir in black beans, tomatoes, rosemary and oregano; heat through. Stir in spinach until wilted. Drain fettuccine; add to bean mixture and toss to combine."
+      },
+      {
+        "id": 35,
+        "image": "./images/1.jpg",
+        "social": "@day.inherlife",
+        "title": "Simple Vegetarian Slow-Cooked Beans",
+        "totalTime": "Prep: 15 min. Cook: 4 hours",
+        "servings": "8 Servings", 
+        "ingredients": "4 cans (15-1/2 ounces each) great northern beans, rinsed and drained, 4 medium carrots finely chopped (about 2 cups), 1 cup vegetable stock, 6 garlic cloves minced, 2 teaspoons ground cumin, 3/4 teaspoon salt, 1/8 teaspoon chili powder, 4 cups fresh baby spinach coarsely chopped, 1 cup oil-packed sun-dried tomatoes patted dry and chopped, 1/3 cup minced fresh cilantro, 1/3 cup minced fresh parsley",
+        "instructions": "In a 3-qt. slow cooker, combine the first 7 ingredients. Cook, covered, on low until carrots are tender, 4-5 hours, adding spinach and tomatoes during the last 10 minutes of cooking. Stir in cilantro and parsley."
+      },
+      {
+        "id": 36,
+        "image": "./images/36.jpg",
+        "social": "@azaldana",
+        "title": "Bacon Breakfast Cookies",
+        "totalTime": "Prep: 10 min. Bake: 15 min./batch",
+        "servings": "2 dozen", 
+        "ingredients": " 1/3 cup minced fresh parsley1/2 cup butter- softened, 3/4 cup sugar, 1 egg, 1 cup all-purpose flour, 1/4 teaspoon baking soda, 10 bacon strips cooked and crumbled, 2 cups cornflakes, 1/2 cup raisins",
+        "instructions": "1. In a large bowl, cream butter and sugar until light and fluffy. Beat in egg. Combine flour and baking soda; gradually add to creamed mixture. Stir in bacon, cornflakes and raisins. \n 2. Drop by rounded tablespoonfuls 2 in. apart onto ungreased baking sheets. Bake at 350° for 15-18 minutes or until lightly browned. Cool for 2 minutes before removing to wire racks. Store in the refrigerator."
+      },
+      {
+        "id": 37,
+        "image": "./images/37.jpg",
+        "social": "@unc_lan_grub",
+        "title": "Brunch Pizza Squares",
+        "totalTime": "Prep/Total Time: 30 min.",
+        "servings": "8 Servings", 
+        "ingredients": "1 pound bulk pork sausage, 1 tube (8 ounces) refrigerated crescent rolls, 4 large Eggland's Best eggs, 2 tablespoons 2% milk, 1/8 teaspoon pepper, 3/4 cup shredded cheddar cheese",
+        "instructions": "1. In a large skillet, crumble sausage and cook over medium heat until no longer pink; drain. Unroll crescent dough onto the bottom and 1/2 in. up the sides of a lightly greased 13x9-in. baking pan; seal seams. Sprinkle with sausage. \n 2. In a large bowl, beat the eggs, milk and pepper; pour over sausage. Sprinkle with cheese. \n 3. Bake, uncovered, at 400° until a knife inserted in the center comes out clean, about 15 minutes."
+      },
+      {
+        "id": 38,
+        "image": "./images/1.jpg",
+        "social": "@day.inherlife",
+        "title": "Banana Oatmeal Pancakes",
+        "totalTime": "Prep: 10 min. Cook: 5 min./batch",
+        "servings": "16 pancakes", 
+        "ingredients": "2 cups complete whole wheat pancake mix, 1 large firm banana, finely chopped, 1/2 cup old-fashioned oats, 1/4 cup chopped walnuts",
+        "instructions": "Prepare pancake batter according to package directions. Stir in the banana, oats and walnuts. Pour batter by 1/4 cupfuls onto a hot griddle coated with cooking spray; turn when bubbles form on top. Cook until the second side is golden brown."
+      },
+      {
+        "id": 39,
+        "image": "./images/39.jpg",
+        "social": "@azaldana",
+        "title": "Sausage Bacon Bites",
+        "totalTime": "Prep: 20 min. + chilling Bake: 35 min.",
+        "servings": "About 3.5 dozen", 
+        "ingredients": "3/4 pound sliced bacon, 2 packages (8 ounces each) frozen fully cooked breakfast sausage links thawed, 1/2 cup plus 2 tablespoons packed brown sugar divided",
+        "instructions": "1. Preheat oven to 350°. Cut bacon strips widthwise in half; cut sausage links in half. Wrap a piece of bacon around each piece of sausage. Place 1/2 cup brown sugar in a shallow bowl; roll sausages in sugar. Secure each with a toothpick. Place in a foil-lined 15x10x1-in. baking pan. Cover and refrigerate 4 hours or overnight. \n 2. Sprinkle with 1 tablespoon brown sugar. Bake until bacon is crisp, 35-40 minutes, turning once. Sprinkle with remaining brown sugar."
+      },
+      {
+        "id": 40,
+        "image": "./images/40.jpg",
+        "social": "@naimuh",
+        "title": "Chocolate Truffle Cheesecake",
+        "totalTime": "Prep: 30 min. Bake: 45 min. + chilling",
+        "servings": "12 Servings", 
+        "ingredients": "1-1/2 cups chocolate wafer crumbs (about 27 wafers), 2 tablespoons sugar, 1/4 cup butter melted, FILLING:, 1/4 cup semisweet chocolate chips, 1/4 cup heavy whipping cream, 3 packages (8 ounces each) cream cheese softened, 1 cup sugar, 1/3 cup baking cocoa, 3 large eggs, lightly beaten, 1 teaspoon vanilla extract, TOPPING:, 1-1/2 cups (9 ounces) semisweet chocolate chips, 1/2 cup heavy whipping cream, 1 teaspoon vanilla extract, Whipped cream and miniature milk chocolate kisses optional",
+        "instructions": "1. In a small bowl, combine wafer crumbs and sugar; stir in butter. Press onto the bottom and 1-1/2 in. up the sides of a greased 9-in. springform pan. Place pan on baking sheet and bake at 350° for 10 minutes. Cool in pan on a wire rack. Reduce heat to 325°. \n 2. For filling, place chocolate chips in a small bowl. In a small heavy saucepan, heat cream just to a boil. Pour over chocolate; let stand 5 minutes. Stir until smooth. In a large bowl, beat cream cheese and sugar until smooth. Add cocoa and beat well. Add eggs; beat on low just until combined. Stir in vanilla and the melted chocolate mixture just until blended. Pour over crust. Return pan to baking sheet. \n 3. Bake for 45-50 minutes or until center is almost set. For topping, place chocolate chips in a bowl. In a small heavy saucepan, heat cream just to a boil. Pour over chocolate; let stand 5 minutes. Stir until smooth. Stir in vanilla. Spread over filling. Cool pan on a wire rack for 10 minutes. Carefully run a knife around edge of pan to loosen; cool 1 hour longer. Refrigerate overnight. \n 4. Remove sides of pan. Just before serving, garnish with whipped cream and miniature chocolate kisses if desired. Refrigerate leftovers."
+      },
+      {
+        "id": 41,
+        "image": "./images/41.jpg",
+        "social": "@naimuh",
+        "title": "Golden Apple Pie",
+        "totalTime": "Prep: 30 min. + cooling Bake: 40 min. + cooling",
+        "servings": "8 Servings", 
+        "ingredients": "6 cups sliced peeled Golden Delicious apples, 3/4 cup plus 2 tablespoons apple juice, divided, 3/4 cup sugar, 1 teaspoon ground cinnamon, 1/2 teaspoon apple pie spice, 2 table, spoons cornstarch, 1/4 teaspoon vanilla extract, CRUST:, 2-1/2 cups all-purpose flour, 1 teaspoon salt, 1 cup cold butter, 6 to 8 tablespoons ice water",
+        "instructions": "1. In a large saucepan, combine apples, 3/4 cup apple juice, sugar, cinnamon and apple pie spice; bring to a boil over medium heat, stirring occasionally. Combine cornstarch and remaining apple juice; add to saucepan. Return to a boil, stirring constantly. Cook and stir 1 minute more or until thickened. Remove from the heat. Stir in vanilla. Cool to room temperature, stirring occasionally. \n 2. For crust, combine flour and salt; cut in the butter until mixture is crumbly. Gradually add water, 1 tablespoon at a time; tossing with a fork until dough can be formed into a ball. Divide in half, making one half slightly larger. On a lightly floured surface, roll out larger portion. \n 3. Line a 9-in. pie plate with bottom pastry; trim even with edge of plate. Add filling. Roll out remaining pastry to fit top of pie; place over filling. Trim, seal and flute edges. Cut slits in top. \n 4. Bake at 400° for 40-45 minutes or until crust is golden brown and apples are tender. Cool on a wire rack."
+      },
+      {
+        "id": 42,
+        "image": "./images/42.jpg",
+        "social": "@unc_lan_grub",
+        "title": "Blackberry Crisp",
+        "totalTime": "Prep: 15 min. Bake: 20 min.",
+        "servings": "2 Servings", 
+        "ingredients": "2 cups fresh or frozen blackberries, 2 tablespoons sugar, 1 teaspoon cornstarch, 1-1/2 teaspoons water, 1/2 teaspoon lemon juice, 1/2 cup quick-cooking oats, 1/4 cup all-purpose flour, 1/4 cup packed brown sugar, 1/2 teaspoon ground cinnamon, 1/4 cup cold butter, Vanilla ice cream",
+        "instructions": "1. Place blackberries in a greased 1-qt. baking dish. In a small bowl, combine the sugar, cornstarch, water and lemon juice until smooth. Pour over berries. Combine the oats, flour, brown sugar and cinnamon; cut in butter until crumbly. Sprinkle over berries. /n 2. Bake, uncovered, at 375° until filling is bubbly, 20-25 minutes. Serve warm with ice cream."
+      },
+      {
+        "id": 43,
+        "image": "./images/43.jpg",
+        "social": "@naimuh",
+        "title": "Cinnamon Monkey Bread",
+        "totalTime": "Prep: 20 min. Bake: 35 min.",
+        "servings": "1 loaf", 
+        "ingredients": "4 tubes (7-1/2 ounces each) refrigerated buttermilk biscuits, 1/2 cup sugar, 2 teaspoons ground cinnamon, 1/2 cup butter, melted, 1/2 cup packed brown sugar",
+        "instructions": "1. Preheat oven to 350° Cut each biscuit into four pieces; shape into balls. In a small bowl, combine sugar and cinnamon. Roll each ball in cinnamon-sugar. Arrange evenly in a generously greased 9- or 10-in. fluted tube pan. Sprinkle with remaining cinnamon-sugar. \n 2. Combine butter and brown sugar; pour over the top. Place tube pan on baking sheet; bake until golden brown and dough is cooked through, 35-45 minutes. Cool for 5 minutes before inverting bread onto a serving platter."
+      },
+      {
+        "id": 44,
+        "image": "./images/44.jpg",
+        "social": "@day.inherlife",
+        "title": "Chocolate Chip Butter Cookies",
+        "totalTime": "Prep: 20 min. Bake: 15 min./batch + cooling",
+        "servings": "About 4 dozen", 
+        "ingredients": "1 cup butter, cubed, 1/2 teaspoon vanilla extract, 2 cups all-purpose flour, 1 cup confectioners' sugar, 1 cup (6 ounces) miniature semisweet chocolate chips, Melted semisweet and/or white chocolate optional",
+        "instructions": "1. Melt butter in a microwave; stir in vanilla. Cool completely. In a large bowl, combine flour and confectioners' sugar; stir in butter mixture and chocolate chips (mixture will be crumbly). \n 2. Shape into 1-in. balls. Place 2 in. apart on ungreased baking sheets; flatten slightly. Bake at 375° for 12 minutes or until edges begin to brown. Cool on wire racks. Dip or drizzle with chocolate if desired."
+      },
+      {
+        "id": 45,
+        "image": "./images/45.jpg",
+        "social": "@naimuh",
+        "title": "Pecan Pie Bar",
+        "totalTime": "Prep: 10 min. Bake: 35 min. + chilling",
+        "servings": "4 dozen", 
+        "ingredients": "2 cups all-purpose flour, 1/2 cup confectioners' sugar, 1 cup butter softened, 1 can (14 ounces) sweetened condensed milk, 1 large Eggland's Best egg, room temperature, 1 teaspoon vanilla extract, Pinch salt, 1 package (8 ounces) milk chocolate English toffee bits, 1 cup chopped pecans",
+        "instructions": "1. In a large bowl, combine flour and sugar. Cut in butter until mixture resembles coarse meal. Press firmly onto the bottom of a greased 13x9-in. baking dish. Bake at 350° for 15 minutes. \n 2. Meanwhile, in large bowl, beat the milk, egg, vanilla and salt until smooth. Stir in toffee bits and pecans; spread evenly over baked crust. \n 3. Bake until lightly browned, 20-25 minutes longer. Cool. Cover and chill; cut into bars. Store in refrigerator."
+      },
+      {
+        "id": 46,
+        "image": "./images/46.jpg",
+        "social": "@naimuh",
+        "title": "Mac n Cheese",
+        "totalTime": "Prep/Total Time: 30 min.",
+        "servings": "6-8 Servings", 
+        "ingredients": "1 package (7 ounces) elbo, macaroni, 6 tablespoons butter divided, 3 tablespoons all-purpose flour, 2 cups whole milk, 1 package (8 ounces) cream cheese cubed, 2 cups shredded cheddar cheese, 2 teaspoons spicy brown mustard, 1/2 teaspoon salt, 1/4 teaspoon pepper, 3/4 cup dry bread crumbs, 2 tablespoons minced fresh parsley",
+        "instructions": "1. Preheat oven to 400°. Cook macaroni according to package directions. Meanwhile, melt 4 tablespoons butter in a large saucepan. Stir in flour until smooth. Gradually add milk. Bring to a boil; cook and stir for 2 minutes. \n 2. Reduce heat; add cheeses, mustard, salt and pepper. Stir until cheese is melted and sauce is smooth. Drain macaroni; add to cheese sauce and stir to coat. \n 3. Transfer to a greased shallow 3-qt. baking dish. Melt remaining butter; toss with bread crumbs and parsley. Sprinkle over macaroni. Bake, uncovered, 15-20 minutes or until golden brown."
+      },
+      {
+        "id": 47,
+        "image": "./images/1.jpg",
+        "social": "@naimuh",
+        "title": "Maple & Bacon Glazed Brussels Sprouts",
+        "ingredients": "Prep: 15 min. Cook: 20 min.",
+        "totalTime": "4 Servings",
+        "servings": "5 bacon strips, chopped, 1 pound fresh Brussels sprouts, trimmed, 3 tablespoons butter, 1/2 cup chicken broth, 1/4 cup chopped pecans, 1/4 cup maple syrup, 1/4 teaspoon salt, 1/4 teaspoon pepper", 
+        "instructions": "1. In a small skillet, cook bacon over medium heat until crisp. Remove to paper towels with a slotted spoon; drain. \n 2. Meanwhile, cut an “X” in the core of each Brussels sprout. In a large skillet, saute Brussels sprouts in butter for 4-5 minutes or until lightly browned. \n 3. Stir in the broth, pecans, maple syrup, salt and pepper. Bring to a boil. Reduce heat; cover and simmer for 5 minutes. Uncover; cook and stir 8-10 minutes longer or until Brussels sprouts are tender. Sprinkle with bacon."
+      },
+      {
+        "id": 48,
+        "image": "./images/48.jpg",
+        "social": "@azaldana",
+        "title": "Loaded Potato Salad",
+        "totalTime": "Prep: 30 min. + chilling",
+        "servings": "8 Servings", 
+        "ingredients": "2 pounds red potatoes, quartered, 1/2 pound bacon strips chopped, 1/2 cup mayonnaise, 1/4 cup creamy Caesar salad dressing, 1/4 cup ranch salad dressing, 3 tablespoons sour cream, 1 tablespoon Dijon mustard, 3 green onions chopped, 1/4 cup shredded cheddar cheese",
+        "instructions": "1. Place potatoes in a large saucepan and cover with water. Bring to a boil. Reduce heat; cover and cook 15-20 minutes or until tender. \n 2. Meanwhile, cook bacon in a large skillet over medium heat, until crisp. Remove to paper towels; drain, reserving 3 tablespoons drippings. \n 3. Drain potatoes and place in a large bowl. Add bacon and reserved drippings; toss to coat. Refrigerate until chilled. \n 4. Whisk the mayonnaise, dressings, sour cream and mustard in a small bowl. Pour over potato mixture; toss to coat. Stir in onions and cheese. Sprinkle with pepper if desired."
+      },
+      {
+        "id": 49,
+        "image": "./images/1.jpg",
+        "social": "@naimuh",
+        "title": "Oven Parmesan Chips",
+        "totalTime": "Prep/Total Time: 25 min.",
+        "servings": "2 Servings", 
+        "ingredients": "2 medium potatoes, 1/4 cup butter melted, 1 tablespoon finely chopped onion, 1/2 teaspoon salt, 1/8 teaspoon pepper, Dash paprika, 2 tablespoons grated Parmesan cheese",
+        "instructions": "1. Preheat oven to 425°. Cut potatoes into 1/4-in. slices; arrange in a single layer on two greased baking sheets. In a small bowl, mix butter, onion, salt, pepper and paprika; brush over both sides of potatoes. \n 2. Roast 15-20 minutes or until potatoes are tender and golden, turning occasionally. Sprinkle with cheese."
+      },
+      {
+        "id": 50,
+        "image": "./images/1.jpg",
+        "social": "@day.inherlife",
+        "title": "Broccoli-Pasta Side",
+        "totalTime": "Prep/Total Time: 25 min.",
+        "servings": "4-6 Servings", 
+        "ingredients": "2-1/2 pounds fresh broccoli, 2 garlic cloves, minced, 1/3 cup olive oil, 1 tablespoon butter, 1 teaspoon salt, 1/4 teaspoon pepper, Pinch cayenne pepper, 8 ounces linguine or thin spaghetti cooked and drained, Grated Romano or Parmesan cheese",
+        "instructions": "Cut florets and tender parts of broccoli stems into bite-sized pieces. In a large skillet, saute broccoli with garlic, oil, butter, salt, pepper and cayenne over medium heat for about 10 minutes or until just tender, stirring frequently. Place hot pasta in a serving dish; top with the broccoli mixture. Sprinkle with cheese." 
+      }
+  ]
