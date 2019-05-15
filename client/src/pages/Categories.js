@@ -8,10 +8,7 @@ class Recipe extends Component {
     render() {
         return (
          
-             <NavBarRecipe>
-
-                 
-             </NavBarRecipe>
+             <NavBarRecipe/>
 
          
         );
