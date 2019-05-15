@@ -1,0 +1,60 @@
+.container-video {
+    width: 65%;
+    height: 850px;
+    text-align: center;
+}
+
+.weekly-video {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.video {
+    width: 100%;
+    text-align: center;
+}
+
+.text-video {
+    margin-top: 45px;
+    margin-right: 80px;
+    text-align: left;
+}
+
+.text-video img {
+    margin-bottom: 30px;
+}
+
+.row {
+    width: 100%;
+}
+
+.row .col.s4 {
+    width: 50%;
+}
+
+.weekly-video h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-top: 100px;
+    font-weight: 600;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+}
+
+#weeklyIcon {
+    align-content: center;
+    margin-bottom: 50px;
+}
+
+.video-content {
+    margin-top: 10px;
+}
+
+iframe {
+    margin-bottom: 20px;
+}
+
+.channel {
+    background-color: #fbaa19;
+    font-size: 15px;
+}

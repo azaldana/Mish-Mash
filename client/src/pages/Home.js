@@ -1,17 +1,18 @@
 import React, {Component} from "react";
 import Wrapper from "../components/Wrapper";
-import HeaderChef from "../components/HeaderChef";
+import HeaderChef from "../components/Home/HeaderChef";
 import recipes from "../recipes.json";
-import NavBar from "../components/NavBar";
-import About from "../components/About";
-import Chefs from "../components/Chefs";
-import DualBtn from "../components/DualBtn";
-import Video from "../components/Video";
-import HeaderBlogs from "../components/HeaderBlogs";
-import Blogs from "../components/Blogs";
-import Categories from "../components/Categories";
-import SubmitForm from "../components/SubmitForm";
-import Footer from "../components/Footer";
+import NavBar from "../components/Home/NavBar";
+import About from "../components/Home/About";
+import Chefs from "../components/Home/Chefs";
+import DualBtn from "../components/Home/DualBtn";
+import Video from "../components/Home/Video";
+import HeaderBlogs from "../components/Home/HeaderBlogs";
+import Blogs from "../components/Home/Blogs";
+import Categories from "../components/Home/Categories";
+import SubmitForm from "../components/Home/SubmitForm";
+import Footer from "../components/Home/Footer";
+// import Slider from '../components/Slider'
 
 class Home extends Component {
   state = {
@@ -24,15 +25,7 @@ render() {
         <NavBar/>
         <About/>
         <HeaderChef>
-          <div className="container cards">
-            <div className="row">
-          {this.state.recipes.map(recipe => (
-            <Chefs 
-            id = {recipe.id}
-            image = {recipe.image}
-            /> ))}
-            </div>
-            </div>
+            <Chefs/>
           </HeaderChef>
           <DualBtn/>
           <Video/>

@@ -1,0 +1,68 @@
+.card {
+    /* width: 250px;
+    height: 250px; */
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.096);
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.title {
+    font-size: 10px;
+}
+
+.blog-image {
+    width: 420px;
+    height: 453px;
+    z-index: 100;
+    position: relative;
+    float: left;
+}
+
+.blog-side {
+    border: 1px solid #c2c2c2;
+    height: 453px;
+    z-index: 1;
+    width: 1067px;
+    padding: 0;
+    position: absolute;
+    float: right;
+}
+
+.blog-side h1 {
+    font-size: 40px;
+}
+
+.blog-side p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.text-blog {
+    float: right;
+    margin-top: 45px;
+    margin-right: 80px;
+    width: 38%;
+}
+
+.text-blog h1 {
+    color: #363d3a;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 40px;
+}
+
+.blog {
+    margin-bottom: 50px;
+}
+
+.all {
+    border: 1px solid #fbaa19;
+    background-color: transparent;
+    color: #fbaa19;
+}
+
+.all:hover {
+    background-color: #fbaa19;
+    color: white;
+}

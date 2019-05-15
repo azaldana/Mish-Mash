@@ -1,10 +1,19 @@
 import React from "react";
 import Home from "./pages/Home";
+import Recipe from "./pages/Recipes";
+import Wrapper from "./components/Wrapper";
 
 
 function App() {
   return (
-    <Home></Home>
+    <Wrapper>
+
+      <Home></Home>
+      {/* <Recipe></Recipe> */}
+
+
+    </Wrapper>
+
   )
 }
 
