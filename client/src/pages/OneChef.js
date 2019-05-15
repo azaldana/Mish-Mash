@@ -1,10 +1,9 @@
 import React, {Component} from "react";
+import NavBarRecipe from "../components/Categories/NavBar";
 
 function OneChef() {
     return (
-      <div>
-        <h1>I am the chosen one!</h1>
-      </div>
+        <NavBarRecipe/>
     );
   }
 export default OneChef;

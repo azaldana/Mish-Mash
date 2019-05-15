@@ -1,10 +1,9 @@
 import React, {Component} from "react";
+import NavBarRecipe from "../components/Categories/NavBar";
 
 function Recipes() {
     return (
-      <div>
-        <h1>What you're eating.</h1>
-      </div>
+        <NavBarRecipe/>
     );
   }
 export default Recipes;

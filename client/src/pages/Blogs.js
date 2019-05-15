@@ -1,10 +1,9 @@
 import React, {Component} from "react";
+import NavBarRecipe from "../components/Categories/NavBar";
 
 function Blogs() {
     return (
-      <div>
-        <h1>Food for thought.</h1>
-      </div>
+        <NavBarRecipe/>
     );
   }
 export default Blogs;
