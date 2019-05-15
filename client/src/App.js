@@ -8,13 +8,6 @@ import OneChef  from "./pages/OneChef";
 import Recipes from "./pages/Recipes";
 
 
-
-// function App() {
-//   return (
-//     <Home></Home>
-//   )
-// }
-
 function Index() {
   return (
     <Home></Home>
@@ -65,6 +58,3 @@ function App() {
 
 export default App;
 
-
-
-// export default App;
