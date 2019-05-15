@@ -1,0 +1,122 @@
+/* .background {
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    width: 100%;
+    height: 350px;
+} */
+
+.recipe-content .card-content {
+    text-align: left;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.096);
+    margin-bottom: 20px;
+}
+
+.chef-image {
+    width: 420px;
+    height: 453px;
+    z-index: 100;
+    position: relative;
+    float: left;
+}
+
+.right-side {
+    border: 1px solid #c2c2c2;
+    height: 453px;
+    z-index: 1;
+    width: 1067px;
+    padding: 0;
+    position: absolute;
+    float: right;
+}
+
+
+.recipe {
+    margin-bottom: 80px;
+}
+.text {
+    float: right;
+    margin-top: 45px;
+    margin-right: 80px;
+    width:  35%;
+}
+
+.text h1 {
+    color: #363d3a;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 50px;
+}
+
+.featured {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #fbaa19;
+    text-align: left;
+}
+
+.chef-container {
+    /* display: flex; */
+    width: 65%;
+    margin: 0 auto;
+    /* padding: 0 55px; */
+}
+
+.view-01 {
+    background-color:  #fbaa19;
+    float: left;
+    /* width: 150px; */
+}
+
+.right{
+    margin-right: 10px;
+}
+
+.row .col {
+    padding: 0 0;
+}
+.btn  {
+    padding: 0 16;
+}
+  
+.row .col.s8 {
+      width: 65%;
+  }
+
+.view {
+      background-color: #fbaa19;
+      margin-bottom: 150px;
+      margin-top: 0px;
+      font-weight: 600;
+      /* font-size: 16px; */
+  }
+  /* .item {
+    flex: 0 0 19.7%;
+    text-align: center;
+    width: 520px !important;
+    height: 150px;
+    margin: 0 10px;
+    transition: transform 300ms ease 100ms;
+  } */
+
+  .container:hover .item {
+    transform: translateX(-25%);
+ }
+
+ .item:hover ~ .item {
+    transform: translateX(25%);
+ }
+
+ .item:hover {
+    transform: scale(1.5) !important;
+  }
+
