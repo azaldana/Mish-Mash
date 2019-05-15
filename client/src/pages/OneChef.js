@@ -4,6 +4,7 @@ import NavBarRecipe from "../components/Categories/NavBar";
 function OneChef() {
     return (
         <NavBarRecipe/>
+
     );
   }
 export default OneChef;
