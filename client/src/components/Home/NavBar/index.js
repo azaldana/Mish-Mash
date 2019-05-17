@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css";
 
 const NavBar = props => {
+    const { handleSignUpClick } = props; 
+    const { handleLoginClick } = props;
     return (
         <div className="container-chefs">
             <header>
@@ -10,8 +12,8 @@ const NavBar = props => {
                         <i class="material-icons white-text">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-                        <li><a href="#login" class="white-text login valign-wrapper modal-trigger">Log In</a></li>
-                        <li><a href="#signup" class="white-text signup valign-wrapper modal-trigger">Sign Up</a></li>
+                        <li><a href="#login" onClick={handleLoginClick} class="white-text login valign-wrapper modal-trigger">Log In</a></li>
+                        <li><a href="#" onClick={handleSignUpClick} class="white-text signup valign-wrapper modal-trigger">Sign Up</a></li>
                         <li><a href="/categories" class="white-text recipes valign-wrapper modal-trigger">Recipes</a></li>
                         <li><a href="#" class="white-text valign-wrapper"></a></li>
                     </ul>

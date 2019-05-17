@@ -12,20 +12,73 @@ import Blogs from "../components/Home/Blogs";
 import Categories from "../components/Home/Categories";
 import SubmitForm from "../components/Home/SubmitForm";
 import Footer from "../components/Home/Footer";
+import Signup from "../components/Home/Signup";
+import Login from "../components/Home/Login";
 // import Slider from '../components/Slider'
 
 class Home extends Component {
   state = {
-    recipes
+    recipes,
+    isSignupOpen: false,
+    isLoginOpen: false
   };
 
+  handleSignUpClick = () => {
+    this.setState({
+      isSignupOpen: true
+    })
+  }
+
+  handleLoginClick = () => {
+    this.setState({
+      isLoginOpen: true
+    })
+  }
+
+  handleSignUpClose = () => {
+    this.setState({
+      isSignupOpen: false
+    })
+  }
+
+  handleLoginClose = () => {
+    this.setState({
+      isLoginOpen: false
+    })
+  }  
+
 render() {
+  const { isSignupOpen } = this.state;
+  const { isLoginOpen } = this.state;
   return (
     <Wrapper>
-        <NavBar/>
+        <NavBar 
+        handleSignUpClick={this.handleSignUpClick}
+        handleLoginClick={this.handleLoginClick}
+        />
+        <Signup 
+        open={isSignupOpen}
+        handleSignUpClose={this.handleSignUpClose}
+        />
+        <Login
+        open={isLoginOpen}
+        handleLoginClose={this.handleLoginClose}
+        />
         <About/>
         <HeaderChef>
-            <Chefs/>
+            <Chefs
+            title={recipes[7].title}
+            image={recipes[7].image}
+            />
+            <Chefs
+            title={recipes[12].title}
+            image={recipes[12].image}
+            />
+            <Chefs
+            title={recipes[20].title}
+            image={recipes[20].image}
+            />
+            <a href="/allchefs" class="waves-effect waves-light btn view">View all Chefs</a>
           </HeaderChef>
           <DualBtn/>
           <Video/>
