@@ -7,7 +7,7 @@ const SubmitForm = props => {
         <div className="container-form">
             <div className="form-content">
 
-                <div className="submit-form">
+                <div className="submit-form" id="submit-form">
                     <h2>Family Recipes</h2>
                     <img src="./images/mish-mash-icon-yellow-new.png" width="50" alt="Icon" id="submitIcon" />
                     <br></br>

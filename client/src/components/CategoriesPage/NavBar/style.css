@@ -1,0 +1,30 @@
+.main-recipe {
+    width: 100%;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navtext {
+    color: black !important;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.navtext:hover {
+    color: #fbaa19 !important;
+    background-color: transparent;
+}
+
+.nav-wrapper {
+    width: 100%;
+    
+}
+
+.nav-logo {
+    margin-top: 15px;
+}

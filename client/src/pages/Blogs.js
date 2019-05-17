@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import NavBarRecipe from "../components/Categories/NavBar";
+import NavBarBlogs from "../components/Blogs/NavBar";
 
 function Blogs() {
     return (
-        <NavBarRecipe/>
+        <NavBarBlogs/>
     );
   }
 export default Blogs;

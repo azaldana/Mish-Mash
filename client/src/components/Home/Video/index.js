@@ -14,25 +14,23 @@ const Video = props => {
                 </div>
 
                 <div className="row video">
-                    <div className="col s4">
+                    <div className="col s4 column">
                         <div className="text-video">
                             <p className="featured">Featured</p>
                             <iframe width="400" height="315" src="https://www.youtube.com/embed/HMNmjlzhyd0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <br></br>
-                            <a class="waves-effect waves-light btn channel"><i class="material-icons right">send</i>View Channel</a>
+                            <a href="https://www.youtube.com/channel/UCjh26H0yxqi8pU926PaQD1w" target="blank" class="waves-effect waves-light btn channel"><i class="material-icons right">send</i>View Channel</a>
 
                         </div>
 
                     </div>
 
-                    {/* <div className="col s4"></div> */}
-
-                    <div className="col s4">
+                    <div className="col s4 column">
                         <div className="text-video">
                             <p className="featured">Featured</p>
                             <iframe width="400" height="315" src="https://www.youtube.com/embed/yaMrsyglTa0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <br></br>
-                            <a class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>View Channel</a>
+                            <a href="https://www.youtube.com/channel/UCJFp8uSYCjXOMnkUyb3CQ3Q" target="blank" class="waves-effect waves-light btn channel"><i class="material-icons right">send</i>View Channel</a>
 
                         </div>
 

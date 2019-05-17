@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import NavBarRecipe from "../components/Categories/NavBar";
+import NavBarRecipe from "../components/CategoriesPage/NavBar";
 
 function Recipes() {
     return (

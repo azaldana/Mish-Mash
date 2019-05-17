@@ -16,13 +16,13 @@ const Blogs = props => {
 Do you have 20 minutes? Cool. You can make these because this is not fancy. This is just really, really delicious chicken tinga tacos.</p>
                         <br></br>
                         <br></br>
-                        <a class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>Read Article</a>
+                        <a href="/blogs" class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>Read Article</a>
 
                     </div>
                 </div>
             </div>
 
-            <a class="waves-effect waves-light btn all z-depth-0"><i class="material-icons right">send</i>All Articles</a>
+            <a href="/blogs" class="waves-effect waves-light btn all z-depth-0"><i class="material-icons right">send</i>All Articles</a>
         </div>
 
     );

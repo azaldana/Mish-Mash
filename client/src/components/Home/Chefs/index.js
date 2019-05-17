@@ -13,7 +13,7 @@ const Chefs = props => {
                         <p className="featured">Featured</p>
                         <h1>Effortless Black Bean Chili</h1>
                         <br></br>
-                        <a class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>View Recipe</a>
+                        <a href="/onechef" class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>View Recipe</a>
 
                     </div>
 
@@ -29,7 +29,7 @@ const Chefs = props => {
                         <p className="featured">Featured</p>
                         <h1>Secret’s in the Sauce' BBQ Ribs</h1>
                         <br></br>
-                        <a class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>View Recipe</a>
+                        <a href="/onechef" class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>View Recipe</a>
                     </div>
 
                 </div>
@@ -44,13 +44,13 @@ const Chefs = props => {
                         <p className="featured">Featured</p>
                         <h1>Shrimp Scampi</h1>
                         <br></br>
-                        <a class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>View Recipe</a>
+                        <a href="/onechef" class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>View Recipe</a>
                     </div>
 
                 </div>
             </div>
 
-            <a class="waves-effect waves-light btn view">View all Chefs</a>
+            <a href="/allchefs" class="waves-effect waves-light btn view">View all Chefs</a>
         </div>
 
 
