@@ -1,9 +1,20 @@
 import React from "react";
 import "./style.css";
 
+const openStyle = {
+  zIndex: 1003,
+  display: "block",
+  opacity: 1,
+  top: "10%",
+  transform: "scaleX(1) scaleY(1)"
+}
+
 const Login = props => {
+  const { handleLoginClose } = props;
+  const { open } = props;
+  const style = open ? openStyle : {}
     return (
-        <div class="modal modal1" id="login">
+        <div class="modal modal1" id="login" style={style}>
         <div class="modal-content">
           <h2>Existing Users Sign In</h2>
           <div class="row">
@@ -28,6 +39,7 @@ const Login = props => {
       
         <div class="left-align" id="modal-footer">
           <a href="#" id="login_submit" class="modal-close btn amber accent-4">Log In</a>
+          <a href="#" id="login_close" onClick={handleLoginClose} class="modal-close btn amber accent-4">Close</a>
         </div>
       </div>
     );
