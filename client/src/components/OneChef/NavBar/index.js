@@ -1,18 +1,17 @@
 import React from "react";
 import "./style.css";
 
-const NavBarRecipe = props => {
+const NavBarOneChef = props => {
     return (
-        <div className="container main-recipe">
+        <div className="container main-chef">
                 <nav class="nav-wrapper transparent z-depth-0">
-                    <a href="#" class="sidenav-trigger" data-target="mobile-menu">
-                        <i class="material-icons white-text">menu</i></a>
+                    <a href="/"><img class="nav-logo" src="./images/mish-mash-logo.png" width="80"></img></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-                        <li><a href="#login" class="white-text navtext valign-wrapper modal-trigger">Home</a></li>
-                        <li><a href="#signup" class="white-text navtext valign-wrapper modal-trigger">Top Chefs</a></li>
-                        <li><a href="#signup" class="white-text navtext valign-wrapper modal-trigger">Recipes</a></li>
-                        <li><a href="#signup" class="white-text navtext valign-wrapper modal-trigger">Blogs</a></li>
+                        <li><a href="/" class="white-text navtext valign-wrapper modal-trigger">Home</a></li>
+                        <li><a href="/allchefs" class="white-text navtext valign-wrapper modal-trigger">Top Chefs</a></li>
+                        <li><a href="/categories" class="white-text navtext valign-wrapper modal-trigger">Recipes</a></li>
+                        <li><a href="/blogs" class="white-text navtext valign-wrapper modal-trigger">Blogs</a></li>
                         <li><a href="#signup" class="white-text navtext valign-wrapper modal-trigger">Sign Out</a></li>
                         <li><a href="#" class="white-text valign-wrapper"></a></li>
                     </ul>
@@ -27,4 +26,4 @@ const NavBarRecipe = props => {
     );
 }
 
-export default NavBarRecipe;
+export default NavBarOneChef;

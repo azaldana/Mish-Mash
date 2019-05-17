@@ -54,6 +54,7 @@
 
 .blog {
     margin-bottom: 50px;
+    width: 100% !important;
 }
 
 .all {

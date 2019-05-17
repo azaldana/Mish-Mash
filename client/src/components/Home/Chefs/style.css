@@ -66,15 +66,20 @@
 
 .chef-container {
     /* display: flex; */
-    width: 65%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto !important;
     /* padding: 0 55px; */
 }
+
 
 .view-01 {
     background-color:  #fbaa19;
     float: left;
     /* width: 150px; */
+}
+
+.view-01:hover {
+    background-color: #ffb83d
 }
 
 .right{
@@ -99,24 +104,8 @@
       font-weight: 600;
       /* font-size: 16px; */
   }
-  /* .item {
-    flex: 0 0 19.7%;
-    text-align: center;
-    width: 520px !important;
-    height: 150px;
-    margin: 0 10px;
-    transition: transform 300ms ease 100ms;
-  } */
 
-  .container:hover .item {
-    transform: translateX(-25%);
- }
-
- .item:hover ~ .item {
-    transform: translateX(25%);
- }
-
- .item:hover {
-    transform: scale(1.5) !important;
-  }
+  .view:hover {
+    background-color: #ffb83d
+}
 

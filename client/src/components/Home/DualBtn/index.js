@@ -11,9 +11,9 @@ const DualBtn = props => {
         <button class="btn waves-effect col 12 waves-light z-depth-0" id="review" type="submit" name="action">Leave Review
         <i class="material-icons left">edit</i>
         </button>
-        <button class="btn waves-effect col 12 waves-light z-depth-0" id="submit" type="submit" name="action">Submit Recipe
+        <a href="#submit-form"><button class="btn waves-effect col 12 waves-light z-depth-0" id="submit" type="submit" name="action">Submit Recipe
             <i class="material-icons right">send</i>
-        </button>
+        </button></a>
         </div>
         
         </div>

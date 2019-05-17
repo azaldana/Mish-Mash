@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import NavBarRecipe from "../components/Categories/NavBar";
+import NavBarAllChefs from "../components/AllChefs/NavBar";
 
 function AllChefs() {
     return (
-        <NavBarRecipe/>
+        <NavBarAllChefs/>
     );
   }
 export default AllChefs;

@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import NavBarRecipe from "../components/Categories/NavBar";
+import NavBarOneChef from "../components/OneChef/NavBar";
 
 function OneChef() {
     return (
-        <NavBarRecipe/>
+        <NavBarOneChef/>
 
     );
   }

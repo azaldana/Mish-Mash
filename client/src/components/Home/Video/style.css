@@ -10,7 +10,7 @@
 }
 
 .video {
-    width: 100%;
+    width: 100% !important;
     text-align: center;
 }
 
@@ -24,12 +24,12 @@
     margin-bottom: 30px;
 }
 
-.row {
-    width: 100%;
+.column {
+    width: 20% !important;
 }
 
-.row .col.s4 {
-    width: 50%;
+.row .column {
+    width: 50% !important;
 }
 
 .weekly-video h2 {
@@ -57,4 +57,8 @@ iframe {
 .channel {
     background-color: #fbaa19;
     font-size: 15px;
+}
+
+.channel:hover  {
+    background-color: #ffb83d;
 }
