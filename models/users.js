@@ -1,25 +1,12 @@
-/* eslint-disable linebreak-style */
-module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define(
-    "User",
-    {
-      name: DataTypes.STRING,
-      password: DataTypes.STRING
-    },
-    {
-      timestamps: false
-    }
-  );
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-  User.associate = function(models) {
-    User.hasMany(models.Fridge, {
-      onDelete: "cascade"
-    });
-    User.hasMany(models.Recipes, {
-      onDelete: "cascade"
-    });
-  };
+const userSchema = new Schema({
+  username: { type: String, required: true },
+  password: { type: String, required: true },
+  // picture: { type: String },
+});
 
+const User = mongoose.model("User", userSchema);
 
-  return User;
-};
+module.exports = User;
