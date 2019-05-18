@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import OneChef  from "./pages/OneChef";
 import Recipes from "./pages/Recipes";
 
+import allRecipes from './recipes.json';
+
 
 function Index() {
   return (
@@ -38,23 +40,43 @@ function Meal() {
   )
 }
 
-function App() {
-  return (
-    <Router>
-        <div>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/allchefs" component={AllChefs} />
-            <Route exact path="/blogs" component={Blogs} />
-            <Route exact path="/categories" component={Categories} />
-            <Route exact path="/onechef" component={OneChef} />
-            <Route exact path="/recipes" component={Recipes} />
-            {/* <Route component={NoMatch} /> */}
-          </Switch>
-        </div>
-    </Router>
-  );
+class App extends React.Component {
+
+  state = {
+    recipieId: -1
+  }
+
+  handleSend = (id) => {
+    this.setState({
+      recipieId: id
+    })
+  }
+
+  render() {
+    const { recipieId } = this.state;
+    const currentRecipe = allRecipes.find(r => r.id == recipieId);
+
+    console.log(currentRecipe);
+
+    return (
+      <Router>
+          <div>
+            <Switch>
+              <Route exact path="/" render={(props) => <Home {...props} handleSend={this.handleSend} />} />
+              <Route exact path="/allchefs" component={AllChefs} />
+              <Route exact path="/blogs" component={Blogs} />
+              <Route exact path="/categories" component={Categories} />
+              <Route exact path="/onechef" render={(props) => <OneChef {...props} recipe={currentRecipe} />} />
+              <Route exact path="/recipes" component={Recipes} />
+              {/* <Route component={NoMatch} /> */}
+            </Switch>
+          </div>
+      </Router>
+    );
+  }
+
 }
+
 
 export default App;
 

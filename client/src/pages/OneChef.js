@@ -4,11 +4,11 @@ import ChefRecipe from "../components/OneChef/ChefRecipe";
 import Wrapper from "../components/Wrapper";
 import Footer from "../components/Home/Footer";
 
-function OneChef() {
+function OneChef(props) {
   return (
     <Wrapper>
       <NavBarOneChef/>
-      <ChefRecipe/>
+      <ChefRecipe {...props}/>
       <Footer/>
 
 

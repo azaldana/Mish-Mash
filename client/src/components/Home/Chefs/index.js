@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./style.css";
 
 const Chefs = props => {
+    const { handleSend } = props;
     return (
         <div className="container chef-container">
             <div className="row recipe">
@@ -13,7 +15,14 @@ const Chefs = props => {
                         <p className="featured">Featured</p>
                         <h1>{props.title}</h1>
                         <br></br>
-                        <a href="/onechef" class="waves-effect waves-light btn view-01"><i class="material-icons right">send</i>View Recipe</a>
+                        <Link
+                          to="/onechef"
+                          className="waves-effect waves-light btn view-01"
+                          onClick={handleSend}
+                        >
+                            <i class="material-icons right">send</i>
+                            View Recipe
+                        </Link>
 
                     </div>
 
