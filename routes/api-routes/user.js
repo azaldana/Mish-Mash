@@ -1,11 +1,11 @@
+const router = require("express").Router();
+const usersController = require("../../controllers/usersController");
 
-const router = require('express').Router();
-const usersController = require('../../controllers/usersController');
-const isAuthenticated = require('../../controllers/authentication');
+// Matches with "/api/users"
+router.route("/signup")
+  .post(usersController.create);
 
-// Matches with "/api/books"
-router.route('/login').post(isAuthenticated, usersController.login);
-router.route('/validate').post(isAuthenticated, usersController.validateToken);
-router.route('/signup').post(isAuthenticated, usersController.signup);
+router.route("/login")
+  .post(usersController.findOne);
 
 module.exports = router;
