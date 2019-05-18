@@ -1,0 +1,80 @@
+.one-chef {
+    width: 100%;
+}
+
+.title-ingred {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 50px;
+    font-weight: bold;
+    margin-left: -50px;
+}
+
+.title-insruc {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.fab {
+    margin-left: 15px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #fbaa19;
+    font-weight: 400;
+}
+
+.submission-insruc {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 25px;
+    font-weight: bold;
+    margin-left: 100px;
+
+}
+
+.headline-ingred {
+    color: black !important;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.image-ingred {
+    margin-left: 100px;
+}
+
+.instructions-ingred  {
+    margin-left: -50px;
+    margin-top: 50px;
+}
+
+.form-ingred {
+    margin-left: -50px;
+}
+
+.container {
+    width: 100%;
+}
+
+.one-chef-row {
+    width: 100% !important;
+    margin-bottom: 100px;
+}
+
+.one-chef-review {
+    margin-left: -50px;
+    background-color: #fbaa19;
+    color: white;
+}
+
+.one-chef-review:hover {
+    background-color: #fbaa19;
+    color: white;
+}

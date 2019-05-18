@@ -3,25 +3,43 @@ import "./style.css";
 
 const OneChefRecipe = props => {
     return (
-        <div className="container one-chef">
-                <nav class="nav-wrapper transparent z-depth-0">
-                    <a href="/"><img class="nav-logo" src="./images/mish-mash-logo.png" width="80"></img></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <div className="container">
+            <div className="row one-chef-row">
+                <div className="col l8 offset-">
+                    <h1 className="headline-ingred">EFFORTLESS BLACK BEAN CHILI</h1>
+                    <img className="image-ingred" src="/images/8.jpg" />
+                    <br></br>
+                    <p className="submission-insruc">
+                        Follow The Chef: @kaylapega <i class="fab fa-instagram"></i>
+                    </p>                   
+                </div>
 
-                        <li><a href="/" class="white-text navtext valign-wrapper modal-trigger">Home</a></li>
-                        <li><a href="/allchefs" class="white-text navtext valign-wrapper modal-trigger">Top Chefs</a></li>
-                        <li><a href="/categories" class="white-text navtext valign-wrapper modal-trigger">Recipes</a></li>
-                        <li><a href="/blogs" class="white-text navtext valign-wrapper modal-trigger">Blogs</a></li>
-                        <li><a href="#signup" class="white-text navtext valign-wrapper modal-trigger">Sign Out</a></li>
-                        <li><a href="#" class="white-text valign-wrapper"></a></li>
-                    </ul>
+                <div className="col l3">
+                    <p className="title-ingred">Ingredients</p>
+                    <form className="form-ingred" action="#">
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>1 pound ground turkey</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" />
+                                <span>1 small onion, chopped</span>
+                            </label>
+                        </p>
+                    </form>
+                    <p className="instructions-ingred">
+                    <p className="title-insruc">Instructions</p><br></br>
+                        1. In a large skillet, cook and crumble turkey with onion over medium-high heat until no longer pink, 5-7 minutes. Transfer to a 4-qt. slow cooker.<br></br><br></br>
+                        2. Stir in all remaining ingredients except toppings. Cook, covered, on low until flavors are blended, 6-8 hours. Top as desired.
+                    </p>
+                    <br></br>
+                    <a class="waves-effect waves-light btn one-chef-review">
+                        <i class="material-icons right">chevron_right</i>
+                    Leave a Review</a>                    
+                </div>
 
-                    <ul class="sidenav grey lighten-2" id="mobile-menu">
-                        <li><a href="#login" class="blue-grey-text login text-darken-4 modal-trigger">Log In</a></li>
-                        <li><a href="#signup" class="blue-grey-text signup text-darken-4 modal-trigger">Sign Up</a></li>
-                        <li><a href="#" class="blue-grey-text text-darken-4">Recipes</a></li>
-                    </ul>
-                </nav>
+            </div>
         </div>
     );
 }
