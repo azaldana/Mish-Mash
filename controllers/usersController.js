@@ -1,48 +1,51 @@
-const db = require('../models');
+const db = require("../models");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+// Defining methods for the booksController
 module.exports = {
-  login: function (req, res) {
-    const { username, password } = req.body;
+  findOne: function(req, res) {
+    const { name, password } = req.body;
+    console.log(req.body);
     db.User
-      .find({ username })
-      .then(userFromDb => {
-        bcrypt.compare(password, userFromDb.password, function (err, same) {
-          if (same) {
-            const token = "aaaa";
-            jwt.sign({
-              username: userFromDb.username,
-              id: userFromDb._id
-            }, "super-secret");
-            return res.json({ token })
-          } else {
-            return res.staus(404).json({
-              error: "This Password does not match our records."
+      .findOne({name})
+      .then(dbModel => {
+        if(!dbModel) {
+          return res.status(404).json({
+            error: "Username and password not matching"
+          });
+        }
+
+        // if (dbModel.password !== password) {
+        //   return res.status(404).json({
+        //     error: "Username and password not matching"
+        //   });
+        // }
+        bcrypt.compare(password, dbModel.password, function(err, same) {
+          if (err) {
+            return res.status(500).json({
+              error: "Something went wrong"
             })
           }
-        });
+          if (!same) {
+            return res.status(404).json({
+              error: "password username not matching"
+            });
+          }
+          const { name, _id: id } = dbModel;
+
+          const token = jwt.sign({name, id}, 'my-website-secrete');
+          return res.json({ jwt: token })
+        })
       })
-  },
-  signup: function (req, res) {
-    const { username, password } = req.body;
-    const hash = bcrypt.hash(password, 10, function (err, hash) {
-      const user = {
-        username,
-        password: hash
-      }
-    })
-  }
-}
-
-const db = require('../models');
-
-module.exports = {
-  findAll: function (req, res) {
-      db.User
-      .find(req.query)
-      .sort({ date: -1})
-      .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-}
+  create: function(req, res) {
+    const password = bcrypt.hashSync(req.body.password, 10);
+    const name = req.body.name;
+    db.User
+      .create({ name, password})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  }
+};
