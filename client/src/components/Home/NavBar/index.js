@@ -14,7 +14,7 @@ const NavBar = props => {
 
                         <li><a href="#login" onClick={handleLoginClick} class="white-text login valign-wrapper modal-trigger">Log In</a></li>
                         <li><a href="#" onClick={handleSignUpClick} class="white-text signup valign-wrapper modal-trigger">Sign Up</a></li>
-                        <li><a href="/categories" class="white-text recipes valign-wrapper modal-trigger">Recipes</a></li>
+                        <li><a href="/categories" class="white-text recipes valign-wrapper modal-trigger">Fridge</a></li>
                         <li><a href="#" class="white-text valign-wrapper"></a></li>
                     </ul>
 

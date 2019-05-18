@@ -10,7 +10,7 @@ const NavBarRecipe = props => {
 
                         <li><a href="/" class="white-text navtext valign-wrapper modal-trigger">Home</a></li>
                         <li><a href="/allchefs" class="white-text navtext valign-wrapper modal-trigger">Top Chefs</a></li>
-                        <li><a href="/categories" class="white-text navtext valign-wrapper modal-trigger">Recipes</a></li>
+                        <li><a href="/recipes" class="white-text navtext valign-wrapper modal-trigger">Fridge</a></li>
                         <li><a href="/blogs" class="white-text navtext valign-wrapper modal-trigger">Blogs</a></li>
                         <li><a href="#signup" class="white-text navtext valign-wrapper modal-trigger">Sign Out</a></li>
                         <li><a href="#" class="white-text valign-wrapper"></a></li>

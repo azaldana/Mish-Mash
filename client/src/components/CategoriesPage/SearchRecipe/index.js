@@ -4,6 +4,8 @@ import "./style.css";
 function handleSearch() {
     alert("button-clicked");
 }
+
+
 const dairy = [
     "Egg",
     "Butter",
@@ -125,8 +127,25 @@ const fruit = [
 ]
 class Ingredients extends React.Component {
     state = {
-        selected: []
-    };
+        selected: [],
+        currentCategory: "",
+        dairy: false,
+        meat: false,
+        veggie: false,
+        pantry: false,
+        seafood: false,
+        fruit: false,
+        searchButton: false,
+
+    }
+
+    toggleCategory = (category) => () => {
+        this.setState({
+            currentCategory: category,
+            searchButton: true
+        });
+    }
+
 
     handleIngredientCheckbox = (event) => {
         const name = event.target.name;
@@ -139,7 +158,7 @@ class Ingredients extends React.Component {
         } else {
             newSelected = [
                 ...selected.slice(0, index),
-                ...selected.slice(index+1)
+                ...selected.slice(index + 1)
             ]
         }
 
@@ -152,6 +171,7 @@ class Ingredients extends React.Component {
     render() {
         console.log(this.state);
 
+
         return (
             <div class="category-content">
                 <div class="category">
@@ -163,234 +183,249 @@ class Ingredients extends React.Component {
                         <p class="subhead">Please choose a category below to view a list of ingredients to add to your fridge</p><br></br>
 
                         <div class="col s4 l2">
-                            <button class="dairyBtn">
-                                <img src="./images/icon_milk.png" width="35"/>
+                            <button onClick={this.toggleCategory("dairy")} class="dairyBtn">
+                                <img src="./images/icon_milk.png" width="35" />
                             </button>
                             <p class="types">Dairy</p>
                         </div>
                         <div class="col s4 l2">
-                            <button class="meatBtn">
-                                <img src="./images/icon_meat.png" width="35"/>
+                            <button onClick={this.toggleCategory("meat")} class="meatBtn">
+                                <img src="./images/icon_meat.png" width="35" />
                             </button>
                             <p class="types">Meats</p>
                         </div>
                         <div class="col s4 l2">
-                            <button class="veggieBtn">
-                                <img src="./images/icon_carrot.png" width="35"/>
+                            <button onClick={this.toggleCategory("veggie")} class="veggieBtn">
+                                <img src="./images/icon_carrot.png" width="35" />
                             </button>
                             <p class="types">Veggies</p>
                         </div>
                         <div class="col s4 l2">
-                            <button class="pantryBtn">
-                                <img src="./images/icon_bread.png" width="35"/>
+                            <button onClick={this.toggleCategory("pantry")} class="pantryBtn">
+                                <img src="./images/icon_bread.png" width="35" />
                             </button>
                             <p class="types">Pantry</p>
                         </div>
 
                         <div class="col s4 l2">
-                            <button class="seafoodBtn">
-                                <img src="./images/icon_fish.png" width="35"/>
+                            <button onClick={this.toggleCategory("seafood")} class="seafoodBtn">
+                                <img src="./images/icon_fish.png" width="35" />
                             </button>
                             <p class="types">Seafood</p>
                         </div>
 
                         <div class="col s4 l2">
-                            <button class="fruitBtn">
-                                <img src="./images/icon_apple.png" width="35"/>
+                            <button onClick={this.toggleCategory("fruit")} class="fruitBtn">
+                                <img src="./images/icon_apple.png" width="35" />
                             </button>
                             <p class="types">Fruits</p>
                         </div>
                     </div>
 
 
-                    <div class="dairy">
-                        <div id="dairy-ingred-menu" class="row">
-                            {dairy.map(ingredient => (
-                                <div class="col s12 l3">
-                                <form action="#">
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
-                                            <span>{ingredient}</span>
-                                        </label>
-                                    </p>
-                                </form>
+                    {this.state.currentCategory === "dairy" ? (
+                        <div class="dairy">
+                            <div id="dairy-ingred-menu" class="row">
+                                {dairy.map(ingredient => (
+                                    <div class="col s12 l3">
+                                        <form action="#">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
+                                                    <span>{ingredient}</span>
+                                                </label>
+                                            </p>
+                                        </form>
+                                    </div>
+                                ))}
+
+                                <div class="prepend-here"></div>
+
+                                <div class="add-ingred input-field col s12 l4">
+
+
+                                    <input placeholder="Add Additional Ingredient" id="dairy-ingredient" type="text" class="validate" />
+                                    <label for="ingredient"></label>
                                 </div>
-                            ))}
-
-                            <div class="prepend-here"></div>
-
-                            <div class="add-ingred input-field col s12 l4">
-
-
-                                <input placeholder="" id="dairy-ingredient" type="text" class="validate" />
-                                <label for="ingredient">Add Additional Ingredient</label>
-                            </div>
-                            <div class="add-ingred input-field col s12 l2">
-                                <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="dairy">
-                                    <i class="material-icons add">add</i>
-                                </a>
+                                <div class="add-ingred input-field col s12 l2">
+                                    <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="dairy">
+                                        <i class="material-icons add">add</i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="meat">
-                        <div id="meat-ingred-menu" class="row">
-                        {meat.map(ingredient => (
-                                <div class="col s12 l3">
-                                <form action="#">
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
-                                            <span>{ingredient}</span>
-                                        </label>
-                                    </p>
-                                </form>
+                    ) : null}
+
+                    {this.state.currentCategory === "meat" ? (
+                        <div class="meat">
+                            <div id="meat-ingred-menu" class="row">
+                                {meat.map(ingredient => (
+                                    <div class="col s12 l3">
+                                        <form action="#">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
+                                                    <span>{ingredient}</span>
+                                                </label>
+                                            </p>
+                                        </form>
+                                    </div>
+                                ))}
+
+                                <div class="prepend-here"></div>
+
+                                <div class="add-ingred input-field col s12 l4">
+
+
+                                    <input placeholder="Add Additional Ingredient" id="meat-ingredient" type="text" class="validate" />
+                                    <label for="ingredient"></label>
                                 </div>
-                            ))}
-
-                            <div class="prepend-here"></div>
-
-                            <div class="add-ingred input-field col s12 l4">
-
-
-                                <input placeholder="Name of Ingredient" id="meat-ingredient" type="text" class="validate" />
-                                <label for="ingredient">Add Additional Ingredient</label>
-                            </div>
-                            <div class="add-ingred input-field col s12 l2">
-                                <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="meat">
-                                    <i class="material-icons add">add</i>
-                                </a>
+                                <div class="add-ingred input-field col s12 l2">
+                                    <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="meat">
+                                        <i class="material-icons add">add</i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ) : null}
+
+                    {this.state.currentCategory === "veggie" ? (
+                        <div class="veggies">
+                            <div id="veggie-ingred-menu" class="row">
+                                {veggie.map(ingredient => (
+                                    <div class="col s12 l3">
+                                        <form action="#">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
+                                                    <span>{ingredient}</span>
+                                                </label>
+                                            </p>
+                                        </form>
+                                    </div>
+                                ))}
+
+                                <div class="prepend-here"></div>
+
+                                <div class="add-ingred input-field col s12 l4">
 
 
-                    <div class="veggies">
-                        <div id="veggie-ingred-menu" class="row">
-                        {veggie.map(ingredient => (
-                                <div class="col s12 l3">
-                                <form action="#">
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
-                                            <span>{ingredient}</span>
-                                        </label>
-                                    </p>
-                                </form>
+                                    <input placeholder="Add Additional Ingredient" id="veggies-ingredient" type="text" class="validate" />
+                                    <label for="ingredient"></label>
                                 </div>
-                            ))}
-
-                            <div class="prepend-here"></div>
-
-                            <div class="add-ingred input-field col s12 l4">
-
-
-                                <input placeholder="Name of Ingredient" id="veggies-ingredient" type="text" class="validate" />
-                                <label for="ingredient">Add Additional Ingredient</label>
-                            </div>
-                            <div class="add-ingred input-field col s12 l2">
-                                <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="veggies">
-                                    <i class="material-icons add">add</i>
-                                </a>
+                                <div class="add-ingred input-field col s12 l2">
+                                    <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="veggies">
+                                        <i class="material-icons add">add</i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ) : null}
 
-                    <div class="pantry">
-                        <div id="pantry-ingred-menu" class="row">
-                        {pantry.map(ingredient => (
-                                <div class="col s12 l3">
-                                <form action="#">
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
-                                            <span>{ingredient}</span>
-                                        </label>
-                                    </p>
-                                </form>
+                    {this.state.currentCategory === "pantry" ? (
+                        <div class="pantry">
+                            <div id="pantry-ingred-menu" class="row">
+                                {pantry.map(ingredient => (
+                                    <div class="col s12 l3">
+                                        <form action="#">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
+                                                    <span>{ingredient}</span>
+                                                </label>
+                                            </p>
+                                        </form>
+                                    </div>
+                                ))}
+
+                                <div class="prepend-here"></div>
+
+                                <div class="add-ingred input-field col s12 l4">
+
+                                    <input placeholder="Add Additional Ingredient" id="pantry-ingredient" type="text" class="validate" />
+                                    <label for="ingredient"></label>
                                 </div>
-                            ))}
-
-                            <div class="prepend-here"></div>
-
-                            <div class="add-ingred input-field col s12 l4">
-
-                                <input placeholder="Name of Ingredient" id="pantry-ingredient" type="text" class="validate" />
-                                <label for="ingredient">Add Additional Ingredient</label>
-                            </div>
-                            <div class="add-ingred input-field col s12 l2">
-                                <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="pantry">
-                                    <i class="material-icons add">add</i>
-                                </a>
+                                <div class="add-ingred input-field col s12 l2">
+                                    <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="pantry">
+                                        <i class="material-icons add">add</i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ) : null}
 
-                    <div class="seafood">
-                        <div id="seafood-ingred-menu" class="row">
-                        {seafood.map(ingredient => (
-                                <div class="col s12 l3">
-                                <form action="#">
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
-                                            <span>{ingredient}</span>
-                                        </label>
-                                    </p>
-                                </form>
+                    {this.state.currentCategory === "seafood" ? (
+                        <div class="seafood">
+                            <div id="seafood-ingred-menu" class="row">
+                                {seafood.map(ingredient => (
+                                    <div class="col s12 l3">
+                                        <form action="#">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
+                                                    <span>{ingredient}</span>
+                                                </label>
+                                            </p>
+                                        </form>
+                                    </div>
+                                ))}
+
+                                <div class="prepend-here"></div>
+
+                                <div class="add-ingred input-field col s12 l4">
+
+
+                                    <input placeholder="Add Additional Ingredient" id="seafood-ingredient" type="text" class="validate" />
+                                    <label for="ingredient"></label>
                                 </div>
-                            ))}
-        
-                            <div class="prepend-here"></div>
-
-                            <div class="add-ingred input-field col s12 l4">
-
-
-                                <input placeholder="Name of Ingredient" id="seafood-ingredient" type="text" class="validate" />
-                                <label for="ingredient">Add Additional Ingredient</label>
-                            </div>
-                            <div class="add-ingred input-field col s12 l2">
-                                <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="seafood">
-                                    <i class="material-icons add">add</i>
-                                </a>
+                                <div class="add-ingred input-field col s12 l2">
+                                    <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="seafood">
+                                        <i class="material-icons add">add</i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ) : null}
 
-                    <div class="fruit">
-                        <div id="fruit-ingred-menu" class="row">
-                        {fruit.map(ingredient => (
-                                <div class="col s12 l3">
-                                <form action="#">
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
-                                            <span>{ingredient}</span>
-                                        </label>
-                                    </p>
-                                </form>
+                    {this.state.currentCategory === "fruit" ? (
+                        <div class="fruit">
+                            <div id="fruit-ingred-menu" class="row">
+                                {fruit.map(ingredient => (
+                                    <div class="col s12 l3">
+                                        <form action="#">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" name={ingredient} onChange={this.handleIngredientCheckbox} />
+                                                    <span>{ingredient}</span>
+                                                </label>
+                                            </p>
+                                        </form>
+                                    </div>
+                                ))}
+
+                                <div class="prepend-here"></div>
+
+                                <div class="add-ingred input-field col s12 l4">
+
+                                    <input placeholder="Add Additional Ingredient" id="fruit-ingredient" type="text" class="validate" />
+                                    <label for="ingredient"></label>
                                 </div>
-                            ))}
-
-                            <div class="prepend-here"></div>
-
-                            <div class="add-ingred input-field col s12 l4">
-
-                                <input placeholder="Name of Ingredient" id="fruit-ingredient" type="text" class="validate" />
-                                <label for="ingredient">Add Additional Ingredient</label>
-                            </div>
-                            <div class="add-ingred input-field col s12 l2">
-                                <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="fruit">
-                                    <i class="material-icons add">add</i>
-                                </a>
+                                <div class="add-ingred input-field col s12 l2">
+                                    <a class="btn-floating btn-small waves-effect waves-light z-depth-0 addition" data-category="fruit">
+                                        <i class="material-icons add">add</i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <button onClick={handleSearch} className="btn waves-effect waves-light submit modal-trigger z-depth-0" name="action">Search for Recipes
+                    ) : null}
+
+                    {this.state.searchButton === true ? (
+                        <button onClick={handleSearch} className="btn waves-effect waves-light submit modal-trigger z-depth-0" name="action">Search for Recipes
                     <i class="material-icons right">send</i>
 
-                    </button>
+                        </button>
+                    ) : null}
                 </div>
             </div >
 

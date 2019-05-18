@@ -23,7 +23,7 @@ const FindRecipes = props => {
           I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a href="/recipes">This is a link</a>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@ const FindRecipes = props => {
           I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a href="/recipes">This is a link</a>
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@ const FindRecipes = props => {
           I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a href="/recipes">This is a link</a>
         </div>
       </div>
     </div>
