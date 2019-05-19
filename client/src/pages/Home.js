@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Wrapper from "../components/Wrapper";
 import HeaderChef from "../components/Home/HeaderChef";
 import recipes from "../recipes.json";
@@ -14,6 +14,7 @@ import SubmitForm from "../components/Home/SubmitForm";
 import Footer from "../components/Home/Footer";
 import Signup from "../components/Home/Signup";
 import Login from "../components/Home/Login";
+import Hero from "../components/Home/Hero";
 // import Slider from '../components/Slider'
 
 class Home extends Component {
@@ -46,69 +47,71 @@ class Home extends Component {
       isLoginOpen: false
     })
   }
-  handleSend = (id) => () =>  {
+  handleSend = (id) => () => {
     this.props.handleSend(id);
   }
 
 
-render() {
-  const { isSignupOpen } = this.state;
-  const { isLoginOpen } = this.state;
+  render() {
+    const { isSignupOpen } = this.state;
+    const { isLoginOpen } = this.state;
 
-  return (
-    <Wrapper>
-        <NavBar 
-        handleSignUpClick={this.handleSignUpClick}
-        handleLoginClick={this.handleLoginClick}
-        />
-        <Signup 
-        open={isSignupOpen}
-        handleSignUpClose={this.handleSignUpClose}
+    return (
+      <Wrapper>
+        <Hero>
+          <NavBar
+            handleSignUpClick={this.handleSignUpClick}
+            handleLoginClick={this.handleLoginClick}
+          />
+        </Hero>
+        <Signup
+          open={isSignupOpen}
+          handleSignUpClose={this.handleSignUpClose}
         />
         <Login
-        open={isLoginOpen}
-        handleLoginClose={this.handleLoginClose}
+          open={isLoginOpen}
+          handleLoginClose={this.handleLoginClose}
         />
-        <About/>
+        <About />
         <HeaderChef>
-            <Chefs recipe={recipes[7]}
-              handleSend={this.handleSend(recipes[7].id)}
+          <Chefs recipe={recipes[7]}
+            handleSend={this.handleSend(recipes[7].id)}
             title={recipes[7].title}
             image={recipes[7].image}
-            />
-            <Chefs recipe={recipes[12]}
-                handleSend={this.handleSend(recipes[12].id)}
+          />
+          <Chefs recipe={recipes[12]}
+            handleSend={this.handleSend(recipes[12].id)}
 
             title={recipes[12].title}
             image={recipes[12].image}
-            />
-            <Chefs recipe={recipes[20]}
-              handleSend={this.handleSend(recipes[20].id)}
-              title={recipes[20].title}
+          />
+          <Chefs recipe={recipes[20]}
+            handleSend={this.handleSend(recipes[20].id)}
+            title={recipes[20].title}
             image={recipes[20].image}
-            />
-            <a href="/allchefs" class="waves-effect waves-light btn view">View all Chefs</a>
-          </HeaderChef>
-          <DualBtn/>
-          <Video/>
-          <HeaderBlogs>
-            <div className="container blogs">
+          />
+          <a href="/allchefs" class="waves-effect waves-light btn view">View all Chefs</a>
+        </HeaderChef>
+        <DualBtn />
+        <Video />
+        <HeaderBlogs>
+          <div className="container blogs">
             <div className="row">
-            <Blogs/>
+              <Blogs />
             </div>
-            </div>
-          </HeaderBlogs>
-          <Categories/>
-          
-            <div className="row">
-            <form className="col s12">
-            <SubmitForm/>
-            </form>
-            </div>
-          <Footer/>
+          </div>
+        </HeaderBlogs>
+        <Categories />
+
+        <div className="row">
+          <form className="col s12">
+            <SubmitForm />
+          </form>
+        </div>
+        <Footer />
       </Wrapper>
-  );
-}
+    );
+  }
 }
 
 export default Home;
