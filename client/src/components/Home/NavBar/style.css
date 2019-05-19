@@ -1,46 +1,13 @@
-header {
-    background: url("/images/background_black.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 750px;
-}
-
-.container-navbar {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar {
-    background-color: transparent;
-}
-
-.navbar-brand, .navbar-text {
-    color: black;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-.score {
-    margin-right: 20px;
-}
-
-.navbar-text {
-    font-weight: bold;
-}
-
-#top-logo {
-    margin: 0 auto;
-}
-
-.center-align {
-    margin-top: 200px;
-}
-
-.recipes {
+.fridge {
     margin-right: 50px;
+    float: right;
 }
 
 .login .signup {
     margin-right: 20px;
+    float: right;
+}
+
+.navbar-header {
+    background-color: transparent;
 }

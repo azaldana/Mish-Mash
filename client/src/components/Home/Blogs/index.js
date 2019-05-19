@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+
 const Blogs = props => {
     return (
         <div className="background-blog">

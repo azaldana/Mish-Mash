@@ -1,0 +1,12 @@
+.header {
+    background: url("/images/background_black.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 750px;
+}
+
+.top-logo {
+    margin: 0 auto;
+    width: 40%;
+    margin-top: 200px;
+}
