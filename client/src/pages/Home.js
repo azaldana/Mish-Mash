@@ -45,11 +45,16 @@ class Home extends Component {
     this.setState({
       isLoginOpen: false
     })
-  }  
+  }
+  handleSend = (id) => () =>  {
+    this.props.handleSend(id);
+  }
+
 
 render() {
   const { isSignupOpen } = this.state;
   const { isLoginOpen } = this.state;
+
   return (
     <Wrapper>
         <NavBar 
@@ -66,16 +71,20 @@ render() {
         />
         <About/>
         <HeaderChef>
-            <Chefs
+            <Chefs recipe={recipes[7]}
+              handleSend={this.handleSend(recipes[7].id)}
             title={recipes[7].title}
             image={recipes[7].image}
             />
-            <Chefs
+            <Chefs recipe={recipes[12]}
+                handleSend={this.handleSend(recipes[12].id)}
+
             title={recipes[12].title}
             image={recipes[12].image}
             />
-            <Chefs
-            title={recipes[20].title}
+            <Chefs recipe={recipes[20]}
+              handleSend={this.handleSend(recipes[20].id)}
+              title={recipes[20].title}
             image={recipes[20].image}
             />
             <a href="/allchefs" class="waves-effect waves-light btn view">View all Chefs</a>
