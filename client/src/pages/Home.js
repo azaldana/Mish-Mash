@@ -11,7 +11,7 @@ import HeaderBlogs from "../components/Home/HeaderBlogs";
 import Blogs from "../components/Home/Blogs";
 import Categories from "../components/Home/Categories";
 import SubmitForm from "../components/Home/SubmitForm";
-import Footer from "../components/Home/Footer";
+import FooterAll from "../components/Home/Footer";
 import Signup from "../components/Home/Signup";
 import Login from "../components/Home/Login";
 import Hero from "../components/Home/Hero";
@@ -108,7 +108,7 @@ class Home extends Component {
             <SubmitForm />
           </form>
         </div>
-        <Footer />
+        <FooterAll />
       </Wrapper>
     );
   }

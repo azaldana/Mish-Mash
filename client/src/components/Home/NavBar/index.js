@@ -10,6 +10,7 @@ const NavBar = props => {
             <NavItem href="" onClick={handleLoginClick} className="white-text login valign-wrapper modal-trigger">
                 Login
             </NavItem>
+            
             <NavItem href="" onClick={handleSignUpClick} className="white-text signup valign-wrapper modal-trigger">
                 Signup
             </NavItem>

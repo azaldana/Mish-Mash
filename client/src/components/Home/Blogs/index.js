@@ -22,8 +22,6 @@ Do you have 20 minutes? Cool. You can make these because this is not fancy. This
                     </div>
                 </div>
             </div>
-
-            <a href="/blogs" class="waves-effect waves-light btn all z-depth-0"><i class="material-icons right">send</i>All Articles</a>
         </div>
 
     );
