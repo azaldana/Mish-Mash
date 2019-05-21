@@ -11,3 +11,13 @@
 .navbar-header {
     background-color: transparent;
 }
+
+.btn, .fridge {
+    background: transparent;
+    text-transform: inherit;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: transparent;
+}

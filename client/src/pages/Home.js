@@ -12,8 +12,8 @@ import Blogs from "../components/Home/Blogs";
 import Categories from "../components/Home/Categories";
 import SubmitForm from "../components/Home/SubmitForm";
 import FooterAll from "../components/Home/Footer";
-import Signup from "../components/Home/Signup";
-import Login from "../components/Home/Login";
+// import Signup from "../components/Home/Signup";
+// import Login from "../components/Home/Login";
 import Hero from "../components/Home/Hero";
 // import Slider from '../components/Slider'
 
@@ -64,14 +64,14 @@ class Home extends Component {
             handleLoginClick={this.handleLoginClick}
           />
         </Hero>
-        <Signup
+        {/* <Signup
           open={isSignupOpen}
           handleSignUpClose={this.handleSignUpClose}
         />
         <Login
           open={isLoginOpen}
           handleLoginClose={this.handleLoginClose}
-        />
+        /> */}
         <About />
         <HeaderChef>
           <Chefs recipe={recipes[7]}
