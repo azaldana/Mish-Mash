@@ -144,7 +144,7 @@
     },
     {
       "id": 14,
-      "image": "./images/1.jpg",
+      "image": "./images/14.jpg",
       "social": "@azaldana",
       "title": "Beef Nachos Supreme",
       "totalTime": "Prep/Total Time: 25 min",
@@ -344,7 +344,7 @@
       },
       {
         "id": 34,
-        "image": "./images/1.jpg",
+        "image": "./images/34.jpg",
         "social": "@day.inherlife",
         "title": "Vegetarian Black Bean Pasta",
         "totalTime": "Prep/Total Time: 25 min.",
@@ -354,7 +354,7 @@
       },
       {
         "id": 35,
-        "image": "./images/1.jpg",
+        "image": "./images/35.jpg",
         "social": "@day.inherlife",
         "title": "Simple Vegetarian Slow-Cooked Beans",
         "totalTime": "Prep: 15 min. Cook: 4 hours",
@@ -384,7 +384,7 @@
       },
       {
         "id": 38,
-        "image": "./images/1.jpg",
+        "image": "./images/38.jpg",
         "social": "@day.inherlife",
         "title": "Banana Oatmeal Pancakes",
         "totalTime": "Prep: 10 min. Cook: 5 min./batch",
@@ -474,7 +474,7 @@
       },
       {
         "id": 47,
-        "image": "./images/1.jpg",
+        "image": "./images/47.jpg",
         "social": "@naimuh",
         "title": "Maple & Bacon Glazed Brussels Sprouts",
         "ingredients": "Prep: 15 min. Cook: 20 min.",
@@ -494,7 +494,7 @@
       },
       {
         "id": 49,
-        "image": "./images/1.jpg",
+        "image": "./images/49.jpg",
         "social": "@naimuh",
         "title": "Oven Parmesan Chips",
         "totalTime": "Prep/Total Time: 25 min.",
@@ -504,7 +504,7 @@
       },
       {
         "id": 50,
-        "image": "./images/1.jpg",
+        "image": "./images/50.jpg",
         "social": "@day.inherlife",
         "title": "Broccoli-Pasta Side",
         "totalTime": "Prep/Total Time: 25 min.",

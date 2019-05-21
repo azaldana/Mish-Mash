@@ -15,12 +15,12 @@ const Signup = props => {
     const { open } = props;
     const style = open ? openStyle : {}
     return (
-        <Modal header="Sign Up" syle={style} onClick={handleSignUpClose} trigger={<Button />}>
+        <Modal header="Sign Up" syle={style} className="modal modal2 open" onClick={handleSignUpClose} trigger={<Button>Signup</Button>}>
             <TextInput icon="accoun-circle" label="User Name" />
             <TextInput icon="lock" label="Password" />
 
         </Modal>
-        
+
         // <div class="modal modal2 open" id="signup" style={style}>
         //     <div class="modal-content">
         //         <h2>Sign Up</h2>

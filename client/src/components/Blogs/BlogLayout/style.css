@@ -1,0 +1,50 @@
+.blog-layout h1  {
+    color: black;
+    margin-top: 100px;
+}
+
+.blog-layout {
+    width: 100%;
+}
+
+.layout-image {
+    width: 50%;
+}
+
+.author-side h1 {
+    font-size: 20px;
+}
+
+.archive-side {
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.archive-side h1 {
+    font-size: 20px;
+}
+
+.author-side {
+    text-align: center;
+}
+
+.main-image {
+    width: 420px;
+}
+
+.layout-text, .layout-text-02 {
+    width: 75%;
+}
+
+hr {
+    width: 50%;
+}
+
+.second-layout {
+    margin-top:  -60px;
+}
+
+.author-layout {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
