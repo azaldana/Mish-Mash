@@ -7,10 +7,13 @@
 var express = require('express');
 const mongoose = require("mongoose");
 const routes = require('./routes');
+// var bodyParser = require('body-parser');
+// var morgan       = require('morgan');
 
 // Sets up the Express App
 // =============================================================
 var app = express();
+// app.use(morgan('dev'));
 var PORT = process.env.PORT || 3005;
 
 // Requiring our models for syncing
@@ -27,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash", { useNewUrlParser: true });
 
 // Start the API server
 app.listen(PORT, function() {
