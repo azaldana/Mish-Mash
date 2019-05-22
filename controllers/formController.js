@@ -24,9 +24,9 @@ module.exports = {
             res.render('pages/single', { post: post, image: cloudinary.image, image_url: cloudinary.url });
         })
     },
-    new: function (req, res) {
-        res.render('pages/new');
-    },
+    // new: function (req, res) {
+    //     res.render('pages/new');
+    // },
     // edit: function (req, res) {
     //     Model.find({ image_id: req.params.id }, function (err, posts) {
     //         if (err) res.send(err);
@@ -41,8 +41,10 @@ module.exports = {
                 console.log(result);
                 var post = new Model({
                     title: req.body.title,
-                    description: req.body.description,
-                    created_at: new Date(),
+                    ingredients: req.body.ingredients,
+                    instructions: req.body.instructions,
+                    totalTime: req.body.totalTime,
+                    servings: req.body.servings,
                     image: result.url,
                     image_id: result.public_id
                 });
