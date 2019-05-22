@@ -5,7 +5,7 @@ const recipesController = require('../../controllers/recipesController');
 router
   .route('/')
   .get(recipesController.findAll)
-  // .post(postsController.create);
+  // .post(recipesController.create);
 
 // Matches with "/api/books/:id"
 // router
