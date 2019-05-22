@@ -16,11 +16,6 @@ module.exports = {
           });
         }
 
-        // if (dbModel.password !== password) {
-        //   return res.status(404).json({
-        //     error: "Username and password not matching"
-        //   });
-        // }
         bcrypt.compare(password, dbModel.password, function(err, same) {
           if (err) {
             return res.status(500).json({
