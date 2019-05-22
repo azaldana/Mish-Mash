@@ -15,7 +15,7 @@ const routes = require('./routes');
 var app = express();
 
 // app.use(morgan('dev'));
-var PORT = process.env.PORT || 3005;
+var PORT = process.env.PORT || 3001;
 
 
 // Requiring our models for syncing
