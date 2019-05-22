@@ -43,12 +43,19 @@ function Meal() {
 class App extends React.Component {
 
   state = {
-    recipieId: -1
+    recipieId: -1,
+    currentUser: null
   }
 
   handleSend = (id) => {
     this.setState({
       recipieId: id
+    })
+  }
+
+  onLoggedIn = (user) => {
+    this.setState({
+      currentUser: user
     })
   }
 
@@ -62,7 +69,9 @@ class App extends React.Component {
       <Router>
           <div>
             <Switch>
-              <Route exact path="/" render={(props) => <Home {...props} handleSend={this.handleSend} />} />
+              <Route exact path="/"
+              render={(props) => <Home {...props} handleSend={this.handleSend} onLoggedIn={this.onLoggedIn}/>} />
+
               <Route exact path="/allchefs" component={AllChefs} />
               <Route exact path="/blogs" component={Blogs} />
               <Route exact path="/categories" component={Categories} />
