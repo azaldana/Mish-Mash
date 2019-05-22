@@ -7,10 +7,13 @@
 var express = require('express');
 const mongoose = require("mongoose");
 const routes = require('./routes');
+// var bodyParser = require('body-parser');
+// var morgan       = require('morgan');
 
 // Sets up the Express App
 // =============================================================
 var app = express();
+// app.use(morgan('dev'));
 var PORT = process.env.PORT || 3005;
 
 // Requiring our models for syncing
