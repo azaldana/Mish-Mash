@@ -6,7 +6,8 @@ import API from "../../../utils/API";
 class NavBar extends React.Component {
     state = {
         username: "",
-        password: ""
+        password: "",
+        error: null
     }
 
     handleChange = (event) => {
@@ -20,8 +21,23 @@ class NavBar extends React.Component {
         const { username, password } = this.state;
         API.signup({ username, password })
             .then(res => {
-                alert("done!")
+                alert("done!");
             });
+    }
+
+    handleLogin = () => {
+        const { username, password } = this.state;
+        // const { history } = this.props;
+        API.login({ username, password })
+            .then(res => {
+                alert("You are logged in!");
+                // history.push("/");
+            })
+            .catch(err => {
+                this.setState({
+                    error: "Username password not matching"
+                })
+            })
     }
 
     render() {
@@ -30,9 +46,30 @@ class NavBar extends React.Component {
             <Navbar brand={<a />} alignLinks="right" className="navbar-header z-depth-0">
                 <NavItem>
                     <Modal header="Existing Users Sign In" className="black-text login" trigger={<Button>Login</Button>}>
-                        <TextInput icon="account_box" label="User Name" />
-                        <TextInput icon="lock" label="Password" />
-                        <Button className="login-button">Log In</Button>
+                        <TextInput 
+                        name="username"
+                        icon="account_box" 
+                        label="User Name"
+                        value={username}
+                        onChange={this.handleChange} 
+                        />
+
+                        <TextInput 
+                        name="password"
+                        type="password"
+                        icon="lock"
+                        label="Password"
+                        value={password}
+                        onChange={this.handleChange}
+                        />
+
+                        {this.state.error ? (
+                            <span className="alert">{this.state.error}</span>
+                        ): null}  <br></br>
+
+                        <Button 
+                        onClick={this.handleLogin}
+                        className="login-button">Log In</Button>
                     </Modal>
                 </NavItem>
 
@@ -48,6 +85,7 @@ class NavBar extends React.Component {
 
                         <TextInput
                             name="password"
+                            type="password"
                             icon="lock"
                             label="Password"
                             value={password}
