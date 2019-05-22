@@ -22,3 +22,7 @@
 .btn:hover {
     background: transparent;
 }
+
+.login-button {
+    color: black;
+}

@@ -11,7 +11,7 @@ const NavBar = props => {
                 <Modal header="Existing Users Sign In" className="black-text login" trigger={<Button>Login</Button>}>
                     <TextInput icon="account-circle" label="User Name" />
                     <TextInput icon="lock" label="Password" />
-                    <Button>Log In</Button>
+                    <Button className="login-button">Log In</Button>
                 </Modal>
             </NavItem>
 
