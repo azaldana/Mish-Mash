@@ -1,22 +1,12 @@
-/* eslint-disable linebreak-style */
-module.exports = function(sequelize, DataTypes) {
-    var Fridge = sequelize.define("Fridge", {
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      }
-    });
-  
-    Fridge.associate = function(models) {
-      Fridge.belongsTo(models.User, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
-  
-    return Fridge;
-  };
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const fridgeSchema = new Schema({
+  name: { type: String, required: true }
+});
+
+const Fridge = mongoose.model("Fridge", fridgeSchema);
+
+module.exports = Fridge;
+
+
