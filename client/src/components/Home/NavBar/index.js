@@ -8,17 +8,18 @@ const NavBar = props => {
     return (
         <Navbar brand={<a />} alignLinks="right" className="navbar-header z-depth-0">
             <NavItem>
-                <Modal header="Modal Header" className="black-text login" trigger={<Button>Login</Button>}>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-</p>
+                <Modal header="Existing Users Sign In" className="black-text login" trigger={<Button>Login</Button>}>
+                    <TextInput icon="account_box" label="User Name" />
+                    <TextInput icon="lock" label="Password" />
+                    <Button className="login-button">Log In</Button>
                 </Modal>
             </NavItem>
 
             <NavItem>
                 <Modal header="Sign Up" className="black-text signup" trigger={<Button>Signup</Button>}>
-                    <TextInput icon="accoun-circle" label="User Name" />
+                    <TextInput icon="account_box" label="User Name" />
                     <TextInput icon="lock" label="Password" />
+                    <Button className="login-button">Signup</Button>
 
                 </Modal>
             </NavItem>

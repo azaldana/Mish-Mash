@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Footer } from 'react-materialize';
+import { Footer, Button } from 'react-materialize';
 
 const FooterAll = props => {
     return (
@@ -9,8 +9,7 @@ const FooterAll = props => {
         <div class="container">
           <div class="row">
             <div class="col l12 s12">
-              <img src="./images/mish-mash-logo.png" width="100"/>
-              {/* <p class="grey-text">Home About Fridge Blog</p> */}
+              <Button className="black-text footer-buttons z-depth-0">Home</Button><Button className="black-text footer-buttons z-depth-0">About</Button><Button className="black-text footer-buttons z-depth-0">Fridge</Button><Button className="black-text footer-buttons z-depth-0">Blogs</Button>
             </div>
           </div>
         </div>
