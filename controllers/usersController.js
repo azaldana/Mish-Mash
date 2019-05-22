@@ -4,48 +4,44 @@ const jwt = require("jsonwebtoken");
 
 // Defining methods for the booksController
 module.exports = {
-  findOne: function(req, res) {
-    const { name, password } = req.body;
-    console.log(req.body);
+  login: function (req, res){
+    const { username, password } = req.body;
+
     db.User
-      .findOne({name})
-      .then(dbModel => {
-        if(!dbModel) {
+    .findOne({username})
+    .then(dbModel => {
+      bcrypt.compare(password, dbModel.password, function(err, same){
+        if (same){
+          const token = jwt.sign({
+            username: dbModel.username,
+            id: dbModel._id
+          }, "super secret");
+          console.log("DBMOPDEL!!", dbModel);
+          return res.json({
+            username: dbModel.username,
+            id: dbModel._id,
+            token
+          })
+        } else {
           return res.status(404).json({
-            error: "Username and password not matching"
-          });
+            error: "Password and Username not matching"
+          })
         }
-
-        // if (dbModel.password !== password) {
-        //   return res.status(404).json({
-        //     error: "Username and password not matching"
-        //   });
-        // }
-        bcrypt.compare(password, dbModel.password, function(err, same) {
-          if (err) {
-            return res.status(500).json({
-              error: "Something went wrong"
-            })
-          }
-          if (!same) {
-            return res.status(404).json({
-              error: "password username not matching"
-            });
-          }
-          const { name, _id: id } = dbModel;
-
-          const token = jwt.sign({name, id}, 'my-website-secrete');
-          return res.json({ jwt: token })
-        })
       })
+    })
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    const password = bcrypt.hashSync(req.body.password, 10);
-    const name = req.body.name;
+    const { username, password } = req.body;
+    console.log(req.body);
+    bcrypt.hash(password, 10, function(err, hash){
+      const user = {
+        username,
+        password: hash
+      }
     db.User
-      .create({ name, password})
+      .create(user)
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    });
   }
 };

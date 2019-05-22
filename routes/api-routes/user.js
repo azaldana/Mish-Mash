@@ -6,6 +6,6 @@ router.route("/signup")
   .post(usersController.create);
 
 router.route("/login")
-  .post(usersController.findOne);
+  .post(usersController.login);
 
 module.exports = router;
