@@ -9,7 +9,7 @@ const NavBar = props => {
         <Navbar brand={<a />} alignLinks="right" className="navbar-header z-depth-0">
             <NavItem>
                 <Modal header="Existing Users Sign In" className="black-text login" trigger={<Button>Login</Button>}>
-                    <TextInput icon="account-circle" label="User Name" />
+                    <TextInput icon="account_box" label="User Name" />
                     <TextInput icon="lock" label="Password" />
                     <Button className="login-button">Log In</Button>
                 </Modal>
@@ -17,8 +17,9 @@ const NavBar = props => {
 
             <NavItem>
                 <Modal header="Sign Up" className="black-text signup" trigger={<Button>Signup</Button>}>
-                    <TextInput icon="account-circle" label="User Name" />
+                    <TextInput icon="account_box" label="User Name" />
                     <TextInput icon="lock" label="Password" />
+                    <Button className="login-button">Signup</Button>
 
                 </Modal>
             </NavItem>
