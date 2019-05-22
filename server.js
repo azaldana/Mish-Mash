@@ -14,7 +14,7 @@ var app = express();
 var PORT = process.env.PORT || 3003;
 
 // Requiring our models for syncing
-var db = require('./models');
+// var db = require('./models');
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
