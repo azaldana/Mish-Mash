@@ -1,9 +1,10 @@
 require("dotenv").config();
 const router = require('express').Router();
-const recipesRoutes = require('./recipes');
+const recipesController = require('../..controllers/recipesController');
 
 
 // Recipes routes
-router.use('/recipes', recipesRoutes);
+router.route('/recipes/:query')
+    .get(recipesController.findAll);
 
 module.exports = router;
