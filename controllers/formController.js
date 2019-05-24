@@ -16,24 +16,6 @@ module.exports = {
             res.render('home', { posts: posts });
         });
     },
-    find: function (req, res) {
-        var id = req.params.id;
-        Model.findOne({ image_id: id }, function (err, post) {
-            if (err) res.send(err);
-
-            res.render('pages/single', { post: post, image: cloudinary.image, image_url: cloudinary.url });
-        })
-    },
-    // new: function (req, res) {
-    //     res.render('pages/new');
-    // },
-    // edit: function (req, res) {
-    //     Model.find({ image_id: req.params.id }, function (err, posts) {
-    //         if (err) res.send(err);
-
-    //         res.render('pages/edit', { post: posts[0] });
-    //     });
-    // },
     create: function (req, res) {
         cloudinary.v2.uploader.upload(req.files.image.path,
             { width: 300, height: 300, crop: "limit", tags: req.body.tags, moderation: 'manual' },
@@ -57,6 +39,24 @@ module.exports = {
                 });
             });
     },
+    // find: function (req, res) {
+    //     var id = req.params.id;
+    //     Model.findOne({ image_id: id }, function (err, post) {
+    //         if (err) res.send(err);
+
+    //         res.render('pages/single', { post: post, image: cloudinary.image, image_url: cloudinary.url });
+    //     })
+    // },
+    // new: function (req, res) {
+    //     res.render('pages/new');
+    // },
+    // edit: function (req, res) {
+    //     Model.find({ image_id: req.params.id }, function (err, posts) {
+    //         if (err) res.send(err);
+
+    //         res.render('pages/edit', { post: posts[0] });
+    //     });
+    // },
     // update: function (req, res) {
     //     var oldName = req.body.old_id
     //     var newName = req.body.image_id;

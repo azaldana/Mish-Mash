@@ -1,4 +1,5 @@
 import React from "react";
+import { Textarea, TextInput, Modal, Button } from 'react-materialize';
 import "./style.css";
 // import Axios from "axios";
 
@@ -9,74 +10,49 @@ class SubmitForm extends React.Component {
         instructions: "",
         totalTime: "",
         servings: "",
-        selectedFile: null,
-        social: ""
+        social: "",
+        image: null,
+        image_id: ""
     }
 
-fileSelectedHandler = event => {
-    this.setState({
-        selectedFile: event.target.files[0]
-    })
-}
+ 
 
-fileUploadHandler = () => {
-const fd = new FormData();
-fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
-// Axios.post('url')
-//     .then(res => {
-//         console.log(res);
-//     });
-}
+    // fileSelectedHandler = event => {
+    //     this.setState({
+    //         image: event.target.files[0]
+    //     })
+    // }
+
+    // fileUploadHandler = () => {
+
+    
+    // }
 
 
-render() {
-    
-        return (
-    
-            <div className="container-form">
-                <div className="form-content">
-    
-                    <div className="submit-form" id="submit-form">
+    render() {
+    return (
+<div className="submit-form" id="submit-form">
                         <h2>Family Recipes</h2>
                         <img src="./images/mish-mash-icon-yellow-new.png" width="50" alt="Icon" id="submitIcon" />
                         <br></br>
-    
-                        <div className="row">
-    
-                            <div className="input-field col s6">
-                                <input placeholder="" id="first_name" type="text" className="validate" />
-                                <label for="first_name">First Name</label>
-                            </div>
-    
-                            <div className="input-field col s6">
-                                <input id="" type="text" className="validate" />
-                                <label for="last_name">Last Name</label>
-                            </div>
+                       
+
+                    <Modal header="Modal Header" onClick={this.fileUploadHandler} trigger={<Button>Submit</Button>}>
+                                <TextInput label="Title" placeholder="" id="form_title" type="text" className="validate" />
+                                <Textarea label="Ingredients" placeholder="" className="validate" data-length={150} />
+                                <Textarea label="Instructions" placeholder="" className="validate" data-length={350} />
+                                <TextInput label="Total Time" placeholder="" id="totalTime" type="text" className="validate" />
+                                <TextInput label="Servings" placeholder="" id="servings" type="text" className="validate" />
+                                <TextInput label="Social" placeholder="" id="social" type="text" className="validate" />
+                                <input type="file" onChange={this.fileSelectedHandler} />
+                        </Modal>
                         </div>
+                  
+                 
+
+)
     
-                        <div className="row">
-                            <div class="input-field col s12">
-                                <input id="password" type="password" class="validate" />
-                                <label for="password">Password</label>
-                            </div>
-    
-                        </div>
-    
-                        <div className="input-field col s6">
-                        <input type="file" onChange={this.fileSelectedHandler} />
-                        <button 
-                        className="btn waves-effect col 12 waves-light z-depth-0"
-                        id="submitRecipe"
-                        type="submit"
-                        name="action"
-                        onClick={this.fileUploadHandler}>Submit</button>
-                         <i class="material-icons right">send</i>
-                        </div>
-                    </div>
-    
-                </div>
-            </div>
-        )}
-    }
+}
+}
 
 export default SubmitForm;

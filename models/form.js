@@ -3,14 +3,15 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // create a schema
-var postSchema = new Schema({
+var formSchema = new Schema({
     title: String,
     ingredients: String,
     instructions: String,
     totalTime: String,
     servings: String,
     image: String,
-    image_id: String
+    image_id: String,
+    social: String
 });
 
 // the schema is useless so far
