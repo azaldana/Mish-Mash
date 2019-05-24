@@ -9,9 +9,10 @@ var formSchema = new Schema({
     instructions: String,
     totalTime: String,
     servings: String,
+    social: String,
     image: String,
-    image_id: String,
-    social: String
+    image_id: String
+    
 });
 
 // the schema is useless so far
