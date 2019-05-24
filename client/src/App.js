@@ -4,9 +4,9 @@ import AllChefs from "./pages/AllChefs";
 import Blogs from "./pages/Blogs";
 import Categories from "./pages/Categories";
 import Home from "./pages/Home";
-import OneChef  from "./pages/OneChef";
+import OneChef from "./pages/OneChef";
 import Recipes from "./pages/Recipes";
-
+import { UserProvider } from './utils/userContext';
 import allRecipes from './recipes.json';
 
 
@@ -66,11 +66,12 @@ class App extends React.Component {
     console.log(currentRecipe);
 
     return (
-      <Router>
+      <UserProvider>
+        <Router>
           <div>
             <Switch>
               <Route exact path="/"
-              render={(props) => <Home {...props} handleSend={this.handleSend} onLoggedIn={this.onLoggedIn}/>} />
+                render={(props) => <Home {...props} handleSend={this.handleSend} onLoggedIn={this.onLoggedIn} />} />
 
               <Route exact path="/allchefs" component={AllChefs} />
               <Route exact path="/blogs" component={Blogs} />
@@ -80,12 +81,10 @@ class App extends React.Component {
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>
-      </Router>
+        </Router>
+        </UserProvider>
     );
   }
-
 }
 
-
 export default App;
-

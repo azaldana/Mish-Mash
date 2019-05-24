@@ -16,8 +16,11 @@ import FooterAll from "../components/Home/Footer";
 // import Login from "../components/Home/Login";
 import Hero from "../components/Home/Hero";
 // import Slider from '../components/Slider'
+import UserContext from "../utils/userContext";
+import { timingSafeEqual } from "crypto";
 
 class Home extends Component {
+  static contextType = UserContext;
   state = {
     recipes,
     isSignupOpen: false,
@@ -51,27 +54,27 @@ class Home extends Component {
     this.props.handleSend(id);
   }
 
+  handleLogin = (user) => {
+    const { onLogin } = this.context;
+    onLogin(user);
+  }
+
+  handleSignup = (user) => {
+    const { onSignup } = this.context;
+    onSignup(user);
+  }
+
 
   render() {
-    const { isSignupOpen } = this.state;
-    const { isLoginOpen } = this.state;
+    const { user } = this.context;
+    console.log(user);
 
     return (
       <Wrapper>
         <Hero>
-          <NavBar
-            handleSignUpClick={this.handleSignUpClick}
-            handleLoginClick={this.handleLoginClick}
-          />
+          <NavBar onLogin={this.handleLogin} user={user}
+          onSignup={this.handleSignup} user={user} />
         </Hero>
-        {/* <Signup
-          open={isSignupOpen}
-          handleSignUpClose={this.handleSignUpClose}
-        />
-        <Login
-          open={isLoginOpen}
-          handleLoginClose={this.handleLoginClose}
-        /> */}
         <About />
         <HeaderChef>
           <Chefs recipe={recipes[7]}
