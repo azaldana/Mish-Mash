@@ -1,8 +1,15 @@
-import React from "react";
 import "./style.css";
+import React from "react";
+var unirest = require('unirest');
 
 function handleSearch() {
     alert("button-clicked");
+    unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=apples%2Cflour%2Csugar")
+    .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+    .header("X-RapidAPI-Key", "WPW7FyEBbTmshvFlCq04kYiUjJU8p1BiPTajsn0sk2QRRQeYTY")
+    .end(function (result) {
+    console.log(result.status, result.headers, result.body);
+    });
 }
 
 
@@ -168,9 +175,17 @@ class Ingredients extends React.Component {
 
     }
 
+        handleSearch() {
+            unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=apples%2Cflour%2Csugar")
+                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .header("X-RapidAPI-Key", "WPW7FyEBbTmshvFlCq04kYiUjJU8p1BiPTajsn0sk2QRRQeYTY")
+                .end(function (result) {
+                console.log("Recipe" + result.status, result.headers, result.body + "found");
+                });
+    }
+
     render() {
         console.log(this.state);
-
 
         return (
             <div class="category-content">
@@ -421,7 +436,7 @@ class Ingredients extends React.Component {
                     ) : null}
 
                     {this.state.searchButton === true ? (
-                        <button onClick={handleSearch} className="btn waves-effect waves-light submit modal-trigger z-depth-0" name="action">Search for Recipes
+                        <button onClick={this.handleSearch} className="btn waves-effect waves-light submit modal-trigger z-depth-0" name="action">Search for Recipes
                     <i class="material-icons right">send</i>
 
                         </button>
@@ -430,7 +445,8 @@ class Ingredients extends React.Component {
             </div >
 
         );
-    }
+        // closing render }
+    } 
 }
 
 export default Ingredients;
