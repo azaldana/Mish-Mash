@@ -1,10 +1,17 @@
 .fridge {
-    margin-right: 50px;
     float: right;
 }
 
+.signout {
+    margin-right: 0 !important;
+}
+
+.nav-wrapper {
+    width: 95% !important;
+}
+
 .login .signup {
-    margin-right: 20px;
+    margin-right: 0 !important;
     float: right;
 }
 
@@ -25,4 +32,23 @@
 
 .login-button {
     color: black;
+}
+
+.login-username, .login-password {
+    width: 65% !important;
+}
+
+.input-field {
+    margin-left: 50px;
+}
+
+.modal-content h4 {
+    font-family: 'Rajdhani', sans-serif;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.modal-content {
+    height: 350px;
 }
