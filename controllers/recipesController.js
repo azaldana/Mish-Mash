@@ -22,15 +22,6 @@ module.exports = {
             result.recipes.prepTime 
         )
       )
-      .then(apiRecipes =>
-        db.Recipes.find().then(dbRecipes =>
-          apiRecipes.filter(apiRecipes =>
-            dbRecipes.every(dbRecipes => dbRecipes.spoonacularId.toString() !== apiRecipes.id)
-          )
-        )
-      )
-      .then(books => res.json(books))
-      .catch(err => res.status(422).json(err));
   }
 };
 
