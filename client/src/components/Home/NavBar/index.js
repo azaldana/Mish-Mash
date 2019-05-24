@@ -117,7 +117,8 @@ class NavBar extends React.Component {
 
                             <Button
                                 onClick={this.handleLogin}
-                                className="login-button">Log In</Button>
+                                className="login-button">Log In
+                            </Button>
                         </Modal>
                     ) : null}
 

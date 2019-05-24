@@ -22,34 +22,9 @@ import { timingSafeEqual } from "crypto";
 class Home extends Component {
   static contextType = UserContext;
   state = {
-    recipes,
-    isSignupOpen: false,
-    isLoginOpen: false
+    recipes
   };
 
-  handleSignUpClick = () => {
-    this.setState({
-      isSignupOpen: true
-    })
-  }
-
-  handleLoginClick = () => {
-    this.setState({
-      isLoginOpen: true
-    })
-  }
-
-  handleSignUpClose = () => {
-    this.setState({
-      isSignupOpen: false
-    })
-  }
-
-  handleLoginClose = () => {
-    this.setState({
-      isLoginOpen: false
-    })
-  }
   handleSend = (id) => () => {
     this.props.handleSend(id);
   }
@@ -63,7 +38,6 @@ class Home extends Component {
     const { onSignup } = this.context;
     onSignup(user);
   }
-
 
   render() {
     const { user } = this.context;
