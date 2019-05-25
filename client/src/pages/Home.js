@@ -39,8 +39,14 @@ class Home extends Component {
     onSignup(user);
   }
 
+  handleSubmitForm = (submission) => {
+    const { submitForm } = this.props;
+    submitForm(submission);
+  }
+
   render() {
     const { user } = this.context;
+    const {submission}= this.props;
     console.log(user);
 
     return (
@@ -82,7 +88,7 @@ class Home extends Component {
 
         <div className="row">
           <form className="col s12">
-            <SubmitForm />
+            <SubmitForm  submitForm={this.handleSubmitForm} submission={submission} />
           </form>
         </div>
         <FooterAll />

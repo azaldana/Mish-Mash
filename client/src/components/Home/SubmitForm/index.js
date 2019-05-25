@@ -25,6 +25,7 @@ class SubmitForm extends React.Component {
 
     handleSubmitForm = () => {
         const { title, ingredients, instructions, totalTime, servings, social, image, image_id } = this.state;
+        const { submission } = this.props;
         API.submitForm({ title, ingredients, instructions, totalTime, servings, social, image, image_id })
             .then(res => {
                 alert("Recipe submitted, thank you!");
@@ -39,6 +40,7 @@ class SubmitForm extends React.Component {
                     image: null,
                     image_id: "",
                 })
+                submission(res.data)
             });
     }
 
@@ -59,7 +61,7 @@ class SubmitForm extends React.Component {
     render() {
         const { title, ingredients, instructions, totalTime, servings, social } = this.state;
         const { submission } = this.props;
-        // console.log(submission);
+        console.log(submission);
         return (
             <div>
                 <h2>Family Recipes</h2>
