@@ -3,6 +3,7 @@ module.exports = {
   Ingredients: require("./ingredients"),
   Recipes: require("./recipes"),
   Search: require("./search"),
-  User: require("./users")
+  User: require("./users"),
+  Form: require("./form")
 };
 
