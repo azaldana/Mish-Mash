@@ -2,8 +2,8 @@ const router = require('express').Router();
 const formController = require('../../controllers/formController');
 
 
-router.route('/')
-  .get(formController.index);
+// router.route('/')
+//   .get(formController.index);
   
   // router.route('/new')
   // .get(formController.new);
