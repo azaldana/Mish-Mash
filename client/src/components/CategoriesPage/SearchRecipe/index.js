@@ -1,6 +1,8 @@
 import "./style.css";
 import React from "react";
 var unirest = require('unirest');
+import API from "../../../utils/API";
+
 
 function handleSearch() {
     alert("button-clicked");
@@ -175,14 +177,14 @@ class Ingredients extends React.Component {
 
     }
 
-        handleSearch() {
-            unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=apples%2Cflour%2Csugar")
-                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                .header("X-RapidAPI-Key", "WPW7FyEBbTmshvFlCq04kYiUjJU8p1BiPTajsn0sk2QRRQeYTY")
-                .end(function (result) {
-                console.log("Recipe" + result.status, result.headers, result.body + "found");
-                });
-    }
+    //     handleSearch() {
+    //         unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=apples%2Cflour%2Csugar")
+    //             .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+    //             .header("X-RapidAPI-Key", "WPW7FyEBbTmshvFlCq04kYiUjJU8p1BiPTajsn0sk2QRRQeYTY")
+    //             .end(function (result) {
+    //             console.log("Recipe" + result.status, result.headers, result.body + "found");
+    //             });
+    // }
 
     render() {
         console.log(this.state);
