@@ -62,14 +62,17 @@ class SubmitForm extends React.Component {
         const { submission } = this.props;
         // console.log(submission);
         return (
-            <div>
+            <div className="submit-form">
                 <h2>Family Recipes</h2>
 
-                <img src={"./images/mish-mash-icon-yellow-new.png"} width="50" alt="Icon" id="submitIcon" />
+                <img src="./images/mish-mash-icon-yellow-new.png" width="50" alt="Icon" id="submitIcon" />
                 <br></br>
 
+                <p className="recipe-abouttext">We need to include some text. Example text could be something like-Do you love cooking and experimenting with different ingredients? Are you the talk of your friend group and love creating new recipes? Join the Mish Mash community and submit your own recipe for others to rate, share and review. </p>
+                <img className="mockup-recipe" src="./images/recipe_layout.jpg" width="1000" alt="Recipe Page Mockup" />
+
                 {submission ? null : (
-                    <Button className="submit-form-button" onClick={this.openSubmitFormModal}>Submit</Button>
+                    <Button className="submit-form-button" onClick={this.openSubmitFormModal}>Submit Your Recipe</Button>
                 )}
 
                 {this.state.isSubmitFormModalOpen ? (

@@ -12,10 +12,7 @@ import Blogs from "../components/Home/Blogs";
 import Categories from "../components/Home/Categories";
 import SubmitForm from "../components/Home/SubmitForm";
 import FooterAll from "../components/Home/Footer";
-// import Signup from "../components/Home/Signup";
-// import Login from "../components/Home/Login";
 import Hero from "../components/Home/Hero";
-// import Slider from '../components/Slider'
 import UserContext from "../utils/userContext";
 import { timingSafeEqual } from "crypto";
 
@@ -46,14 +43,14 @@ class Home extends Component {
 
   render() {
     const { user } = this.context;
-    const {submission}= this.props;
+    const { submission } = this.props;
     console.log(user);
 
     return (
       <Wrapper>
         <Hero>
           <NavBar onLogin={this.handleLogin} user={user}
-          onSignup={this.handleSignup} user={user} />
+            onSignup={this.handleSignup} user={user} />
         </Hero>
         <About />
         <HeaderChef>
@@ -88,7 +85,7 @@ class Home extends Component {
 
         <div className="row">
           <form className="col s12">
-            <SubmitForm  submitForm={this.handleSubmitForm} submission={submission} />
+            <SubmitForm submitForm={this.handleSubmitForm} submission={submission} />
           </form>
         </div>
         <FooterAll />
