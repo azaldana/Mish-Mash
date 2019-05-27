@@ -17,5 +17,8 @@ export default {
   validateToken: function(t) {
     return axios.post('/api/users/validate', { token: t });
   },
+  submitForm: function(data){
+    return axios.post('/api/form/create', data);
+  },
   
 };

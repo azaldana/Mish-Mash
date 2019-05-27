@@ -10,6 +10,8 @@ const OneChefRecipe = ({ recipe }) => {
             <div className="row one-chef-row">
                 <div className="col l8 offset-">
                     <h1 className="headline-ingred">{recipe.title}</h1>
+                    <p className="totalTime-ingred">{recipe.totalTime}</p>
+                    <p className="servings-ingred">Serving Size: {recipe.servings}</p>
                     <img className="image-ingred" src={recipe.image} width="420" />
                     <br></br>
                     <p className="submission-insruc">

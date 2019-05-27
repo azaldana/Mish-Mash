@@ -12,44 +12,16 @@ import Blogs from "../components/Home/Blogs";
 import Categories from "../components/Home/Categories";
 import SubmitForm from "../components/Home/SubmitForm";
 import FooterAll from "../components/Home/Footer";
-// import Signup from "../components/Home/Signup";
-// import Login from "../components/Home/Login";
 import Hero from "../components/Home/Hero";
-// import Slider from '../components/Slider'
 import UserContext from "../utils/userContext";
 import { timingSafeEqual } from "crypto";
 
 class Home extends Component {
   static contextType = UserContext;
   state = {
-    recipes,
-    isSignupOpen: false,
-    isLoginOpen: false
+    recipes
   };
 
-  handleSignUpClick = () => {
-    this.setState({
-      isSignupOpen: true
-    })
-  }
-
-  handleLoginClick = () => {
-    this.setState({
-      isLoginOpen: true
-    })
-  }
-
-  handleSignUpClose = () => {
-    this.setState({
-      isSignupOpen: false
-    })
-  }
-
-  handleLoginClose = () => {
-    this.setState({
-      isLoginOpen: false
-    })
-  }
   handleSend = (id) => () => {
     this.props.handleSend(id);
   }
@@ -64,16 +36,21 @@ class Home extends Component {
     onSignup(user);
   }
 
+  handleSubmitForm = (submission) => {
+    const { submitForm } = this.props;
+    submitForm(submission);
+  }
 
   render() {
     const { user } = this.context;
+    const { submission } = this.props;
     console.log(user);
 
     return (
       <Wrapper>
         <Hero>
           <NavBar onLogin={this.handleLogin} user={user}
-          onSignup={this.handleSignup} user={user} />
+            onSignup={this.handleSignup} user={user} />
         </Hero>
         <About />
         <HeaderChef>
@@ -108,7 +85,7 @@ class Home extends Component {
 
         <div className="row">
           <form className="col s12">
-            <SubmitForm />
+            <SubmitForm submitForm={this.handleSubmitForm} submission={submission} />
           </form>
         </div>
         <FooterAll />

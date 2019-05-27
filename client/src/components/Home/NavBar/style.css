@@ -1,7 +1,3 @@
-.fridge {
-    float: right;
-}
-
 .signout {
     margin-right: 0 !important;
 }
@@ -12,7 +8,11 @@
 
 .login .signup {
     margin-right: 0 !important;
-    float: right;
+    padding: 0 !important;
+}
+
+.signout {
+    padding: 0 !important;
 }
 
 .navbar-header {
@@ -31,11 +31,21 @@
 }
 
 .login-button {
-    color: black;
+    color: white;
+    background-color: #fbaa19;
+    margin-left: 50px;
+    text-transform: uppercase;
+}
+
+.login-button:hover {
+    color: #fbaa19;
+    background-color: white;
+    border: 1px solid  #fbaa19;
 }
 
 .login-username, .login-password {
     width: 65% !important;
+    border-bottom: 1px solid #fbaa19;
 }
 
 .input-field {
@@ -51,4 +61,8 @@
 
 .modal-content {
     height: 350px;
+}
+
+.modal-close {
+    color: white;
 }
