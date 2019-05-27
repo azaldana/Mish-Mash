@@ -21,7 +21,7 @@ export default {
     return axios.post('/api/form/create', data);
   },
 
-  getRecipes: function() {
+  getRecipes: function(query) {
     return axios.post('api/recipes', {q: query})
   }
   

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import NavBarBlogs from "../components/Blogs/NavBar";
 import BlogLayout from "../components/Blogs/BlogLayout";
 import Wrapper from "../components/Wrapper";
-import Footer from "../components/Blogs/Footer";
+import Footer from "../components/Home/Footer";
 
 function Blogs() {
     return (
