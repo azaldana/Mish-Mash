@@ -1,5 +1,8 @@
 const axios = require("axios");
 const db = require("../models");
+require("dotenv").config();
+
+const key = process.env.SPOONKEY;
 
 // Defining methods for the googleController
 
@@ -12,7 +15,7 @@ module.exports = {
     axios
       .get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" , {
         params
-      })
+      }, key)
       .then(results =>
         results.data.items.filter(
           result =>
