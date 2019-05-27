@@ -1,54 +1,44 @@
 // ./app/controller.js
-// var cloudinary = require('cloudinary');
-const db = require("../models");
+var cloudinary = require('cloudinary');
+var Model = require('./model');
 
-// cloudinary.config({
-//     cloud_name: 'mish-mash',
-//     api_key: '514316982861672',
-//     api_secret: 'AEglA9tn-0DTBfeOKJ_5lpvpYiA'
-// });
+cloudinary.config({
+    cloud_name: 'mish-mash',
+    api_key: '514316982861672',
+    api_secret: 'AEglA9tn-0DTBfeOKJ_5lpvpYiA'
+});
 
 module.exports = {
-    create: function (req, res) {
-        const post = ({
-            title: req.body.title,
-            ingredients: req.body.ingredients,
-            instructions: req.body.instructions,
-            totalTime: req.body.totalTime,
-            servings: req.body.servings,
-            social: req.body.social,
-            // image: result.url,
-            // image_id: result.public_id
-            image: "",
-            image_id: 0,
-        });
-        db.Form
-            .create(post)
-            .then(dbModel => res.json(dbModel))
-    }
-    // create: function (req, res) {
-    //     // cloudinary.v2.uploader.upload(req.files.image.path,
-    //     //     { width: 300, height: 300, crop: "limit", tags: req.body.tags, moderation: 'manual' },
-    //         function (err, result) {
-    //             console.log(result);
-    //             const post = new Model({
-    //                 title: req.body.title,
-    //                 ingredients: req.body.ingredients,
-    //                 instructions: req.body.instructions,
-    //                 totalTime: req.body.totalTime,
-    //                 servings: req.body.servings,
-    //                 image: result.url,
-    //                 image_id: result.public_id
-    //             });
+    index: function (req, res) {
+        Model.find({}, function (err, posts) {
+            if (err) res.send(err);
 
-    //             post.save(function (err) {
-    //                 if (err) {
-    //                     res.send(err)
-    //                 }
-    //                 res.redirect('/');
-    //             });
-    //         });
-    // },
+            res.render('home', { posts: posts });
+        });
+    },
+    create: function (req, res) {
+        cloudinary.v2.uploader.upload(req.files.image.path,
+            { width: 300, height: 300, crop: "limit", tags: req.body.tags, moderation: 'manual' },
+            function (err, result) {
+                console.log(result);
+                var post = new Model({
+                    title: req.body.title,
+                    ingredients: req.body.ingredients,
+                    instructions: req.body.instructions,
+                    totalTime: req.body.totalTime,
+                    servings: req.body.servings,
+                    image: result.url,
+                    image_id: result.public_id
+                });
+
+                post.save(function (err) {
+                    if (err) {
+                        res.send(err)
+                    }
+                    res.redirect('/');
+                });
+            });
+    },
     // find: function (req, res) {
     //     var id = req.params.id;
     //     Model.findOne({ image_id: id }, function (err, post) {

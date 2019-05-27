@@ -5,9 +5,8 @@
 }
 
 .submit-form {
-    width: 100%;
+    width: 65%;
     margin: 0 auto;
-    text-align: center;
 }
 
 .submit-form h2 {
@@ -19,12 +18,9 @@
     text-align: center;
 }
 
-.mockup-recipe {
-    text-align: center;
-}
-
 #submitIcon {
-    margin-bottom: 25px;
+    align-content: center;
+    margin-bottom: 50px;
 }
 
 .form-content {
@@ -63,31 +59,4 @@
 .all:hover {
     background-color: #fbaa19;
     color: white;
-}
-
-.submit-form-button {
-    color: white;
-    font-size: 16px;
-    background-color: #fbaa19;
-    font-family: 'Rajdhani', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
-.recipe-abouttext {
-    margin-bottom: 80px !important;
-    text-align: left;
-    width:  90%;
-    margin: 0 auto;
-    margin-top:  50px;
-}
-
-.submit-form-button:hover {
-    color: white;
-    background-color: #fbaa19;
-    font-family: 'Rajdhani', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
 }

@@ -9,14 +9,14 @@ const ChefCards = props => {
             <div class="card chefcard">
                 <div class="card-image">
                     <img src={props.image} />
+                    <span class="card-title">{props.title}</span>
                 </div>
                 <div class="card-content">
-                    <span class="card-title allchef-title">{props.title}</span>
-                    <br></br>
-                    <p className="all-chef-instructions">Recipe by: {props.social}</p>
+                    <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                    <a href="#">View Recipe</a>
+                    <a href="#">This is a link</a>
                 </div>
             </div>
         </div>

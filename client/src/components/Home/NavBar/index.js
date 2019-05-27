@@ -25,7 +25,7 @@ class NavBar extends React.Component {
         const { username, password } = this.state;
         API.signup({ username, password })
             .then(res => {
-                // alert("done!");
+                alert("done!");
                 this.setState({
                     isSignupModalOpen: false,
                     username: "",
@@ -39,7 +39,7 @@ class NavBar extends React.Component {
         const { onLogin } = this.props;
         API.login({ username, password })
             .then(res => {
-                // alert("You are logged in!");
+                alert("You are logged in!");
                 this.setState({
                     isLoginModalOpen: false,
                     username: "",
@@ -84,15 +84,9 @@ class NavBar extends React.Component {
         console.log(user);
         return (
             <Navbar brand={<a />} alignLinks="right" className="navbar-header z-depth-0">
-                <NavItem href="/categories" className="white-text valign-wrapper">
-                    Fridge
-             </NavItem>
-                <NavItem href="/blogs" className="white-text valign-wrapper">
-                    Blogs
-             </NavItem>
                 <NavItem>
                     {user ? null : (
-                        <Button className="white-text valign-wrapper" onClick={this.openLoginModal}>Login</Button>
+                        <Button onClick={this.openLoginModal}>Login</Button>
                     )}
 
                     {this.state.isLoginModalOpen ? (
@@ -123,20 +117,19 @@ class NavBar extends React.Component {
 
                             <Button
                                 onClick={this.handleLogin}
-                                className="login-button z-depth-0">Log In
-                            </Button>
+                                className="login-button">Log In</Button>
                         </Modal>
                     ) : null}
 
                 </NavItem>
 
                 <NavItem>
-                    {user ?
-                        <NavItem className="white-text signout valign-wrapper">
-                            Signout
+                {user ? 
+                <NavItem className="white-text signout valign-wrapper">
+                Signout
          </NavItem> : (
-                            <Button className="white-text valign-wrapper" onClick={this.openSignupModal}>Signup</Button>
-                        )}
+                    <Button onClick={this.openSignupModal}>Signup</Button>
+                    )}
 
                     {this.state.isSignupModalOpen ? (
                         <Modal header="Sign Up" className="black-text signup" open={true}>
@@ -165,6 +158,9 @@ class NavBar extends React.Component {
                     ) : null}
 
                 </NavItem>
+                <NavItem href="/categories" className="white-text fridge valign-wrapper">
+                    Fridge
+             </NavItem>
             </Navbar>
         );
     }

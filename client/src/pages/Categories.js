@@ -3,7 +3,7 @@ import Wrapper from "../components/Wrapper";
 import NavBarIngredients from "../components/CategoriesPage/NavBar";
 import Ingredients from "../components/CategoriesPage/SearchRecipe";
 import FindRecipes from "../components/CategoriesPage/FindRecipe";
-import Footer from "../components/Home/Footer";
+import Footer from "../components/CategoriesPage/Footer";
 
 class Recipe extends Component {
 
