@@ -2,10 +2,12 @@ import React from "react";
 import "./style.css";
 
 const OneChefRecipe = ({ recipe }) => {
+
     if (!recipe) {
         return <div />;
     }
     return (
+
         <div className="container">
             <div className="row one-chef-row">
                 <div className="col l8 offset-">
@@ -17,6 +19,24 @@ const OneChefRecipe = ({ recipe }) => {
                     <p className="submission-insruc">
                         Follow The Chef: {recipe.social} <i class="fab fa-instagram"></i>
                     </p>
+                    <div class="rating">
+                        <label>
+                            <input type="radio" name="rating" value="5" title="5 stars" /> 5
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="4" title="4 stars" /> 4
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="3" title="3 stars" /> 3
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="2" title="2 stars" /> 2
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="1" title="1 star" /> 1
+                        </label>
+                    </div>
+
                 </div>
 
                 <div className="col l3">

@@ -61,7 +61,6 @@ class Home extends Component {
           />
           <Chefs recipe={recipes[12]}
             handleSend={this.handleSend(recipes[12].id)}
-
             title={recipes[12].title}
             image={recipes[12].image}
           />
