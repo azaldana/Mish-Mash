@@ -13,8 +13,6 @@ function OneChef(props) {
 
 
     </Wrapper>
-
-
   );
 }
 export default OneChef;

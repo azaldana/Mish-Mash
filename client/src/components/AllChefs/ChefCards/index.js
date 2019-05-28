@@ -4,6 +4,7 @@ import { Row, Col, Card, CardTitle, CardMedia } from 'react-materialize';
 import { Link } from 'react-router-dom';
 
 const ChefCards = props => {
+    const { handleSend } = props;
     return (
         <div class="col s12 m7 l4">
             <div class="card chefcard">
@@ -16,7 +17,11 @@ const ChefCards = props => {
                     <p className="all-chef-instructions">Recipe by: {props.social}</p>
                 </div>
                 <div class="card-action">
-                    <a href="#">View Recipe</a>
+                <Link
+                    to="/onechef"
+                    onClick={handleSend}>
+                    View Recipe
+                </Link>
                 </div>
             </div>
         </div>
