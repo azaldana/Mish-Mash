@@ -22,7 +22,7 @@ export default {
   },
 
   getRecipes: function(query) {
-    return axios.post('api/recipes', {q: query})
+    return axios.get("/api/recipes", { params: { q: query } });
   }
   
 };

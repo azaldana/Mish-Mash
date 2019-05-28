@@ -9,6 +9,7 @@ import Recipes from "./pages/Recipes";
 import { UserProvider } from './utils/userContext';
 import allRecipes from './recipes.json';
 
+const API_KEY = "a98f4c1c702634fb3ad1e056fde192f1";
 
 function Index() {
   return (
@@ -44,7 +45,8 @@ class App extends React.Component {
 
   state = {
     recipieId: -1,
-    currentUser: null
+    currentUser: null,
+    recipes: []
   }
 
   handleSend = (id) => {
@@ -58,6 +60,36 @@ class App extends React.Component {
       currentUser: user
     })
   }
+
+  // componentDidMount() {
+  //   fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=apples%2Cflour%2Csugar")
+  //   .then(results => results.json())
+  //   .then(data => {
+  //     const recipes = data.reults;
+  //     this.setState({ recipes: recipes})
+  //     console.log(recipes);
+  //   })
+  //   .catch(err => console.log(err));
+  // }
+  getRecipe = async (e) => {
+    const recipeName = e.target.elements.recipeName.value;
+    e.preventDefault();
+    const api_call = await fetch(`https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=10`);
+    
+    const data = await api_call.json();
+    this.setState({ recipes: data.recipes });
+    console.log(this.state.recipes);
+  }
+  componentDidMount = () => {
+    const json = localStorage.getItem("recipes");
+    const recipes = JSON.parse(json);
+    this.setState({ recipes });
+  }
+  componentDidUpdate = () => {
+    const recipes = JSON.stringify(this.state.recipes);
+    localStorage.setItem("recipes", recipes);
+  }
+
 
   render() {
     const { recipieId } = this.state;
@@ -78,9 +110,9 @@ class App extends React.Component {
               <Route exact path="/categories" component={Categories} />
               <Route exact path="/onechef" render={(props) => <OneChef {...props} recipe={currentRecipe} />} />
               <Route exact path="/recipes" component={Recipes} />
-              {/* <Route component={NoMatch} /> */}
+              {/* <Route component={NoMatch} /> */}   
             </Switch>
-          </div>
+          </div>   
         </Router>
         </UserProvider>
     );
