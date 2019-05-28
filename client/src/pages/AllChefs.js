@@ -10,6 +10,11 @@ class AllChefs extends Component {
   state = {
     recipes
   }
+
+  handleSend = (id) => () => {
+    this.props.handleSend(id);
+  }
+
   render() {
 
     return (
@@ -22,6 +27,7 @@ class AllChefs extends Component {
                 title={recipe.title}
                 image={recipe.image}
                 social={recipe.social}
+                handleSend={this.handleSend(recipes.id)}
               />
             ))}
         </div>

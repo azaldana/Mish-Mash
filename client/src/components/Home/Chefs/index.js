@@ -18,8 +18,7 @@ const Chefs = props => {
                         <Link
                           to="/onechef"
                           className="waves-effect waves-light btn view-01"
-                          onClick={handleSend}
-                        >
+                          onClick={handleSend}>
                             <i class="material-icons right">send</i>
                             View Recipe
                         </Link>
