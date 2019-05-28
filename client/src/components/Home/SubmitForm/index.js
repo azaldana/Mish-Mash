@@ -143,8 +143,9 @@ class SubmitForm extends React.Component {
                         />
 
                         <input
+                            name="image"
                             type="file"
-                            onChange={this.fileSelectedHandler} />
+                            onChange={this.handleChange} />
 
                         <Button onClick={this.handleSubmitForm}>Submit</Button>
                     </Modal>
