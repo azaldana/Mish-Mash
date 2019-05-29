@@ -5,17 +5,6 @@ var unirest = require('unirest');
 
 
 
-// function handleSearch() {
-//     alert("button-clicked");
-//     unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=apples%2Cflour%2Csugar")
-//     .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-//     .header("X-RapidAPI-Key", "WPW7FyEBbTmshvFlCq04kYiUjJU8p1BiPTajsn0sk2QRRQeYTY")
-//     .end(function (result) {
-//     console.log(result.status, result.headers, result.body);
-//     });
-// }
-
-
 const dairy = [
     "Egg",
     "Butter",
@@ -178,14 +167,36 @@ class Ingredients extends React.Component {
 
     }
 
-        handleSearch() {
-            unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=apples%2Cflour%2Csugar")
-                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                .header("X-RapidAPI-Key", "WPW7FyEBbTmshvFlCq04kYiUjJU8p1BiPTajsn0sk2QRRQeYTY")
-                .end(function (result) {
-                console.log(result.status, result.headers, result.body);
-                });
+    handleSearch = () => {
+        var ingredient = this.state.selected.join("%2C");
+        console.log(ingredient);
+        // API.getRecipes({ingredient: ingredient})
+        // .then(data => {
+        //     console.log(data);
+        // })
+        fetch('/api/recipes', {
+            method: "post", 
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ingredient})
+        })
+        .then(data => data.json())
+        .then(results => {
+            console.log(results);
+        })
     }
+
+    // componentDidMount() {
+    //     fetch('/api/recipes', {
+    //         method: "post", 
+    //         headers: {"Content-Type": "application/json"},
+    //         body: JSON.stringify({test:'hello from frontend'})
+    //     })
+    //     .then(data => data.json())
+    //     .then(results => {
+    //         console.log(results);
+    //     })
+    // }
+
 
     render() {
         console.log(this.state);
@@ -449,7 +460,7 @@ class Ingredients extends React.Component {
 
         );
         // closing render }
-    } 
+    }
 }
 
 export default Ingredients;
