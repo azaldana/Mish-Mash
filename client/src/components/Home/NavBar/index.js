@@ -54,6 +54,10 @@ class NavBar extends React.Component {
             })
     }
 
+    signoutButtonClicked = () => {
+
+    }
+
     openLoginModal = () => {
         this.setState({
             isLoginModalOpen: true
@@ -132,7 +136,7 @@ class NavBar extends React.Component {
 
                 <NavItem>
                     {user ?
-                        <NavItem className="white-text signout valign-wrapper">
+                        <NavItem className="white-text signout valign-wrapper" onClick={this.signoutButtonClicked}>
                             Signout
          </NavItem> : (
                             <Button className="white-text valign-wrapper" onClick={this.openSignupModal}>Signup</Button>

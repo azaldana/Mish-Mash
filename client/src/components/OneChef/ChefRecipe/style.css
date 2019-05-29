@@ -40,6 +40,17 @@
 
 }
 
+.main-rating {
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 25px !important;
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
 .headline-ingred {
     color: black !important;
     margin-top: 50px;
@@ -97,43 +108,11 @@
     color: white;
 }
 
-.rating {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    width: 100%;
-    text-align: left;
+.page-wrap {
     margin-left: 100px;
-}
-
-.rating input {
-    position: absolute;
-    left: -999999px;
-}
-
-.rating label {
-    display: inline-block;
-    font-size: 0;
-    padding-right: 10px;
     margin-top: 10px;
 }
 
-.rating > label:before {
-    position: relative;
-    font: 24px/1 FontAwesome;
-    display: block;
-    content: "\f005";
-    color: #ccc;
-    background: #b3b3b3;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.rating > label:hover:before,
-.rating > label:hover ~ label:before,
-.rating > label.selected:before,
-.rating > label.selected ~ label:before {
-    color: #f0ad4e;
-    background: #fbaa19;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.main-rating {
+    display: inline;
 }
