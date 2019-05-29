@@ -1,4 +1,5 @@
 import React from "react";
+import MainRating from "../Ratings";
 import "./style.css";
 
 const OneChefRecipe = ({ recipe }) => {
@@ -19,7 +20,9 @@ const OneChefRecipe = ({ recipe }) => {
                     <p className="submission-insruc">
                         Follow The Chef: {recipe.social} <i class="fab fa-instagram"></i>
                     </p>
-                    <div class="rating">
+                    <br></br>
+                    <p className="main-rating">Rate The Chef Below <MainRating/></p>
+                    {/* <div class="rating">
                         <label>
                             <input type="radio" name="rating" value="5" title="5 stars" /> 5
                         </label>
@@ -35,7 +38,7 @@ const OneChefRecipe = ({ recipe }) => {
                         <label>
                             <input type="radio" name="rating" value="1" title="1 star" /> 1
                         </label>
-                    </div>
+                    </div> */}
 
                 </div>
 

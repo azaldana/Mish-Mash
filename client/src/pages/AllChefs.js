@@ -31,6 +31,7 @@ class AllChefs extends Component {
               />
             ))}
         </div>
+        
         <Footer></Footer>
       </Wrapper>
     );
