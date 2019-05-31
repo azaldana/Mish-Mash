@@ -55,19 +55,21 @@ class Home extends Component {
         <About />
         <HeaderChef>
           <Chefs recipe={recipes[7]}
-            handleSend={this.handleSend(recipes[7].id)}
             title={recipes[7].title}
             image={recipes[7].image}
+            id={recipes[7].id}
           />
           <Chefs recipe={recipes[12]}
             handleSend={this.handleSend(recipes[12].id)}
             title={recipes[12].title}
             image={recipes[12].image}
+            id={recipes[12].id}
           />
           <Chefs recipe={recipes[20]}
             handleSend={this.handleSend(recipes[20].id)}
             title={recipes[20].title}
             image={recipes[20].image}
+            id={recipes[20].id}
           />
           <a href="/allchefs" class="waves-effect waves-light btn view">View all Chefs</a>
         </HeaderChef>

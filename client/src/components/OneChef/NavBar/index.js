@@ -3,7 +3,7 @@ import "./style.css";
 import { Navbar, NavItem } from 'react-materialize';
 
 const NavBarOneChef = props => {
-    const Img = <a href="/"><img src="./images/mish-mash-logo.png" width="80" className="nav-logo"/></a>
+    const Img = <a href="/"><img src="/images/mish-mash-logo.png" width="80" className="nav-logo"/></a>
     return (
     <Navbar brand={Img} alignLinks="right" className="transparent z-depth-0">
             <NavItem href="/" className="black-text navtext valign-wrapper modal-trigger">
