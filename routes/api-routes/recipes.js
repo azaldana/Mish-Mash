@@ -1,13 +1,13 @@
 require("dotenv").config();
 const router = require('express').Router();
-const recipesController = require('../..controllers/recipesController');
+const categoriesController = require('../..controllers/categoriesController');
 
 
 // Recipes routes
-router.route('/recipes/:query')
-    .get(recipesController.findAll);
-router.routes('/recipes')
-    .post(recipesController.getRecipes);
+router.route('/categories/:query')
+    .get(categoriesController.findAll);
+router.routes('/categories')
+    .post(categoriesController.getCategories);
 // router.post('/recipes', function (req, res) {
 //     console.log(req.body);
 // })
