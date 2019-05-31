@@ -10,7 +10,7 @@ const FooterAll = props => {
       <div class="container footer-container">
         <div class="row footer-row">
           <div class="col l12">
-            <img className="footer-logo" src="./images/mish-mash-icon.png" alt="Mish Mash Icon" width="35" /><br></br><br></br>
+            <img className="footer-logo" src="/images/mish-mash-icon.png" alt="Mish Mash Icon" width="35" /><br></br><br></br>
             <Link to="/"><Button className="black-text footer-buttons z-depth-0">Home</Button></Link>
             <Link to="/"><Button className="black-text footer-buttons z-depth-0">About</Button></Link>
             <Link to="/categories"><Button className="black-text footer-buttons z-depth-0">Fridge</Button></Link>

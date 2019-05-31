@@ -9,8 +9,7 @@ const FooterAll = props => {
         <div class="container">
           <div class="row">
             <div class="col l12 s12">
-              <img src="./images/mish-mash-logo.png" width="100"/>
-              {/* <p class="grey-text">Home About Fridge Blog</p> */}
+              <img src="/images/mish-mash-logo.png" width="100"/>
             </div>
           </div>
         </div>

@@ -3,7 +3,11 @@ import MainRating from "../Ratings";
 import "./style.css";
 
 const OneChefRecipe = ({ recipe }) => {
-
+    console.log("This is a console", recipe);
+    const ingredients = recipe && typeof recipe.ingredients === 'string'
+      ? recipe.ingredients.split(',')
+      : recipe && recipe.ingredients;
+    
     if (!recipe) {
         return <div />;
     }
@@ -27,7 +31,7 @@ const OneChefRecipe = ({ recipe }) => {
                 <div className="col l3">
                     <p className="title-ingred">Ingredients</p>
                     <form className="form-ingred" action="#">
-                        {recipe.ingredients.split(",").map(
+                        {ingredients.map(
                             (item) => {
                                 return <p>
                                     <label>

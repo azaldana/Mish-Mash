@@ -7,20 +7,26 @@ import Footer from "../components/Home/Footer";
 
 class OneChef extends Component {
   state = {
-    recipes
+    recipes,
+    recipe: null
   }
 
   componentDidMount() {
         console.log("componentDidMount");
-
+        console.log(this.props.match.params);
+        const id = Number(this.props.match.params.id);
+        const recipe = this.state.recipes.find(r => r.id === id);
+        console.log(recipe);
+        console.log(recipes);
+        this.setState({ recipe })
     }
 
 render(){
   return (
     <Wrapper>
       <NavBarOneChef/>
-      <ChefRecipe 
-      {...this.props}/>
+      <ChefRecipe recipe={this.state.recipe}
+      />
       <Footer/>
     </Wrapper>
     );
