@@ -23,6 +23,15 @@ class SubmitForm extends React.Component {
         });
     }
 
+    handleFileChange = (event) => {
+        const { files, value } = event.target;
+        console.log(files[0]);
+        console.log(value);
+        this.setState({
+            image: files[0]
+        })
+    }
+
     handleSubmitForm = () => {
         const { title, ingredients, instructions, totalTime, servings, social, image, image_id } = this.state;
         const { submission } = this.props;
@@ -82,7 +91,7 @@ class SubmitForm extends React.Component {
                             name="title"
                             value={title}
                             label="Title"
-                            placeholder=""
+                            placeholder="Ice Cubes"
                             id="form_title"
                             type="text"
                             className="validate"
@@ -93,7 +102,7 @@ class SubmitForm extends React.Component {
                             name="ingredients"
                             value={ingredients}
                             label="Ingredients"
-                            placeholder=""
+                            placeholder="2 cups of water, 2 tablespoons of water, etc."
                             className="validate"
                             data-length={150}
                             onChange={this.handleChange}
@@ -103,8 +112,8 @@ class SubmitForm extends React.Component {
                             name="instructions"
                             value={instructions}
                             label="Instructions"
-                            placeholder=""
-                            className="validate"
+                            placeholder="1. Mix 2 cups of water with 2 tablespoons of water  2. Add more water to taste 3. Pour water into ice cube tray 4. Freeze water"
+                            className="validate instructions"
                             data-length={350}
                             onChange={this.handleChange}
                         />
@@ -113,7 +122,7 @@ class SubmitForm extends React.Component {
                             name="totalTime"
                             value={totalTime}
                             label="Total Time"
-                            placeholder=""
+                            placeholder="90 minutes"
                             id="totalTime"
                             type="text"
                             className="validate"
@@ -124,7 +133,7 @@ class SubmitForm extends React.Component {
                             name="servings"
                             value={servings}
                             label="Servings"
-                            placeholder=""
+                            placeholder="4 glasses"
                             id="servings"
                             type="text"
                             className="validate"
@@ -135,7 +144,7 @@ class SubmitForm extends React.Component {
                             name="social"
                             value={social}
                             label="Social"
-                            placeholder=""
+                            placeholder="@IceCube"
                             id="social"
                             type="text"
                             className="validate"
@@ -145,9 +154,9 @@ class SubmitForm extends React.Component {
                         <input
                             name="image"
                             type="file"
-                            onChange={this.handleChange} />
+                            onChange={this.handleFileChange} />
 
-                        <Button onClick={this.handleSubmitForm}>Submit</Button>
+                        <Button className="submit-form-button" onClick={this.handleSubmitForm}>Submit</Button>
                     </Modal>
                 ) : null}
             </div>

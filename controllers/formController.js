@@ -1,20 +1,20 @@
 // ./app/controller.js
-// const cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary');
 const db = require("../models");
 
-// cloudinary.config({
-//     cloud_name: 'mish-mash',
-//     api_key: '514316982861672',
-//     api_secret: 'AEglA9tn-0DTBfeOKJ_5lpvpYiA'
-// });
+cloudinary.config({
+    cloud_name: 'mish-mash',
+    api_key: '514316982861672',
+    api_secret: 'AEglA9tn-0DTBfeOKJ_5lpvpYiA'
+});
 
 module.exports = {
     create: function (req, res) {
-            // console.log(req.body)
-        // cloudinary.v2.uploader.upload(req.body.image,
-        //     // { width: 300, height: 300, crop: "limit", moderation: 'manual' },
-        //     function (err, result) {
-        //         console.log(result, err);
+            console.log(req.body)
+        cloudinary.v2.uploader.upload(req.body.image,
+            // { width: 300, height: 300, crop: "limit", moderation: 'manual' },
+            function (err, result) {
+                console.log(result, err);
                 const post = {
                     title: req.body.title,
                     ingredients: req.body.ingredients,
@@ -22,15 +22,15 @@ module.exports = {
                     totalTime: req.body.totalTime,
                     servings: req.body.servings,
                     social: req.body.social,
-                    image: "",
-                    image_id: 0
-                    // image: result.url,
-                    // image_id: result.public_id
+                    // image: "",
+                    // image_id: 0
+                    image: result.url,
+                    image_id: result.public_id
                 };
                 db.Form
                     .create(post)
                     .then(dbModel => res.json(dbModel))
-            // });
+            });
 
     }
     // create: function (req, res) {
