@@ -11,12 +11,13 @@ const routes = require('./routes');
 const unirest = require('unirest');
 // const multer = require('multer');
 // const upload = multer({ dest: 'uploads/'});
-// var bodyParser = require('body-parser');
-// var morgan       = require('morgan');
+var bodyParser = require('body-parser');
+var morgan       = require('morgan');
 
 // Sets up the Express App
 // =============================================================
 var app = express();
+app.use(morgan('dev'));
 
 
 // app.use(morgan('dev'));
@@ -53,6 +54,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash",
 
 //   res.send("OK!");
 // })
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 
 app.post('/api/recipes', function (req, res) {

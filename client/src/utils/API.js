@@ -18,7 +18,21 @@ export default {
     return axios.post('/api/users/validate', { token: t });
   },
   submitForm: function(data){
-    return axios.post('/api/form/create', data);
+    const formData = new FormData();
+    const { title, ingredients, instructions, totalTime, servings, social, image, image_id } = data;
+    formData.append('title', title);
+    formData.append('ingredients', ingredients);
+    formData.append('instructions', instructions);
+    formData.append('totalTime', totalTime);
+    formData.append('servings', servings);
+    formData.append('social', social);
+    formData.append('image',image);
+    formData.append('image_id', image_id );
+    return axios.post('/api/form/create', data, {
+      headers: {
+        "Content-type": "multiform/form-data"
+      }
+    });
   },
 
   getRecipes: function(query) {
