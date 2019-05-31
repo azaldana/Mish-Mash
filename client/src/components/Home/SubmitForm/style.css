@@ -91,3 +91,7 @@
     text-transform: uppercase;
     font-weight: 700;
 }
+
+textarea.materialize-textarea {
+    min-height: 60px !important;
+}

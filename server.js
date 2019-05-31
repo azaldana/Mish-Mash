@@ -5,15 +5,19 @@
 // *** Dependencies
 // =============================================================
 var express = require('express');
+// const path = require('path'); 
 const mongoose = require("mongoose");
 const routes = require('./routes');
 const unirest = require('unirest');
+// const multer = require('multer');
+// const upload = multer({ dest: 'uploads/'});
 // var bodyParser = require('body-parser');
 // var morgan       = require('morgan');
 
 // Sets up the Express App
 // =============================================================
 var app = express();
+
 
 // app.use(morgan('dev'));
 var PORT = process.env.PORT || 3001;
@@ -25,6 +29,8 @@ var PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -39,6 +45,14 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash",
     useNewUrlParser: true
   }
 );
+
+// app.post('/upload', upload.single('picture'), (req, res) => {
+//   const { name } = req.body;
+//   console.log(name);
+//   console.log(req.file);
+
+//   res.send("OK!");
+// })
 
 
 app.post('/api/recipes', function (req, res) {
