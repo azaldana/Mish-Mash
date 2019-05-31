@@ -55,7 +55,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash",
 // })
 
 
-app.post('/api/recipes', function (req, res) {
+app.post('/api/categories', function (req, res) {
   var ingredients = req.body.ingredient
   unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=" + ingredients)
     .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")

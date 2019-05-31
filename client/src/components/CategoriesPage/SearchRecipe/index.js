@@ -174,7 +174,7 @@ class Ingredients extends React.Component {
         // .then(data => {
         //     console.log(data);
         // })
-        fetch('/api/recipes', {
+        fetch('/api/categories', {
             method: "post", 
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ingredient})

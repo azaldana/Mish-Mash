@@ -20,7 +20,9 @@ export default {
   submitForm: function(data){
     return axios.post('/api/form/create', data);
   },
-
+  getCategories: function(query) {
+    return axios.post('/api/categories', query);
+  },
   getRecipes: function(query) {
     return axios.post('/api/recipes', query);
   },
