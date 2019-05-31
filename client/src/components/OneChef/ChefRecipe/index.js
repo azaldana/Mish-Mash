@@ -22,24 +22,6 @@ const OneChefRecipe = ({ recipe }) => {
                     </p>
                     <br></br>
                     <p className="main-rating">Rate The Chef Below <MainRating/></p>
-                    {/* <div class="rating">
-                        <label>
-                            <input type="radio" name="rating" value="5" title="5 stars" /> 5
-                        </label>
-                        <label>
-                            <input type="radio" name="rating" value="4" title="4 stars" /> 4
-                        </label>
-                        <label>
-                            <input type="radio" name="rating" value="3" title="3 stars" /> 3
-                        </label>
-                        <label>
-                            <input type="radio" name="rating" value="2" title="2 stars" /> 2
-                        </label>
-                        <label>
-                            <input type="radio" name="rating" value="1" title="1 star" /> 1
-                        </label>
-                    </div> */}
-
                 </div>
 
                 <div className="col l3">
