@@ -27,7 +27,7 @@ class AllChefs extends Component {
                 title={recipe.title}
                 image={recipe.image}
                 social={recipe.social}
-                handleSend={this.handleSend(recipes.id)}
+                id={recipe.id}
               />
             ))}
         </div>
