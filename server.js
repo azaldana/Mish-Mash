@@ -7,6 +7,7 @@
 var express = require('express');
 const mongoose = require("mongoose");
 const routes = require('./routes');
+const unirest = require('unirest');
 // var bodyParser = require('body-parser');
 // var morgan       = require('morgan');
 
@@ -33,13 +34,24 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash",
-{
-  useCreateIndex: true,
-  useNewUrlParser: true
-}
+  {
+    useCreateIndex: true,
+    useNewUrlParser: true
+  }
 );
 
+
+app.post('/api/recipes', function (req, res) {
+  var ingredients = req.body.ingredient
+  unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=" + ingredients)
+    .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+    .header("X-RapidAPI-Key", "WPW7FyEBbTmshvFlCq04kYiUjJU8p1BiPTajsn0sk2QRRQeYTY")
+    .end(function (result) {
+      res.json(result.body)
+    });
+})
+
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

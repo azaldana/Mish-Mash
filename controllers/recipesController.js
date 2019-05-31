@@ -25,7 +25,10 @@ module.exports = {
             result.recipes.prepTime 
         )
       )
-  }
+  },
+  // getRecipes: function(req, res) {
+  //   console.log(req.body);
+  // }
 };
 
 // var db = require('../models');
