@@ -16,15 +16,24 @@ module.exports = {
       .get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" , {
         params
       }, key)
-      .then(results =>
-        results.data.items.filter(
-          result =>
-            result.recipes.title &&
-            result.recipes.bigImg &&
-            result.recipes.instructions &&
-            result.recipes.prepTime 
+      .then(results => {
+        const recipes =  results.data.items.map(recipe  => ({
+            spoonacularId: recipe.id,
+            title: recipe.title,
+          })
         )
-      )
+        return recipes;
+      })
+      .then(recipes => {
+        recipes.foreach(recipe => {
+          db.Recipes.create(recipe)
+        })
+      })
+       
+            // result.recipes.title &&
+            // result.recipes.bigImg &&
+            // result.recipes.instructions &&
+            // result.recipes.prepTime 
   },
   // getRecipes: function(req, res) {
   //   console.log(req.body);
