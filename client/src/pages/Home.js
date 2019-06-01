@@ -22,24 +22,24 @@ class Home extends Component {
     recipes
   };
 
-  handleSend = (id) => () => {
+  handleSend = id => () => {
     this.props.handleSend(id);
-  }
+  };
 
-  handleLogin = (user) => {
+  handleLogin = user => {
     const { onLogin } = this.context;
     onLogin(user);
-  }
+  };
 
-  handleSignup = (user) => {
+  handleSignup = user => {
     const { onSignup } = this.context;
     onSignup(user);
-  }
+  };
 
-  handleSubmitForm = (submission) => {
+  handleSubmitForm = submission => {
     const { submitForm } = this.props;
     submitForm(submission);
-  }
+  };
 
   render() {
     const { user } = this.context;
@@ -49,29 +49,38 @@ class Home extends Component {
     return (
       <Wrapper>
         <Hero>
-          <NavBar onLogin={this.handleLogin} user={user}
-            onSignup={this.handleSignup} user={user} />
+          <NavBar
+            onLogin={this.handleLogin}
+            user={user}
+            onSignup={this.handleSignup}
+            user={user}
+          />
         </Hero>
         <About />
         <HeaderChef>
-          <Chefs recipe={recipes[7]}
+          <Chefs
+            recipe={recipes[7]}
             title={recipes[7].title}
             image={recipes[7].image}
             id={recipes[7].id}
           />
-          <Chefs recipe={recipes[12]}
+          <Chefs
+            recipe={recipes[12]}
             handleSend={this.handleSend(recipes[12].id)}
             title={recipes[12].title}
             image={recipes[12].image}
             id={recipes[12].id}
           />
-          <Chefs recipe={recipes[20]}
+          <Chefs
+            recipe={recipes[20]}
             handleSend={this.handleSend(recipes[20].id)}
             title={recipes[20].title}
             image={recipes[20].image}
             id={recipes[20].id}
           />
-          <a href="/allchefs" class="waves-effect waves-light btn view">View all Chefs</a>
+          <a href="/allchefs" class="waves-effect waves-light btn view">
+            View all Chefs
+          </a>
         </HeaderChef>
         <DualBtn />
         <Video />
@@ -86,7 +95,12 @@ class Home extends Component {
 
         <div className="row">
           <form className="col s12">
-            <SubmitForm submitForm={this.handleSubmitForm} submission={submission} />
+            <SubmitForm
+              onLogin={this.handleLogin}
+              user={user}
+              submitForm={this.handleSubmitForm}
+              submission={submission}
+            />
           </form>
         </div>
         <FooterAll />
