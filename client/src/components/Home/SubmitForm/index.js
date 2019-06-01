@@ -69,6 +69,12 @@ class SubmitForm extends React.Component {
     });
   };
 
+  openLoginModal = () => {
+    this.setState({
+      isLoginModalOpen: true
+    });
+  };
+
   openSubmitFormModal = event => {
     event.preventDefault();
     this.setState({
@@ -127,6 +133,15 @@ class SubmitForm extends React.Component {
             Submit Your Recipe
           </Button>
         ) : null}
+
+        {user ? null : (
+          <Button
+            className="white-text valign-wrapper submit-form-button"
+            onClick={this.openLoginModal}
+          >
+            Login to submit recipe
+          </Button>
+        )}
 
         {this.state.isSubmitFormModalOpen ? (
           <Modal
