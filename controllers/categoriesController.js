@@ -8,7 +8,7 @@ module.exports = {
   findAll: function (req, res) {
     console.log(req.body);
     const { ingredient } = req.body;
-    unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=" + ingredient)
+    unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=6&ranking=1&ignorePantry=false&ingredients=" + ingredient)
       .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
       .header("X-RapidAPI-Key", key)
       .end(async function (result) {
