@@ -52,9 +52,6 @@ const OneChefRecipe = ({ recipe }) => {
                         )}
                     </p>
                     <br></br>
-                    <a class="waves-effect waves-light btn one-chef-review">
-                        <i class="material-icons right">chevron_right</i>
-                        Leave a Review</a>
                 </div>
 
             </div>

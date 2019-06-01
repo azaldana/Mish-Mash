@@ -4,18 +4,20 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
-var express = require('express');
+const express = require('express');
 // const path = require('path'); 
 const mongoose = require("mongoose");
 const routes = require('./routes');
 // const multer = require('multer');
 // const upload = multer({ dest: 'uploads/'});
-// var bodyParser = require('body-parser');
-// var morgan       = require('morgan');
+const bodyParser = require('body-parser');
+const cloudinary = require('cloudinary');
+require('dotenv').config();
+
 
 // Sets up the Express App
 // =============================================================
-var app = express();
+const app = express();
 
 
 // app.use(morgan('dev'));
@@ -24,6 +26,7 @@ var PORT = process.env.PORT || 3001;
 
 // Requiring our models for syncing
 // var db = require('./models');
+require('./models/form')
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -45,13 +48,45 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash",
   }
 );
 
-// app.post('/upload', upload.single('picture'), (req, res) => {
-//   const { name } = req.body;
-//   console.log(name);
-//   console.log(req.file);
+require('./config/cloudinaryConfig')
+const upload = require('./config/multer')
+const Form = mongoose.model('Form')
 
-//   res.send("OK!");
-// })
+app.use(bodyParser.json()).use(bodyParser.urlencoded({ extended: true }))
+
+app.get('/', (req, res) => {
+  console.log("hello")
+  res.render('index')
+})
+
+app.get('/create', async (req, res) => {
+  console.log("hello2")
+  const form = await Form.find({})
+  res.render('forms', {
+    form
+  })
+})
+
+
+app.post('/create', upload.single('image'), async (req, res) => {
+  console.log("hello")
+  const result = await cloudinary.v2.uploader.upload(req.file.path)
+  console.log("hello 2")
+  const post = {
+    title: req.body.title,
+    ingredients: req.body.ingredients,
+    instructions: req.body.instructions,
+    totalTime: req.body.totalTime,
+    servings: req.body.servings,
+    social: req.body.social,
+    image: result.secure_url,
+    image_id: result.public_id
+}
+  await post.save()
+  res.send({
+    message: 'Blog is Created'
+  })
+})
 
 
 // Start the API server
