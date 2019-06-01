@@ -27,12 +27,12 @@ export default {
     formData.append('totalTime', totalTime);
     formData.append('servings', servings);
     formData.append('social', social);
-    formData.append('image',image);
+    formData.append('image', image);
     formData.append('image_id', image_id );
     return axios.post('/api/form/create', data, {
-      headers: {
-        "Content-type": "multiform/form-data"
-      }
+      // headers: {
+      //   "Content-type": "multiform/form-data"
+      // }
     });
   },
   getCategories: function(query) {
