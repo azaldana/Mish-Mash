@@ -35,15 +35,35 @@
     background-color: #fbaa19;
     margin-left: 50px;
     text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    width: 125px;
+    font-size: 12px;
 }
 
-.login-button:hover {
-    color: #fbaa19;
-    background-color: white;
-    border: 1px solid  #fbaa19;
+.signup-button {
+    color: white;
+    background-color: #fbaa19;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    width: 130px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.login-button:hover, .signup-button:hover {
+    color: white;
+    background-color: #fbaa19;
 }
 
 .login-username, .login-password {
+    width: 65% !important;
+    border-bottom: 1px solid #fbaa19;
+}
+
+.signup-username, .signup-password {
     width: 65% !important;
     border-bottom: 1px solid #fbaa19;
 }
@@ -65,4 +85,8 @@
 
 .modal-close {
     color: white;
+}
+
+.modal {
+    width: 45%;
 }

@@ -18,6 +18,7 @@ export default {
     return axios.post('/api/users/validate', { token: t });
   },
   submitForm: function(data){
+
     // return axios.post('/api/form/create', data);
     const formData = new FormData();
     const { title, ingredients, instructions, totalTime, servings, social, image, image_id } = data;
