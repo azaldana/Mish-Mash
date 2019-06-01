@@ -1,6 +1,4 @@
 const router = require('express').Router();
-const multipart = require('connect-multiparty');
-const multipartMiddleware = multipart();
 const formController = require('../../controllers/formController');
 
 
@@ -11,7 +9,7 @@ const formController = require('../../controllers/formController');
   // .get(formController.new);
 
   router.route('/create')
-  .post(multipartMiddleware, formController.create);
+  .post(formController.create);
 
 
 module.exports = router;
