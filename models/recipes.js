@@ -8,7 +8,7 @@ const recipesSchema = new Schema({
   title: { 
     type: String 
   },
-  img: { 
+  image: { 
     type: String, 
     required: true 
   },
@@ -16,7 +16,7 @@ const recipesSchema = new Schema({
     type: String, 
     required: true 
   },
-  prepTime: { 
+  preparationMinutes: { 
     type: Number, 
     required: true 
   },
