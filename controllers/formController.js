@@ -24,8 +24,8 @@ module.exports = {
                     social: req.body.social,
                     // image: "",
                     // image_id: 0
-                    image: result.url,
-                    image_id: result.public_id
+                    // image: result.url,
+                    // image_id: result.public_id
                 };
                 db.Form
                     .create(post)
