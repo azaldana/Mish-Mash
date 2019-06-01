@@ -8,7 +8,6 @@ var express = require('express');
 // const path = require('path'); 
 const mongoose = require("mongoose");
 const routes = require('./routes');
-const unirest = require('unirest');
 // const multer = require('multer');
 // const upload = multer({ dest: 'uploads/'});
 // var bodyParser = require('body-parser');
@@ -54,16 +53,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash",
 //   res.send("OK!");
 // })
 
-
-app.post('/api/categories', function (req, res) {
-  var ingredients = req.body.ingredient
-  unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=5&ranking=1&ignorePantry=false&ingredients=" + ingredients)
-    .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-    .header("X-RapidAPI-Key", "WPW7FyEBbTmshvFlCq04kYiUjJU8p1BiPTajsn0sk2QRRQeYTY")
-    .end(function (result) {
-      res.json(result.body)
-    });
-})
 
 // Start the API server
 app.listen(PORT, function () {
