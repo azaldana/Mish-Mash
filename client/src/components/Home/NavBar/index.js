@@ -96,7 +96,7 @@ class NavBar extends React.Component {
              </NavItem>
                 <NavItem>
                     {user ? null : (
-                        <Button className="white-text valign-wrapper" onClick={this.openLoginModal}>Login</Button>
+                        <Button className="white-text valign-wrapper z-depth-0" onClick={this.openLoginModal}>Login</Button>
                     )}
 
                     {this.state.isLoginModalOpen ? (
@@ -146,7 +146,7 @@ class NavBar extends React.Component {
                         <NavItem className="white-text signout valign-wrapper" onClick={this.signoutButtonClicked}>
                             Signout
          </NavItem> : (
-                            <Button className="white-text valign-wrapper" onClick={this.openSignupModal}>Signup</Button>
+                            <Button className="white-text valign-wrapper z-depth-0" onClick={this.openSignupModal}>Signup</Button>
                         )}
 
                     {this.state.isSignupModalOpen ? (

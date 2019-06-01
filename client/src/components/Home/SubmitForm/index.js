@@ -77,7 +77,8 @@ class SubmitForm extends React.Component {
                 <img src="./images/mish-mash-icon-yellow-new.png" width="50" alt="Icon" id="submitIcon" />
                 <br></br>
 
-                <p className="recipe-abouttext">We need to include some text. Example text could be something like-Do you love cooking and experimenting with different ingredients? Are you the talk of your friend group and love creating new recipes? Join the Mish Mash community and submit your own recipe for others to rate, share and review. </p>
+                <p className="subhead">Are you the Chef Ramsay of your friends, and reign supreme in the kitchen? <br></br>
+                Place your bid in for Top Chef -- Submit, Rate Share!</p><br></br>
                 <img className="mockup-recipe" src="./images/recipe_layout.jpg" width="1000" alt="Recipe Page Mockup" />
 
                 {submission ? null : (
