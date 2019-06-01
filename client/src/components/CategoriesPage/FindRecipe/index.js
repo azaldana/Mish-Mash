@@ -6,6 +6,7 @@ const FindRecipes = props => {
 
 <div class="recipe-page-content">
   <div class="recipes-page">
+    {JSON.stringify(props.receipes)}
     <h2>Recipes</h2>
     <img src="./images/mish-mash-icon-yellow-new.png" width="50" alt="Icon" id="recipeIcon"/>
     <br></br>

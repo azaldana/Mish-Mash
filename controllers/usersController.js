@@ -2,7 +2,7 @@ const db = require("../models");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-// Defining methods for the booksController
+// Defining methods for the usersController
 module.exports = {
   login: function(req, res) {
     const { username, password } = req.body;

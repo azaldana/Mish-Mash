@@ -179,10 +179,7 @@ class Ingredients extends React.Component {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ingredient})
         })
-        .then(data => data.json())
-        .then(results => {
-            console.log(results);
-        })
+        .then(data => data.json()).then(d => this.props.setReceipes(d))
     }
 
     // componentDidMount() {
