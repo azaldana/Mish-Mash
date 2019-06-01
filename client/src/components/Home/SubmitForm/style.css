@@ -95,3 +95,19 @@
 textarea.materialize-textarea {
     min-height: 60px !important;
 }
+
+.submission {
+    width: 60%;
+}
+
+.validate {
+    width: 85% !important;
+}
+
+input {
+    margin-left: 50px;
+}
+
+.submit-form-button {
+    margin-left: 50px;
+}

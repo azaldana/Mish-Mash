@@ -96,7 +96,7 @@ class NavBar extends React.Component {
              </NavItem>
                 <NavItem>
                     {user ? null : (
-                        <Button className="white-text valign-wrapper" onClick={this.openLoginModal}>Login</Button>
+                        <Button className="white-text valign-wrapper z-depth-0" onClick={this.openLoginModal}>Login</Button>
                     )}
 
                     {this.state.isLoginModalOpen ? (
@@ -127,7 +127,14 @@ class NavBar extends React.Component {
 
                             <Button
                                 onClick={this.handleLogin}
-                                className="login-button z-depth-0">Log In
+                                className="login-button">Log In
+                                <i class="material-icons right">chevron_right</i>
+                            </Button>
+
+                            <Button
+                                onClick={this.closeLoginModal}
+                                className="login-button">Close
+                                <i class="material-icons right">close</i>
                             </Button>
                         </Modal>
                     ) : null}
@@ -139,12 +146,13 @@ class NavBar extends React.Component {
                         <NavItem className="white-text signout valign-wrapper" onClick={this.signoutButtonClicked}>
                             Signout
          </NavItem> : (
-                            <Button className="white-text valign-wrapper" onClick={this.openSignupModal}>Signup</Button>
+                            <Button className="white-text valign-wrapper z-depth-0" onClick={this.openSignupModal}>Signup</Button>
                         )}
 
                     {this.state.isSignupModalOpen ? (
                         <Modal header="Sign Up" className="black-text signup" open={true}>
                             <TextInput
+                                className="signup-username"
                                 name="username"
                                 icon="account_box"
                                 label="User Name"
@@ -153,6 +161,7 @@ class NavBar extends React.Component {
                             />
 
                             <TextInput
+                                className="signup-password"
                                 name="password"
                                 type="password"
                                 icon="lock"
@@ -163,7 +172,15 @@ class NavBar extends React.Component {
 
                             <Button
                                 onClick={this.handleSignup}
-                                className="login-button">Signup</Button>
+                                className="signup-button">Signup
+                                <i class="material-icons right">chevron_right</i>
+                            </Button>
+
+                            <Button
+                                onClick={this.closeSignupModal}
+                                className="signup-button">Close
+                                <i class="material-icons right">close</i>
+                            </Button>
 
                         </Modal>
                     ) : null}
