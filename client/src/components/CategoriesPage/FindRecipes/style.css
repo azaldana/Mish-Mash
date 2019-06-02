@@ -1,0 +1,53 @@
+.recipe-page-content {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9;
+  padding-bottom: 60px;
+}
+
+.recipe-content .card-content {
+  text-align: left;
+}
+
+.recipes-page {
+  /* width: 70%; */
+  margin: 0 auto;
+}
+
+.recipes-page h2 {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-top: 100px;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+}
+
+#seeMore {
+  border: 1px solid #ffab00;
+  background-color: transparent;
+  color: black;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+#seeMore:hover {
+  /* border: 1px solid #FFAB00; */
+  background-color: #ffab00;
+  color: white;
+}
+
+.card {
+  min-height: 400px;
+  /* height: 600px; */
+  width: 300px !important;
+}
+
+.card-content {
+  height: 164px;
+}
+
+.row {
+  width: 75% !important;
+}
