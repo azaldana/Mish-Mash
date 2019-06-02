@@ -9,26 +9,23 @@ class OneChef extends Component {
   state = {
     recipes,
     recipe: null
-  }
+  };
 
   componentDidMount() {
-        console.log("componentDidMount");
-        console.log(this.props.match.params);
-        const id = Number(this.props.match.params.id);
-        const recipe = this.state.recipes.find(r => r.id === id);
-        console.log(recipe);
-        console.log(recipes);
-        this.setState({ recipe })
-    }
+    console.log("componentDidMount");
+    console.log(this.props.match.params);
+    const id = Number(this.props.match.params.id);
+    const recipe = this.state.recipes.find(r => r.id === id);
+    this.setState({ recipe });
+  }
 
-render(){
-  return (
-    <Wrapper>
-      <NavBarOneChef/>
-      <ChefRecipe recipe={this.state.recipe}
-      />
-      <Footer/>
-    </Wrapper>
+  render() {
+    return (
+      <Wrapper>
+        <NavBarOneChef />
+        <ChefRecipe recipe={this.state.recipe} />
+        <Footer />
+      </Wrapper>
     );
   }
 }
