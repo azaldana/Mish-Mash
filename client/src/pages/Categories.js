@@ -27,6 +27,7 @@ class Recipe extends Component {
                 title={recipe.title}
                 image={recipe.image}
                 id={recipe.id}
+                handleSend={this.handleSend}
               />
             ))}
           </div>
