@@ -26,5 +26,8 @@ export default {
   getRecipes: function(query) {
     console.log("query",query);
     return axios.get("/api/recipes", query);
+  },
+  searchRecipes: function(query){
+    return axios.post("/api/searchrecipes", query);
   }
 };
