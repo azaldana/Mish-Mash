@@ -1,18 +1,18 @@
 import React from "react";
 import "./style.css";
 
-const SelectedRecipe = props => {
-    return (
-        <div className="container">
-            <div className="row selected-recipe-row">
-                <div className="col l8 offset-">
-                    <h1 className="headline-ingred">EFFORTLESS BLACK BEAN CHILI</h1>
-                    <img className="image-ingred" src="/images/8.jpg" />
-                    <br></br>
-                    <p className="submission-insruc">
-                        Follow The Chef: @kaylapega <i class="fab fa-instagram"></i>
-                    </p>                   
-                </div>
+const SelectedRecipe = ({ selectedRecipe }) => {
+  // componentDidMount() {
+  //   console.log("componentDidMount");
+  //   console.log(this.props.match.params);
+  //   const id = Number(this.props.match.params.id);
+  //   const chosenRecipe = this.state.recipes.find(r => r.id === id);
+  //   this.setState({ chosenRecipe });
+  // }
+  const ingredients =
+    selectedRecipe && typeof selectedRecipe.ingredients === "string"
+      ? selectedRecipe.ingredients.split(",")
+      : selectedRecipe && selectedRecipe.ingredients;
 
                 <div className="col l3">
                     <p className="title-ingred">Ingredients</p>

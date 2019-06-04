@@ -6,7 +6,7 @@ const FindRecipes = props => {
   console.log(props.image);
   return (
     <div class="col s12 m7 l4">
-      <div class="card chefcard">
+      <div class="card recipeCard">
         <div class="card-image">
           <img src={props.image} />
         </div>
