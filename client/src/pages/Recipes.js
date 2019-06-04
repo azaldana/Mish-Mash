@@ -6,21 +6,25 @@ import Footer from "../components/Home/Footer";
 
 class Recipes extends Component {
   state = {
-    recipes: []
+    chosenRecipe: null
   };
-  handleSend = id => () => {
-    this.props.handleSend(id);
-  };
-  render () {
+
+  // componentDidMount() {
+  //   console.log("componentDidMount");
+  //   console.log(this.props.match.params);
+  //   const id = Number(this.props.match.params.id);
+  //   const chosenRecipe = this.state.recipes.find(r => r.id === id);
+  //   this.setState({ chosenRecipe });
+  // }
+
+  render() {
     return (
       <Wrapper>
         <NavBarRecipe />
-        <SelectedRecipe/>
-        <Footer/>
+        <SelectedRecipe chosenRecipe={this.state.chosenRecipe} />
+        <Footer />
       </Wrapper>
-  
     );
   }
 }
-
 export default Recipes;
