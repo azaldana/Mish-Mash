@@ -6,7 +6,7 @@ const key = process.env.SPOONKEY;
 
 module.exports = {
   findAll: function (req, res) {
-    console.log(req.body);
+    console.log("Hello", req.body);
     const { ingredient } = req.body;
     unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?number=6&ranking=1&ignorePantry=false&ingredients=" + ingredient)
       .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
@@ -21,6 +21,9 @@ module.exports = {
         res.json(result.body)
       });
   },
+  findRecipe: function (req, res) {
+    console.log("line 25", req.body);
+  }
 };
 
 

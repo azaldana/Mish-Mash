@@ -12,7 +12,7 @@ router.use("/form", formRoutes);
 router.use("/categories", categoriesRoutes);
 
 const getRecipes = (req, res) =>{
-    console.log("getRecipes",req.body);
+    console.log("getRecipes line 9", req);
     const { ingredient } = req.body;
     unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information")
         .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")

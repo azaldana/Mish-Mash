@@ -26,6 +26,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mishmash",
   }
 );
 
+app.get("/api/recipes/:id", function (req, res) {
+  console.log("line 30", req.params);
+}) 
+
 app.use(bodyParser.json()).use(bodyParser.urlencoded({ extended: true }))
 
 // Start the API server

@@ -15,6 +15,17 @@ class Recipe extends Component {
     this.props.handleSend(id);
   };
 
+  getRecipe = id => {
+    console.log(id);
+    fetch("/api/categories/x", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id })
+    })
+      .then(data => data.json())
+      .then(d => console.log(d));
+  }
+
   render() {
     console.log(this.state.recipes);
 
@@ -30,6 +41,7 @@ class Recipe extends Component {
                 image={recipe.image}
                 id={recipe.id}
                 handleSend={this.handleSend}
+                getRecipe={this.getRecipe}
               />
             ))}
           </div>
