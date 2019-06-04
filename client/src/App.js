@@ -79,6 +79,7 @@ class App extends React.Component {
               <Route exact path="/onechef" render={(props) => <OneChef {...props} recipe={currentRecipe} />} />
               <Route exact path="/onechef/:id" render={(props) => <OneChef {...props} recipe={currentRecipe} />} />
               <Route exact path="/recipes" component={Recipes} />
+              <Route exact path="/recipes/:id" render={(props) => <Recipes {...props} recipe={currentRecipe} />} />
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>

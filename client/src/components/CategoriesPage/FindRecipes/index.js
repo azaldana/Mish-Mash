@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-dom";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const FindRecipes = props => {
@@ -14,8 +14,8 @@ const FindRecipes = props => {
           <span class="card-title allchef-title">{props.title}</span>
         </div>
         <div class="card-action">
-          <a href="/onechef">View Recipe</a>
-          {/* <Link to={`/onechef/${props.id}`}>View Recipe</Link> */}
+          {/* <a href="/onechef">View Recipe</a> */}
+          <Link to={`/recipes/${props.id}`}>View Recipe</Link>
         </div>
       </div>
     </div>

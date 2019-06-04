@@ -12,6 +12,10 @@ const recipesSchema = new Schema({
     type: String, 
     required: true 
   },
+  ingredients: {
+    type: String,
+    required: true
+  },
   instructions: { 
     type: String, 
     required: true 
@@ -20,6 +24,10 @@ const recipesSchema = new Schema({
     type: Number, 
     required: true 
   },
+  servings: {
+    type: Number,
+    required: true
+  }
 });
 
 const Recipes = mongoose.model("Recipes", recipesSchema);
