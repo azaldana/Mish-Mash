@@ -6,58 +6,46 @@ import Categories from "./pages/Categories";
 import Home from "./pages/Home";
 import OneChef from "./pages/OneChef";
 import Recipes from "./pages/Recipes";
-import { UserProvider } from './utils/userContext';
-import allRecipes from './recipes.json';
-
+import { UserProvider } from "./utils/userContext";
+import allRecipes from "./recipes.json";
 
 function Index() {
-  return (
-    <Home></Home>
-  )
+  return <Home />;
 }
 
 function Featured() {
-  return (
-    <AllChefs></AllChefs>
-  )
+  return <AllChefs />;
 }
 
 function Articles() {
-  return (
-    <Blogs></Blogs>
-  )
+  return <Blogs />;
 }
 
 function Ingredients() {
-  return (
-    <Categories></Categories>
-  )
+  return <Categories />;
 }
 
 function Meal() {
-  return (
-    <Recipes></Recipes>
-  )
+  return <Recipes />;
 }
 
 class App extends React.Component {
-
   state = {
     recipieId: -1,
     currentUser: null
-  }
+  };
 
-  handleSend = (id) => {
+  handleSend = id => {
     this.setState({
       recipieId: id
-    })
-  }
+    });
+  };
 
-  onLoggedIn = (user) => {
+  onLoggedIn = user => {
     this.setState({
       currentUser: user
-    })
-  }
+    });
+  };
 
   render() {
     const { recipieId } = this.state;
@@ -70,20 +58,42 @@ class App extends React.Component {
         <Router>
           <div>
             <Switch>
-              <Route exact path="/"
-                render={(props) => <Home {...props} handleSend={this.handleSend} onLoggedIn={this.onLoggedIn} />} />
+              <Route
+                exact
+                path="/"
+                render={props => (
+                  <Home
+                    {...props}
+                    handleSend={this.handleSend}
+                    onLoggedIn={this.onLoggedIn}
+                  />
+                )}
+              />
 
               <Route exact path="/allchefs" component={AllChefs} />
               <Route exact path="/blogs" component={Blogs} />
               <Route exact path="/categories" component={Categories} />
-              <Route exact path="/onechef" render={(props) => <OneChef {...props} recipe={currentRecipe} />} />
-              <Route exact path="/onechef/:id" render={(props) => <OneChef {...props} recipe={currentRecipe} />} />
+              <Route
+                exact
+                path="/onechef"
+                render={props => <OneChef {...props} recipe={currentRecipe} />}
+              />
+              <Route
+                exact
+                path="/onechef/:id"
+                render={props => <OneChef {...props} recipe={currentRecipe} />}
+              />
               <Route exact path="/recipes" component={Recipes} />
+              <Route
+                exact
+                path="/recipes/:id"
+                render={props => <Recipes {...props} recipe={currentRecipe} />}
+              />
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>
         </Router>
-        </UserProvider>
+      </UserProvider>
     );
   }
 }

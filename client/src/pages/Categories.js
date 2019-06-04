@@ -16,6 +16,8 @@ class Recipe extends Component {
   };
 
   render() {
+    console.log(this.state.recipes);
+
     return (
       <Wrapper>
         <NavBarIngredients />
@@ -27,6 +29,7 @@ class Recipe extends Component {
                 title={recipe.title}
                 image={recipe.image}
                 id={recipe.id}
+                handleSend={this.handleSend}
               />
             ))}
           </div>
