@@ -16,6 +16,8 @@ class Recipe extends Component {
   };
 
   render() {
+    console.log(this.state.recipes);
+
     return (
       <Wrapper>
         <NavBarIngredients />
