@@ -10,11 +10,12 @@ class Recipes extends Component {
     chosenRecipe: []
   };
 
-  componentDidMount = id => {
-    console.log("componentDidMount");
+  componentDidMount = () => {
+    const { match: {params} } = this.props;
+    console.log(params);
     console.log(this.props.match.params);
 
-    API.getRecipes(id)
+    API.getRecipes(params.id)
       .then(res =>
         this.setState({
           chosenRecipe: res.data
@@ -24,6 +25,7 @@ class Recipes extends Component {
   };
 
   render() {
+    console.log("recipe.js", this.state);
     return (
       <Wrapper>
         <NavBarRecipe />

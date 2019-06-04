@@ -5,13 +5,13 @@ const unirest = require('unirest');
 const key = process.env.SPOONKEY2;
 
 module.exports = {
-    findAll: function (req, res) {
-        console.log(req.body);
+    getRecipes: function (req, res) {
+        console.log("getRecipes",req.body);
         const { ingredient } = req.body;
         unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information")
             .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
             .header("X-RapidAPI-Key", key)
-            .end(function (result) {
+            .end(async function (result) {
                 console.log(result.body.map(r => r.id))
                 await Promise.all(result.body.map(r => db.Recipes.create({
                     id: r.id,
@@ -25,4 +25,5 @@ module.exports = {
                 res.json(result.body)
             });
     },
+   
 };
