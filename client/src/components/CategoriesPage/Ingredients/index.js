@@ -1,7 +1,6 @@
 import API from "../../../utils/API";
 import "./style.css";
 import React from "react";
-var unirest = require("unirest");
 
 const dairy = [
   "Egg",
