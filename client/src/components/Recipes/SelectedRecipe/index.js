@@ -2,6 +2,13 @@ import React from "react";
 import "./style.css";
 
 const SelectedRecipe = ({ selectedRecipe }) => {
+  // componentDidMount() {
+  //   console.log("componentDidMount");
+  //   console.log(this.props.match.params);
+  //   const id = Number(this.props.match.params.id);
+  //   const chosenRecipe = this.state.recipes.find(r => r.id === id);
+  //   this.setState({ chosenRecipe });
+  // }
   const ingredients =
     selectedRecipe && typeof selectedRecipe.ingredients === "string"
       ? selectedRecipe.ingredients.split(",")

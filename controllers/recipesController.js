@@ -17,8 +17,10 @@ module.exports = {
                     id: r.id,
                     image: r.image,
                     title: r.title,
+                    ingredients: r.extendedIngredients.originalString,
                     instructions: r.instructions,
-                    preparationMinutes: r.preparationMinutes
+                    preparationMinutes: r.preparationMinutes,
+                    servings: r.servings
                 })))
                 res.json(result.body)
             });
