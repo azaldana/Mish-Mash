@@ -1,39 +1,32 @@
 import React from "react";
+import MainRating from "../../OneChef/Ratings";
 import "./style.css";
 
-const SelectedRecipe = ({ selectedRecipe }) => {
-  // componentDidMount() {
-  //   console.log("componentDidMount");
-  //   console.log(this.props.match.params);
-  //   const id = Number(this.props.match.params.id);
-  //   const chosenRecipe = this.state.recipes.find(r => r.id === id);
-  //   this.setState({ chosenRecipe });
-  // }
-  const ingredients =
-    selectedRecipe && typeof selectedRecipe.ingredients === "string"
-      ? selectedRecipe.ingredients.split(",")
-      : selectedRecipe && selectedRecipe.ingredients;
-
-  if (!selectedRecipe) {
-    return <div />;
-  }
+const SelectedRecipe = props => {
   return (
     <div className="container">
       <div className="row selected-recipe-row">
         <div className="col l8 offset-">
-          <h1 className="headline-ingred">{selectedRecipe.title}</h1>
-          <p className="totalTime-ingred">{selectedRecipe.totalTime}</p>
-          <p className="servings-ingred">
-            Serving Size: {selectedRecipe.servings}
+          <h1 className="headline-ingred">{props.title}</h1>
+          <p className="totalTime-ingred">
+            Prep Time: {props.readyInMinutes} minutes
           </p>
-          <img className="image-ingred" src={selectedRecipe.image} />
+          <p className="servings-ingred">Serving Size: {props.servings}</p>
+          <img className="image-ingred" src={props.image} />
           <br />
+          <br />
+          <p className="main-rating">
+            Rate The Chef Below <MainRating />
+          </p>
         </div>
 
         <div className="col l3">
           <p className="title-ingred">Ingredients</p>
-          <form className="form-ingred" action="#">
-            {ingredients.map(item => {
+
+          {/* <p>{props.extendedIngredients.originalString}</p> */}
+          {console.log("ingredients", props.extendedIngredients)}
+          {/* <form className="form-ingred" action="#">
+            {props.extendedIngredients.original.map(item => {
               return (
                 <p>
                   <label>
@@ -43,13 +36,14 @@ const SelectedRecipe = ({ selectedRecipe }) => {
                 </p>
               );
             })}
-          </form>
+          </form> */}
           <p className="instructions-ingred">
             <p className="title-insruc">Instructions</p>
             <br />
-            {selectedRecipe.instructions.split("\n").map(item => {
+            {/* {props.instructions.split(".").map(item => {
               return <p>{item}</p>;
-            })}
+            })} */}
+            {props.instructions}
           </p>
           <br />
         </div>

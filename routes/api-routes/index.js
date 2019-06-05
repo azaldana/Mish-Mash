@@ -3,14 +3,16 @@ const userRoutes = require("./user");
 const formRoutes = require("./form");
 const categoriesRoutes = require("./categories");
 const recipesRoutes = require("./recipes");
-const unirest = require('unirest');
+const unirest = require("unirest");
 
 const key = process.env.SPOONKEY2;
 
 router.use("/users", userRoutes);
 router.use("/form", formRoutes);
 router.use("/categories", categoriesRoutes);
+router.use("/recipes", recipesRoutes);
 
+/*
 const getRecipes = (req, res) =>{
     console.log("getRecipes line 9", req);
     const { ingredient } = req.body;
@@ -38,7 +40,6 @@ const getRecipes = (req, res) =>{
 
 router.route("/recipes").get(getRecipes);
 // router.use("/recipes", ()=>{console.log("HEEEEEEELP!!")});
-
-
+*/
 
 module.exports = router;

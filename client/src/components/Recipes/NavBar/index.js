@@ -6,7 +6,7 @@ const NavBarRecipe = props => {
   const Img = (
     <a href="/">
       <img
-        src="/images/mish-mash-logo.png"
+        src="./images/mish-mash-logo.png"
         width="80"
         className="nav-logo"
         alt="Logo"

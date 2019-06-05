@@ -1,16 +1,12 @@
 require("dotenv").config();
-const router = require('express').Router();
-const recipesController = require('../../controllers/recipesController');
-const categoriesController = require('../../controllers/categoriesController');
-
+const router = require("express").Router();
+const recipesController = require("../../controllers/recipesController");
+const categoriesController = require("../../controllers/categoriesController");
 
 // Recipes routes
-router.route('/recipes')
-    .post(recipesController.getRecipes);
-router.route('/recipes/:id')
-    .get(recipesController.getRecipes)
-router.route('/categories')
-    .post(categoriesController.findRecipe);
+router.route("/").post(recipesController.getRecipes);
+router.route("/:id").get(recipesController.getRecipes);
+router.route("/categories").post(categoriesController.findRecipe);
 // router.route('/recipes')
 //     .post((req,res)=>{
 //         console.log("in the post");
