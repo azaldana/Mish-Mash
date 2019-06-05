@@ -25,25 +25,24 @@ const SelectedRecipe = props => {
 
           {/* <p>{props.extendedIngredients.originalString}</p> */}
           {console.log("ingredients", props.extendedIngredients)}
-          {/* <form className="form-ingred" action="#">
-            {props.extendedIngredients.original.map(item => {
+          <form className="form-ingred" action="#">
+            {props.extendedIngredients.map(item => {
               return (
                 <p>
                   <label>
                     <input type="checkbox" />
-                    <span>{item}</span>
+                    <span>{item.originalString}</span>
                   </label>
                 </p>
               );
             })}
-          </form> */}
+          </form>
           <p className="instructions-ingred">
             <p className="title-insruc">Instructions</p>
             <br />
-            {/* {props.instructions.split(".").map(item => {
+            {props.instructions.split(".").map(item => {
               return <p>{item}</p>;
-            })} */}
-            {props.instructions}
+            })}
           </p>
           <br />
         </div>
