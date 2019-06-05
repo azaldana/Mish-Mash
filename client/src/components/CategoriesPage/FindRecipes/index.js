@@ -13,7 +13,8 @@ const FindRecipes = props => {
           <span class="card-title allchef-title">{props.title}</span>
         </div>
         <div class="card-action">
-          <Link to={`/recipes/${props.id}`}>View Recipe</Link>
+          {/* <Link to={`/api/recipes/${props.id}`}>View Recipe</Link> */}
+          <a onClick={() => props.getRecipe(props.id)}>View Recipe</a>
         </div>
       </div>
     </div>

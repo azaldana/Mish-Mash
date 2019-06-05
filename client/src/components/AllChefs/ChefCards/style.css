@@ -1,5 +1,5 @@
-.chefCardRow  {
-    width: 90% !important;
+.chefCardRow {
+  width: 90% !important;
 }
 
 .chefcard {
@@ -9,13 +9,13 @@
 }
 
 .chefTitle {
-    color: black;
+  color: black;
 }
 
 .all-chef-instructions {
-    color: black;
+  color: black;
 }
 
 .allchef-title {
-    font-weight: 600 !important;
+  font-weight: 600 !important;
 }

@@ -39,7 +39,7 @@
 }
 
 .card {
-  min-height: 400px;
+  min-height: 550px;
   /* height: 600px; */
   width: 300px !important;
 }
@@ -48,6 +48,7 @@
   min-height: 400px !important;
   margin-bottom: 100px !important;
 }
+
 .card-content {
   height: 164px;
 }
