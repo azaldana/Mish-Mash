@@ -23,11 +23,11 @@ export default {
   getCategories: function(query) {
     return axios.post("/api/categories", query);
   },
-  getRecipes: function(query) {
-    console.log("query",query);
-    return axios.get("/api/recipes", query);
+  getRecipes: function(id) {
+    console.log("id", id);
+    return axios.get("/api/recipes/" + id);
   },
-  searchRecipes: function(query){
+  searchRecipes: function(query) {
     return axios.post("/api/searchrecipes", query);
   }
 };

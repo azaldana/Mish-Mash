@@ -7,20 +7,23 @@ import API from "../utils/API";
 
 class Recipes extends Component {
   state = {
-    chosenRecipe: []
+    chosenRecipe: null
   };
 
   componentDidMount = () => {
-    const { match: {params} } = this.props;
+    const {
+      match: { params }
+    } = this.props;
     console.log(params);
     console.log(this.props.match.params);
 
     API.getRecipes(params.id)
-      .then(res =>
+      .then(res => {
+        console.log(res.data);
         this.setState({
           chosenRecipe: res.data
-        })
-      )
+        });
+      })
       .catch(err => console.log(err));
   };
 
@@ -29,17 +32,9 @@ class Recipes extends Component {
     return (
       <Wrapper>
         <NavBarRecipe />
-        {this.state.chosenRecipe.map(chosen => (
-          <SelectedRecipe
-            chosenRecipe={this.state.chosenRecipe}
-            title={chosen.title}
-            image={chosen.image}
-            ingredients={chosen.ingredients}
-            instructions={chosen.instructions}
-            servings={chosen.servings}
-            preparationMinutes={chosen.preparationMinutes}
-          />
-        ))}
+        {this.state.chosenRecipe ? (
+          <SelectedRecipe {...this.state.chosenRecipe} />
+        ) : null}
         <Footer />
       </Wrapper>
     );
