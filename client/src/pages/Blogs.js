@@ -1,16 +1,16 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import NavBarBlogs from "../components/Blogs/NavBar";
 import BlogLayout from "../components/Blogs/BlogLayout";
 import Wrapper from "../components/Wrapper";
 import Footer from "../components/Home/Footer";
 
 function Blogs() {
-    return (
-      <Wrapper>
-        <NavBarBlogs/>
-        <BlogLayout/>
-        <Footer/>
-        </Wrapper>
-    );
-  }
+  return (
+    <Wrapper>
+      <NavBarBlogs />
+      <BlogLayout />
+      <Footer />
+    </Wrapper>
+  );
+}
 export default Blogs;

@@ -1,4 +1,3 @@
-import API from "../../../utils/API";
 import "./style.css";
 import React from "react";
 
@@ -195,25 +194,25 @@ class Ingredients extends React.Component {
 
             <div class="col s4 l2">
               <button onClick={this.toggleCategory("dairy")} class="dairyBtn">
-                <img src="./images/icon_milk.png" width="35" />
+                <img src="./images/icon_milk.png" width="35" alt="Dairy" />
               </button>
               <p class="types">Dairy</p>
             </div>
             <div class="col s4 l2">
               <button onClick={this.toggleCategory("meat")} class="meatBtn">
-                <img src="./images/icon_meat.png" width="35" />
+                <img src="./images/icon_meat.png" width="35" alt="Meat" />
               </button>
               <p class="types">Meats</p>
             </div>
             <div class="col s4 l2">
               <button onClick={this.toggleCategory("veggie")} class="veggieBtn">
-                <img src="./images/icon_carrot.png" width="35" />
+                <img src="./images/icon_carrot.png" width="35" alt="Veggies" />
               </button>
               <p class="types">Veggies</p>
             </div>
             <div class="col s4 l2">
               <button onClick={this.toggleCategory("pantry")} class="pantryBtn">
-                <img src="./images/icon_bread.png" width="35" />
+                <img src="./images/icon_bread.png" width="35" alt="Pantry" />
               </button>
               <p class="types">Pantry</p>
             </div>
@@ -223,14 +222,14 @@ class Ingredients extends React.Component {
                 onClick={this.toggleCategory("seafood")}
                 class="seafoodBtn"
               >
-                <img src="./images/icon_fish.png" width="35" />
+                <img src="./images/icon_fish.png" width="35" alt="Seafood" />
               </button>
               <p class="types">Seafood</p>
             </div>
 
             <div class="col s4 l2">
               <button onClick={this.toggleCategory("fruit")} class="fruitBtn">
-                <img src="./images/icon_apple.png" width="35" />
+                <img src="./images/icon_apple.png" width="35" alt="Fruit" />
               </button>
               <p class="types">Fruits</p>
             </div>
@@ -507,7 +506,6 @@ class Ingredients extends React.Component {
         </div>
       </div>
     );
-    // closing render }
   }
 }
 

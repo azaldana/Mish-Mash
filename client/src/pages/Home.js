@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
 import HeaderChef from "../components/Home/HeaderChef";
 import recipes from "../recipes.json";
@@ -15,7 +14,6 @@ import SubmitForm from "../components/Home/SubmitForm";
 import FooterAll from "../components/Home/Footer";
 import Hero from "../components/Home/Hero";
 import UserContext from "../utils/userContext";
-import { timingSafeEqual } from "crypto";
 
 class Home extends Component {
   static contextType = UserContext;
@@ -79,9 +77,9 @@ class Home extends Component {
             image={recipes[20].image}
             id={recipes[20].id}
           />
-          <NavLink to="/allchefs" class="waves-effect waves-light btn view">
-            View all Chefs
-          </NavLink>
+          <a href="/allchefs" class="waves-effect waves-light btn view">
+            View All Chefs
+          </a>
         </HeaderChef>
         <DualBtn />
         <Video />

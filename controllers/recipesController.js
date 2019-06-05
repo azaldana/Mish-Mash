@@ -7,7 +7,6 @@ const key = process.env.SPOONKEY2;
 module.exports = {
   getRecipes: function(req, res) {
     console.log("getRecipes", req.params);
-    // const { ingredient } = req.body;
     const id = req.params.id;
     unirest
       .get(
