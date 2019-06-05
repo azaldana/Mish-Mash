@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
 import HeaderChef from "../components/Home/HeaderChef";
 import recipes from "../recipes.json";
@@ -78,9 +79,9 @@ class Home extends Component {
             image={recipes[20].image}
             id={recipes[20].id}
           />
-          <a href="/allchefs" class="waves-effect waves-light btn view">
+          <NavLink to="/allchefs" class="waves-effect waves-light btn view">
             View all Chefs
-          </a>
+          </NavLink>
         </HeaderChef>
         <DualBtn />
         <Video />

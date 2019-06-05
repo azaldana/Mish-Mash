@@ -2,14 +2,17 @@ import React, { Component } from "react";
 import NavBarAllChefs from "../components/AllChefs/NavBar";
 import ChefCards from "../components/AllChefs/ChefCards";
 import Wrapper from "../components/Wrapper";
-import recipes from "../recipes.json";
+// import {recipes} from "../recipes.js";
 import ChefHeader from "../components/AllChefs/ChefHeader";
 import Footer from "../components/Home/Footer";
+import UserContext from "../utils/userContext";
+
 
 class AllChefs extends Component {
-  state = {
-    recipes
-  };
+  // state = {
+  //   recipes,
+  //   recipe
+  // };
 
   handleSend = id => () => {
     this.props.handleSend(id);
@@ -17,11 +20,13 @@ class AllChefs extends Component {
 
   render() {
     return (
+      <UserContext.Consumer>
+        {context => (
       <Wrapper>
         <NavBarAllChefs />
         <ChefHeader />
         <div class="row">
-          {this.state.recipes.map(recipe => (
+          {context.recipes.map(recipe => (
             <ChefCards
               title={recipe.title}
               image={recipe.image}
@@ -32,6 +37,8 @@ class AllChefs extends Component {
         </div>
         <Footer />
       </Wrapper>
+        )}
+     </UserContext.Consumer>
     );
   }
 }

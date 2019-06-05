@@ -5,6 +5,7 @@
 .chefcard {
    text-align: center;
     margin-top: 50px;
+    min-height: 550px !important;
 }
 
 .chefTitle {
