@@ -3,6 +3,8 @@ import { Textarea, TextInput, Modal, Button } from 'react-materialize';
 import "./style.css";
 import API from "../../../utils/API";
 import axios from "axios";
+import UserContext from "../../../utils/userContext";
+
 
 const url = "https://api.cloudinary.com/v1_1/mish-mash/image/upload";
 
@@ -34,7 +36,8 @@ class SubmitForm extends React.Component {
     });
   };
 
-  handleSubmitForm = () => {
+  handleSubmitForm = (newRecipe) => {
+    console.log(newRecipe)
     const {
       title,
       ingredients,
@@ -56,6 +59,8 @@ class SubmitForm extends React.Component {
       image,
       image_id
     }).then(res => {
+      newRecipe(res.data)
+      console.log(res.data);
       this.setState({
         isSubmitFormModalOpen: false,
         title: "",
@@ -115,6 +120,8 @@ class SubmitForm extends React.Component {
     const { user } = this.props;
     // console.log(submission);
     return (
+      <UserContext.Consumer>
+        {context => (
       <div className="submit-form" id="submit-form">
         <h2>Family Recipes</h2>
 
@@ -262,7 +269,7 @@ class SubmitForm extends React.Component {
 
             <Button
               className="submit-form-button"
-              onClick={this.handleSubmitForm}
+              onClick={() => this.handleSubmitForm(context.newRecipe)}
             >
               Submit
               <i class="material-icons right">send</i>
@@ -277,6 +284,9 @@ class SubmitForm extends React.Component {
           </Modal>
         ) : null}
       </div>
+        )}
+      </UserContext.Consumer>
+
     );
   }
 }
