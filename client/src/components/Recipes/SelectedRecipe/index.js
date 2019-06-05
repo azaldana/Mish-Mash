@@ -23,7 +23,6 @@ const SelectedRecipe = props => {
         <div className="col l3">
           <p className="title-ingred">Ingredients</p>
 
-          {/* <p>{props.extendedIngredients.originalString}</p> */}
           {console.log("ingredients", props.extendedIngredients)}
           <form className="form-ingred" action="#">
             {props.extendedIngredients.map(item => {

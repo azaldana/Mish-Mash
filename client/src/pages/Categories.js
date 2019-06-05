@@ -24,7 +24,7 @@ class Recipe extends Component {
     })
       .then(data => data.json())
       .then(d => console.log(d));
-  }
+  };
 
   render() {
     console.log(this.state.recipes);

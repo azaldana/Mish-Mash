@@ -1,6 +1,6 @@
 import React from "react";
-import { randomNumber } from './index';
-import Widget from './widget';
+import { randomNumber } from "./index";
+import Widget from "./widget";
 
 class WidgetRatings extends React.Component {
   constructor(props) {
@@ -8,28 +8,26 @@ class WidgetRatings extends React.Component {
     this.fillId = `widgetGrad${randomNumber()}`;
     this.state = {
       highestWidgetHovered: -Infinity
-    }
+    };
   }
-  static Widget = Widget
+  static Widget = Widget;
 
-  get
-  widgetRatingsStyle() {
+  get widgetRatingsStyle() {
     const widgetRatingsStyle = {
-      position: 'relative',
-      boxSizing: 'border-box',
-      display: 'inline-block'
+      position: "relative",
+      boxSizing: "border-box",
+      display: "inline-block"
     };
     return this.props.ignoreInlineStyles ? {} : widgetRatingsStyle;
   }
 
-  get
-  widgetGradientStyle() {
+  get widgetGradientStyle() {
     const widgetGradientStyle = {
-      position: 'absolute',
-      zIndex: '0',
-      width: '0',
-      height: '0',
-      visibility: 'hidden'
+      position: "absolute",
+      zIndex: "0",
+      width: "0",
+      height: "0",
+      visibility: "hidden"
     };
     return this.props.ignoreInlineStyles ? {} : widgetGradientStyle;
   }
@@ -37,17 +35,13 @@ class WidgetRatings extends React.Component {
   stopColorStyle(color) {
     const stopColorStyle = {
       stopColor: color,
-      stopOpacity: '1'
+      stopOpacity: "1"
     };
     return this.props.ignoreInlineStyles ? {} : stopColorStyle;
   }
 
-  get
-  titleText() {
-    const {
-      typeOfWidget,
-      rating: selectedRating
-    } = this.props;
+  get titleText() {
+    const { typeOfWidget, rating: selectedRating } = this.props;
     const hoveredRating = this.state.highestWidgetHovered;
     const currentRating = hoveredRating > 0 ? hoveredRating : selectedRating;
     // fix it at 2 decimal places and remove trailing 0s
@@ -56,19 +50,21 @@ class WidgetRatings extends React.Component {
       formattedRating = String(currentRating);
     }
     let widgetText = `${typeOfWidget}s`;
-    if (formattedRating === '1') {
+    if (formattedRating === "1") {
       widgetText = typeOfWidget;
     }
     return `${formattedRating} ${widgetText}`;
   }
 
-  get
-  offsetValue() {
+  get offsetValue() {
     const rating = this.props.rating;
     const ratingIsInteger = Number.isInteger(rating);
-    let offsetValue = '0%';
+    let offsetValue = "0%";
     if (!ratingIsInteger) {
-      const firstTwoDecimals = rating.toFixed(2).split('.')[1].slice(0, 2);
+      const firstTwoDecimals = rating
+        .toFixed(2)
+        .split(".")[1]
+        .slice(0, 2);
       offsetValue = `${firstTwoDecimals}%`;
     }
     return offsetValue;
@@ -77,19 +73,18 @@ class WidgetRatings extends React.Component {
   unHoverOverWidget = () => {
     this.setState({
       highestWidgetHovered: -Infinity
-    })
-  }
+    });
+  };
 
-  hoverOverWidget = (rating) => {
+  hoverOverWidget = rating => {
     return () => {
       this.setState({
         highestWidgetHovered: rating
-      })
-    }
-  }
+      });
+    };
+  };
 
-  get
-  childrenWithRatingState() {
+  get childrenWithRatingState() {
     const {
       changeRating,
       rating: selectedRating,
@@ -130,7 +125,8 @@ class WidgetRatings extends React.Component {
 
       // only matters when changeRating is false
       // given widget 5 and rating 4.2:  5 > 4.2 && 4 < 4.2;
-      const isPartiallyFullWidget = widgetRating > selectedRating && widgetRating - 1 < selectedRating
+      const isPartiallyFullWidget =
+        widgetRating > selectedRating && widgetRating - 1 < selectedRating;
 
       const isFirstWidget = widgetRating === 1;
       const isLastWidget = widgetRating === numberOfWidgets;
@@ -140,7 +136,9 @@ class WidgetRatings extends React.Component {
         ignoreInlineStyles,
         gradientPathName,
         changeRating: changeRating ? () => changeRating(widgetRating) : null,
-        hoverOverWidget: changeRating ? this.hoverOverWidget(widgetRating) : null,
+        hoverOverWidget: changeRating
+          ? this.hoverOverWidget(widgetRating)
+          : null,
         unHoverOverWidget: changeRating ? this.unHoverOverWidget : null,
         inheritFillId: this.fillId,
         isSelected,
@@ -150,7 +148,8 @@ class WidgetRatings extends React.Component {
         isFirstWidget,
         isLastWidget,
         hoverMode,
-        hasCustomGradientColor: (widgetRatedColor || widgetEmptyColor) && isPartiallyFullWidget,
+        hasCustomGradientColor:
+          (widgetRatedColor || widgetEmptyColor) && isPartiallyFullWidget,
         svgIconPath: svgIconPath || svgIconPaths,
         svgIconViewBox: svgIconViewBox || svgIconViewBoxes,
         widgetHoverColor: widgetHoverColor || widgetHoverColors,
@@ -164,10 +163,7 @@ class WidgetRatings extends React.Component {
   }
 
   render() {
-    const {
-      widgetEmptyColors,
-      widgetRatedColors
-    } = this.props;
+    const { widgetEmptyColors, widgetRatedColors } = this.props;
 
     return (
       <div
@@ -175,16 +171,29 @@ class WidgetRatings extends React.Component {
         title={this.titleText}
         style={this.widgetRatingsStyle}
       >
-        <svg
-          className="widget-grad"
-          style={this.widgetGradientStyle}
-        >
+        <svg className="widget-grad" style={this.widgetGradientStyle}>
           <defs>
             <linearGradient id={this.fillId} x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" className="stop-color-first" style={this.stopColorStyle(widgetRatedColors)} />
-              <stop offset={this.offsetValue} className="stop-color-first" style={this.stopColorStyle(widgetRatedColors)} />
-              <stop offset={this.offsetValue} className="stop-color-final" style={this.stopColorStyle(widgetEmptyColors)} />
-              <stop offset="100%" className="stop-color-final" style={this.stopColorStyle(widgetEmptyColors)} />
+              <stop
+                offset="0%"
+                className="stop-color-first"
+                style={this.stopColorStyle(widgetRatedColors)}
+              />
+              <stop
+                offset={this.offsetValue}
+                className="stop-color-first"
+                style={this.stopColorStyle(widgetRatedColors)}
+              />
+              <stop
+                offset={this.offsetValue}
+                className="stop-color-final"
+                style={this.stopColorStyle(widgetEmptyColors)}
+              />
+              <stop
+                offset="100%"
+                className="stop-color-final"
+                style={this.stopColorStyle(widgetEmptyColors)}
+              />
             </linearGradient>
           </defs>
         </svg>
@@ -196,17 +205,17 @@ class WidgetRatings extends React.Component {
 
 WidgetRatings.defaultProps = {
   rating: 0,
-  typeOfWidget: 'Star',
+  typeOfWidget: "Star",
   changeRating: null,
   ignoreInlineStyles: false,
-  gradientPathName: '',
-  svgIconPaths: 'm25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z',
-  svgIconViewBoxes: '0 0 51 48',
-  widgetRatedColors: '#fbaa19',
-  widgetEmptyColors: 'rgb(203, 211, 227)',
-  widgetHoverColors: '#fbaa19',
-  widgetDimensions: '25px',
-  widgetSpacings: '7px',
+  gradientPathName: "",
+  svgIconPaths: "m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z",
+  svgIconViewBoxes: "0 0 51 48",
+  widgetRatedColors: "#fbaa19",
+  widgetEmptyColors: "rgb(203, 211, 227)",
+  widgetHoverColors: "#fbaa19",
+  widgetDimensions: "25px",
+  widgetSpacings: "7px"
 };
 
 export default WidgetRatings;

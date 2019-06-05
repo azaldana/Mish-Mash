@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { Navbar, NavItem } from "react-materialize";
 
-const NavBarIngredients = props => {
+const NavBarIngredients = () => {
   const Img = (
     <a href="/">
       <img

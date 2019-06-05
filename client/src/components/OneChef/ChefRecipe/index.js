@@ -19,7 +19,12 @@ const OneChefRecipe = ({ recipe }) => {
           <h1 className="headline-ingred">{recipe.title}</h1>
           <p className="totalTime-ingred">{recipe.totalTime}</p>
           <p className="servings-ingred">Serving Size: {recipe.servings}</p>
-          <img className="image-ingred" src={recipe.image} width="420" />
+          <img
+            className="image-ingred"
+            src={recipe.image}
+            width="420"
+            alt="Recipe"
+          />
           <br />
           <p className="submission-insruc">
             Follow The Chef: {recipe.social} <i class="fab fa-instagram" />

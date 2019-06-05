@@ -1,6 +1,6 @@
 import React from "react";
-import classNames from 'classnames';
-import { randomNumber } from './index';
+import classNames from "classnames";
+import { randomNumber } from "./index";
 
 class Widget extends React.Component {
   constructor(props) {
@@ -10,8 +10,7 @@ class Widget extends React.Component {
     }
   }
 
-  get
-  widgetContainerStyle() {
+  get widgetContainerStyle() {
     const {
       changeRating,
       widgetSpacing,
@@ -21,35 +20,33 @@ class Widget extends React.Component {
     } = this.props;
 
     const widgetContainerStyle = {
-      position: 'relative',
-      display: 'inline-block',
-      verticalAlign: 'middle',
+      position: "relative",
+      display: "inline-block",
+      verticalAlign: "middle",
       paddingLeft: isFirstWidget ? undefined : widgetSpacing,
       paddingRight: isLastWidget ? undefined : widgetSpacing,
-      cursor: changeRating ? 'pointer' : undefined
+      cursor: changeRating ? "pointer" : undefined
     };
-    return ignoreInlineStyles ? {} : widgetContainerStyle
+    return ignoreInlineStyles ? {} : widgetContainerStyle;
   }
 
-  get
-  widgetSvgStyle() {
+  get widgetSvgStyle() {
     const {
       ignoreInlineStyles,
       isCurrentHoveredWidget,
-      widgetDimension,
+      widgetDimension
     } = this.props;
     const widgetSvgStyle = {
       width: widgetDimension,
       height: widgetDimension,
-      transition: 'transform .2s ease-in-out',
-      transform: isCurrentHoveredWidget ? 'scale(1.1)' : undefined
+      transition: "transform .2s ease-in-out",
+      transform: isCurrentHoveredWidget ? "scale(1.1)" : undefined
     };
 
     return ignoreInlineStyles ? {} : widgetSvgStyle;
   }
 
-  get
-  pathStyle() {
+  get pathStyle() {
     const {
       isSelected,
       isPartiallyFullWidget,
@@ -68,21 +65,21 @@ class Widget extends React.Component {
       if (isHovered) fill = widgetHoverColor;
       else fill = widgetEmptyColor;
     } else {
-      if (isPartiallyFullWidget) fill = `url('${gradientPathName}#${this.fillId || inheritFillId}')`;
+      if (isPartiallyFullWidget)
+        fill = `url('${gradientPathName}#${this.fillId || inheritFillId}')`;
       else if (isSelected) fill = widgetRatedColor;
       else fill = widgetEmptyColor;
     }
 
     const pathStyle = {
       fill: fill,
-      transition: 'fill .2s ease-in-out',
+      transition: "fill .2s ease-in-out"
     };
 
     return ignoreInlineStyles ? {} : pathStyle;
   }
 
-  get
-  widgetClasses() {
+  get widgetClasses() {
     const {
       isSelected,
       isPartiallyFullWidget,
@@ -92,49 +89,63 @@ class Widget extends React.Component {
     } = this.props;
 
     const widgetClasses = classNames({
-      'widget-svg': true,
-      'widget-selected': isSelected,
-      'multi-widget-selected': isPartiallyFullWidget,
-      'hovered': isHovered,
-      'current-hovered': isCurrentHoveredWidget
-    })
+      "widget-svg": true,
+      "widget-selected": isSelected,
+      "multi-widget-selected": isPartiallyFullWidget,
+      hovered: isHovered,
+      "current-hovered": isCurrentHoveredWidget
+    });
 
-    return ignoreInlineStyles ? {} : widgetClasses
+    return ignoreInlineStyles ? {} : widgetClasses;
   }
 
   stopColorStyle(color) {
     const stopColorStyle = {
       stopColor: color,
-      stopOpacity: '1'
+      stopOpacity: "1"
     };
     return this.props.ignoreInlineStyles ? {} : stopColorStyle;
   }
 
-  get
-  offsetValue() {
+  get offsetValue() {
     const selectedRating = this.props.selectedRating;
     const ratingIsInteger = Number.isInteger(selectedRating);
-    let offsetValue = '0%';
+    let offsetValue = "0%";
     if (!ratingIsInteger) {
-      const firstTwoDecimals = selectedRating.toFixed(2).split('.')[1].slice(0, 2);
+      const firstTwoDecimals = selectedRating
+        .toFixed(2)
+        .split(".")[1]
+        .slice(0, 2);
       offsetValue = `${firstTwoDecimals}%`;
     }
     return offsetValue;
   }
 
-  get
-  renderIndividualGradient() {
-    const {
-      widgetRatedColor,
-      widgetEmptyColor,
-    } = this.props;
+  get renderIndividualGradient() {
+    const { widgetRatedColor, widgetEmptyColor } = this.props;
     return (
       <defs>
         <linearGradient id={this.fillId} x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" className="stop-color-first" style={this.stopColorStyle(widgetRatedColor)} />
-          <stop offset={this.offsetValue} className="stop-color-first" style={this.stopColorStyle(widgetRatedColor)} />
-          <stop offset={this.offsetValue} className="stop-color-final" style={this.stopColorStyle(widgetEmptyColor)} />
-          <stop offset="100%" className="stop-color-final" style={this.stopColorStyle(widgetEmptyColor)} />
+          <stop
+            offset="0%"
+            className="stop-color-first"
+            style={this.stopColorStyle(widgetRatedColor)}
+          />
+          <stop
+            offset={this.offsetValue}
+            className="stop-color-first"
+            style={this.stopColorStyle(widgetRatedColor)}
+          />
+          <stop
+            offset={this.offsetValue}
+            className="stop-color-final"
+            style={this.stopColorStyle(widgetEmptyColor)}
+          />
+          <stop
+            offset="100%"
+            className="stop-color-final"
+            style={this.stopColorStyle(widgetEmptyColor)}
+          />
         </linearGradient>
       </defs>
     );
@@ -166,20 +177,18 @@ class Widget extends React.Component {
         onMouseLeave={unHoverOverWidget}
         onClick={changeRating}
       >
-        {customSvg ? customSvg :
+        {customSvg ? (
+          customSvg
+        ) : (
           <svg
             viewBox={svgIconViewBox}
             className={this.widgetClasses}
             style={this.widgetSvgStyle}
           >
             {hasCustomGradientColor ? this.renderIndividualGradient : null}
-            <path
-              className="widget"
-              style={this.pathStyle}
-              d={svgIconPath}
-            />
+            <path className="widget" style={this.pathStyle} d={svgIconPath} />
           </svg>
-        }
+        )}
       </div>
     );
   }

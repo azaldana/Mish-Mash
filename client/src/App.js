@@ -9,26 +9,6 @@ import Recipes from "./pages/Recipes";
 import { UserProvider } from "./utils/userContext";
 import allRecipes from "./recipes.json";
 
-function Index() {
-  return <Home />;
-}
-
-function Featured() {
-  return <AllChefs />;
-}
-
-function Articles() {
-  return <Blogs />;
-}
-
-function Ingredients() {
-  return <Categories />;
-}
-
-function Meal() {
-  return <Recipes />;
-}
-
 class App extends React.Component {
   state = {
     recipieId: -1,
@@ -89,7 +69,6 @@ class App extends React.Component {
                 path="/recipes/:id"
                 render={props => <Recipes {...props} recipe={currentRecipe} />}
               />
-              {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>
         </Router>
