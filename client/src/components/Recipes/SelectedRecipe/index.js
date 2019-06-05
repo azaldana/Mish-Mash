@@ -40,9 +40,13 @@ const SelectedRecipe = props => {
           <p className="instructions-ingred">
             <p className="title-insruc">Instructions</p>
             <br />
-            {props.instructions.split(".").map(item => {
-              return <p>{item}</p>;
-            })}
+            {console.log("instructions", props.instructions)}
+            {props.instructions
+              ? props.instructions.split(".").map(item => {
+                  console.log("item", item);
+                  return <p>{item}</p>;
+                })
+              : ""}
           </p>
           <br />
         </div>
