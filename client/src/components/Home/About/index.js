@@ -18,25 +18,24 @@ const About = () => {
             Perfect for when your fridge gets a little strange...
           </p>
           <p className="about-text">
-            All of us have been there one time or another, staring into the
-            pantry or refrigerator and thinking, “There’s nothing to eat in this
-            house.” Although you may feel like your options are limited,
-            generally people have 3 weeks worth of meals in their household. So
-            how can you make great meals with those random ingredients you may
-            ask? Well worry no more, because Mish Mash is here to make your life
-            much easier.
+            Ever find yourself opening your fridge and pantry only to discover
+            ingredients that seemingly don't go together or leave you 
+            gastronomically uninspired? Not wanting to order in and knowing you 
+            have the materials to whip up a delicious meal - your search takes you 
+            down the path of scrolling through recipes on Google. Unsuccessful with 
+            your hunt you ask, " How can I make a great meal with my random
+            ingredients?" Well worry no more, because Mish Mash was created for
+            instances just like this!
             <br />
             <br />
-            Mish Mash is an ingredient-to-recipe application that takes in user
-            input and provides them with the best recipe per their ingredients.
-            Whether you’re looking for toppings for your avocado toast or what
-            to do with that bag of rice, Mish Mash can assist in providing you
-            with a variety of recipes.
-            <br />
-            <br />
-            And its easy! All you have to do is select a category from the
-            refrigerator below and select the ingredients you have and search
-            for a recipe! See easy. We’re here to help. So let’s get cooking!
+            Mish Mash is a social platform for chefs and foodies to access and
+            share food inspirations, trends and recipes. Whether you're wanting
+            to see what your neighbor is eating, experience different cultural 
+            cuisines, strategize your next grocery shopping trip, or search for 
+            recipes based on your fridge and pantry contents - Mish Mash will 
+            will keep you up-to-date with recipes, industry 
+            trends and techniques via user “Family Recipe” submissions and 
+            weekly updated YouTube videos and blog posts.    
           </p>
         </div>
       </div>
