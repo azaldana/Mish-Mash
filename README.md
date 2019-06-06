@@ -27,7 +27,7 @@ Mish Mash keeps users up-to-date on industry trends and techniques through weekl
 
 ## Sample View
 
-![Mish Mash App Screenshot](/images/screenshot.jpg/)
+![Mish Mash App Screenshot](/client/public/images/screenshot.jpg/)
 
 
 ## Library 
