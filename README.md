@@ -3,7 +3,7 @@
 A full-stack application that uses Express, Mongoose, Cloudinary, and React, deployed on Heroku. 
 A social platform for chefs and foodies to access and share food inspirations, trends, and recipes- utilizing the Spoonacular API.
 
-[Mish Mash Link](http://immense-ravine-59091.herokuapp.com/ "Mish-Mash Link")
+[Mish Mash Link](https://guarded-depths-70836.herokuapp.com/ "Mish-Mash Link")
 
 
 ## Description
@@ -27,7 +27,7 @@ Mish Mash keeps users up-to-date on industry trends and techniques through weekl
 
 ## Sample View
 
-![Mish Mash App Screenshot](/public/images/screenshot.jpg/)
+![Mish Mash App Screenshot](./images/screenshot.jpg/)
 
 
 ## Library 
